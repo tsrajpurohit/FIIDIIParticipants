@@ -27,23 +27,27 @@ jobs:
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}  # Ensure this matches the secret's name in GitHub
         run: python fiidiiparticipants.py  # Ensure the path to the script is correct
 
-      - name: Check Git status (for debugging)
+      - name: Check Git status and file changes
         run: |
-          git status  # This will help verify the status of the repository before commit
+          git status -uall  # Show untracked files and all changes
+          ls -lR  # List all files and directories recursively
+
+      - name: Fix permissions on generated CSV files
+        run: |
+          chmod -R 755 .  # Fix file permissions to ensure Git can track them
+          chown -R $(whoami) .  # Ensure correct ownership for files
 
       - name: Commit and push any modified .csv files
         run: |
-          # Add and commit all modified .csv files
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           
           # Find all .csv files and add them to the commit
           csv_files=$(find . -type f -name "*.csv")
           
-          # Check for changes before proceeding with commit
           if [ -n "$csv_files" ]; then
             echo "Found modified or new CSV files. Adding to commit."
-            git add -A  # This ensures all changes (new files, modifications, deletions) are staged
+            git add -A  # Ensure all changes are staged
             git commit -m "Add or update CSV files"
             git push
           else
