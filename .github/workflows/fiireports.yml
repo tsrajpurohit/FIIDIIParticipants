@@ -37,14 +37,15 @@ jobs:
           chmod -R 755 .  # Fix file permissions to ensure Git can track them
           chown -R $(whoami) .  # Ensure correct ownership for files
 
-      - name: Commit and push any modified .csv files
+      - name: Commit and push any modified .csv files if changes are detected
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           
-          # Find all .csv files and add them to the commit
+          # Find all .csv files and check if there are any modified files
           csv_files=$(find . -type f -name "*.csv")
           
+          # Check if there are any changes in the .csv files
           if [ -n "$csv_files" ]; then
             echo "Found modified or new CSV files. Adding to commit."
             git add -A  # Ensure all changes are staged
@@ -52,4 +53,5 @@ jobs:
             git push
           else
             echo "No CSV files found. No changes to commit."
+            exit 0  # Exit without error if no files to commit
           fi
