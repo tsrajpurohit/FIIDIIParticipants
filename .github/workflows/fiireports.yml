@@ -27,6 +27,10 @@ jobs:
           GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}  # Ensure this matches the secret's name in GitHub
         run: python fiidiiparticipants.py  # Ensure the path to the script is correct
 
+      - name: Check Git status (for debugging)
+        run: |
+          git status  # This will help verify the status of the repository before commit
+
       - name: Commit and push any modified .csv files
         run: |
           # Add and commit all modified .csv files
@@ -36,8 +40,10 @@ jobs:
           # Find all .csv files and add them to the commit
           csv_files=$(find . -type f -name "*.csv")
           
+          # Check for changes before proceeding with commit
           if [ -n "$csv_files" ]; then
-            git add $csv_files
+            echo "Found modified or new CSV files. Adding to commit."
+            git add -A  # This ensures all changes (new files, modifications, deletions) are staged
             git commit -m "Add or update CSV files"
             git push
           else
