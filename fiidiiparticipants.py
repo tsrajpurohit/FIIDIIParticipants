@@ -78,12 +78,23 @@ def upload_to_google_sheets(df):
     try:
         # Open the Google Sheet by ID
         sheet = client.open_by_key(SHEET_ID)
-        worksheet = sheet.get_worksheet(0)  # Open the first sheet
-        # Clear the existing content in the sheet
+        
+        # Check if the "FiiDii_OI" tab exists
+        try:
+            worksheet = sheet.worksheet("FiiDii_OI")
+            print("Tab 'FiiDii_OI' already exists.")
+        except gspread.exceptions.WorksheetNotFound:
+            # If the tab doesn't exist, create it
+            worksheet = sheet.add_worksheet(title="FiiDii_OI", rows="1000", cols="20")
+            print("Tab 'FiiDii_OI' created.")
+        
+        # Clear the existing content in the sheet (if necessary)
         worksheet.clear()
+        
         # Update with the new data from DataFrame
         worksheet.update([df.columns.values.tolist()] + df.values.tolist())
         print("Data successfully uploaded to Google Sheets.")
+    
     except Exception as e:
         print(f"Error uploading to Google Sheets: {e}")
 
