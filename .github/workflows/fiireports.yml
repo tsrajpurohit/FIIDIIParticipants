@@ -1,0 +1,45 @@
+name: Run fiireports Script
+
+on:
+  schedule:
+    # Run every day at 10 PM IST, Monday to Friday
+    - cron: '0 4 * * 1-5'  # This cron schedule runs at 9:30 PM UTC, which is 10:00 PM IST, Monday to Friday
+  workflow_dispatch:  # Allows manual trigger of the workflow
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Install dependencies from requirements.txt
+
+      - name: Run script
+        env:
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}  # Ensure this matches the secret's name in GitHub
+        run: python fiidiiparticipants.py  # Ensure the path to the script is correct
+
+      - name: Commit and push any modified .csv files
+        run: |
+          # Add and commit all modified .csv files
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          
+          # Find all .csv files and add them to the commit
+          csv_files=$(find . -type f -name "*.csv")
+          
+          if [ -n "$csv_files" ]; then
+            git add $csv_files
+            git commit -m "Add or update CSV files"
+            git push
+          else
+            echo "No CSV files found. No changes to commit."
+          fi
