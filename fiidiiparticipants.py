@@ -10,6 +10,10 @@ import gspread
 from google.auth.transport.requests import Request
 from google.oauth2.service_account import Credentials
 from google.auth.exceptions import RefreshError
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Fetch credentials and Sheet ID from environment variables
 credentials_json = os.getenv('GOOGLE_SHEETS_CREDENTIALS')  # JSON string
@@ -34,24 +38,23 @@ async def fetch_data(session, url, date):
                 url_content = await response.read()
                 df = pd.read_csv(io.StringIO(url_content.decode('utf-8')), skiprows=1)
                 df['Date'] = date
-                
-                # Ensure consistent headers
-                expected_columns = ['Participant Type', 'Future Index Long', 'Future Index Short',
-                                    'Future Stock Long', 'Future Stock Short', 'Option Index Call Long',
-                                    'Option Index Put Long', 'Option Stock Call Long', 'Option Stock Put Long', 'Date']
+
+                # Standardize column headers
+                expected_columns = [
+                    'Participant Type', 'Future Index Long', 'Future Index Short',
+                    'Future Stock Long', 'Future Stock Short', 'Option Index Call Long',
+                    'Option Index Put Long', 'Option Stock Call Long', 'Option Stock Put Long', 'Date'
+                ]
                 df = df.reindex(columns=expected_columns, fill_value=0)  # Fill missing columns with 0
-                
-                print(f"Fetched data for {date.strftime('%d-%m-%Y')}:")
-                print(df.head())  # Debugging output
+
+                logging.info(f"Fetched data for {date.strftime('%d-%m-%Y')}")
                 return df
             else:
-                print(f"Error for {date.strftime('%d-%m-%Y')}: {response.status}")
+                logging.error(f"Error for {date.strftime('%d-%m-%Y')}: {response.status}")
                 return None
     except Exception as e:
-        print(f"Error fetching {date.strftime('%d-%m-%Y')}: {e}")
+        logging.error(f"Error fetching {date.strftime('%d-%m-%Y')}: {e}")
         return None
-
-
 
 # Main function to handle the asynchronous process
 async def main():
@@ -74,7 +77,12 @@ async def main():
         results = await asyncio.gather(*tasks)
 
     # Combine all the DataFrames
-    df = pd.concat([result for result in results if result is not None], ignore_index=True)
+    valid_results = [result for result in results if result is not None]
+    if not valid_results:
+        logging.warning("No valid data fetched. Exiting.")
+        return
+
+    df = pd.concat(valid_results, ignore_index=True)
     df['Date'] = pd.to_datetime(df['Date'])
 
     # Save the data to Google Sheets
@@ -83,50 +91,47 @@ async def main():
     # Save the data to a CSV file
     save_to_csv(df)
 
-    print(f"Data processing completed.")
+    logging.info("Data processing completed.")
 
 def upload_to_google_sheets(df):
     if df.empty:
-        print("DataFrame is empty. No data to upload.")
+        logging.warning("DataFrame is empty. No data to upload.")
         return
 
     try:
         # Open the Google Sheet by ID
         sheet = client.open_by_key(SHEET_ID)
-        
+
         # Check if the "FiiDii_OI" tab exists
         try:
             worksheet = sheet.worksheet("FiiDii_OI")
-            print("Tab 'FiiDii_OI' already exists.")
+            logging.info("Tab 'FiiDii_OI' already exists.")
         except gspread.exceptions.WorksheetNotFound:
             # If the tab doesn't exist, create it
             worksheet = sheet.add_worksheet(title="FiiDii_OI", rows="1000", cols="20")
-            print("Tab 'FiiDii_OI' created.")
+            logging.info("Tab 'FiiDii_OI' created.")
         
         # Clear the existing content in the sheet (if necessary)
         worksheet.clear()
-        
+
         # Debugging: Verify data structure
-        print("Uploading the following data:")
-        print(df.head())
-        
+        logging.info("Uploading the following data:")
+        logging.info(df.head())
+
         # Update with the new data from DataFrame
         worksheet.update([df.columns.values.tolist()] + df.values.tolist())
-        print("Data successfully uploaded to Google Sheets.")
-    
+        logging.info("Data successfully uploaded to Google Sheets.")
     except Exception as e:
-        print(f"Error uploading to Google Sheets: {e}")
-
-
+        logging.error(f"Error uploading to Google Sheets: {e}")
 
 def save_to_csv(df):
     try:
         # Save the DataFrame to a CSV file
         output_filename = 'fao_participant_oi_data.csv'
         df.to_csv(output_filename, index=False)
-        print(f"Data successfully saved to {output_filename}.")
+        logging.info(f"Data successfully saved to {output_filename}.")
     except Exception as e:
-        print(f"Error saving to CSV: {e}")
+        logging.error(f"Error saving to CSV: {e}")
 
 # Run the asynchronous main function
 asyncio.run(main())
