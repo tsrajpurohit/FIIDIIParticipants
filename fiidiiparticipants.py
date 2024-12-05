@@ -99,6 +99,10 @@ def upload_to_google_sheets(df):
         return
 
     try:
+        # Convert the Date column to a string format for Google Sheets compatibility
+        if 'Date' in df.columns:
+            df['Date'] = df['Date'].dt.strftime('%Y-%m-%d')  # ISO format: YYYY-MM-DD
+
         # Open the Google Sheet by ID
         sheet = client.open_by_key(SHEET_ID)
 
@@ -123,6 +127,7 @@ def upload_to_google_sheets(df):
         logging.info("Data successfully uploaded to Google Sheets.")
     except Exception as e:
         logging.error(f"Error uploading to Google Sheets: {e}")
+
 
 def save_to_csv(df):
     try:
