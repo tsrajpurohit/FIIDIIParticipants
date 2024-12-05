@@ -33,14 +33,15 @@ async def fetch_data(session, url, date):
             if response.status == 200:
                 url_content = await response.read()
                 df = pd.read_csv(io.StringIO(url_content.decode('utf-8')), skiprows=1)
-                df['Date'] = date  # Keep as `datetime.date`
-                print(f'Done for {date.strftime("%d-%m-%Y")}')
+                df['Date'] = date
+                print(f"Fetched data for {date.strftime('%d-%m-%Y')}:")
+                print(df.head())  # Print first few rows for debugging
                 return df
             else:
-                print(f'Error for {date.strftime("%d-%m-%Y")}: {response.status}')
+                print(f"Error for {date.strftime('%d-%m-%Y')}: {response.status}")
                 return None
     except Exception as e:
-        print(f'Error fetching {date.strftime("%d-%m-%Y")}: {e}')
+        print(f"Error fetching {date.strftime('%d-%m-%Y')}: {e}")
         return None
 
 
@@ -93,12 +94,17 @@ def upload_to_google_sheets(df):
         # Clear the existing content in the sheet (if necessary)
         worksheet.clear()
         
+        # Debugging: Verify data structure
+        print("Uploading the following data:")
+        print(df.head())
+        
         # Update with the new data from DataFrame
         worksheet.update([df.columns.values.tolist()] + df.values.tolist())
         print("Data successfully uploaded to Google Sheets.")
     
     except Exception as e:
         print(f"Error uploading to Google Sheets: {e}")
+
 
 def save_to_csv(df):
     try:
