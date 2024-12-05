@@ -33,7 +33,7 @@ async def fetch_data(session, url, date):
             if response.status == 200:
                 url_content = await response.read()
                 df = pd.read_csv(io.StringIO(url_content.decode('utf-8')), skiprows=1)
-                df['Date'] = date.strftime("%d-%m-%Y")
+                df['Date'] = date  # Keep as `datetime.date`
                 print(f'Done for {date.strftime("%d-%m-%Y")}')
                 return df
             else:
@@ -42,6 +42,7 @@ async def fetch_data(session, url, date):
     except Exception as e:
         print(f'Error fetching {date.strftime("%d-%m-%Y")}: {e}')
         return None
+
 
 # Main function to handle the asynchronous process
 async def main():
@@ -65,6 +66,7 @@ async def main():
 
     # Combine all the DataFrames
     df = pd.concat([result for result in results if result is not None], ignore_index=True)
+    df['Date'] = pd.to_datetime(df['Date'])
 
     # Save the data to Google Sheets
     upload_to_google_sheets(df)
