@@ -34,8 +34,15 @@ async def fetch_data(session, url, date):
                 url_content = await response.read()
                 df = pd.read_csv(io.StringIO(url_content.decode('utf-8')), skiprows=1)
                 df['Date'] = date
+                
+                # Ensure consistent headers
+                expected_columns = ['Participant Type', 'Future Index Long', 'Future Index Short',
+                                    'Future Stock Long', 'Future Stock Short', 'Option Index Call Long',
+                                    'Option Index Put Long', 'Option Stock Call Long', 'Option Stock Put Long', 'Date']
+                df = df.reindex(columns=expected_columns, fill_value=0)  # Fill missing columns with 0
+                
                 print(f"Fetched data for {date.strftime('%d-%m-%Y')}:")
-                print(df.head())  # Print first few rows for debugging
+                print(df.head())  # Debugging output
                 return df
             else:
                 print(f"Error for {date.strftime('%d-%m-%Y')}: {response.status}")
@@ -43,6 +50,7 @@ async def fetch_data(session, url, date):
     except Exception as e:
         print(f"Error fetching {date.strftime('%d-%m-%Y')}: {e}")
         return None
+
 
 
 # Main function to handle the asynchronous process
@@ -78,6 +86,10 @@ async def main():
     print(f"Data processing completed.")
 
 def upload_to_google_sheets(df):
+    if df.empty:
+        print("DataFrame is empty. No data to upload.")
+        return
+
     try:
         # Open the Google Sheet by ID
         sheet = client.open_by_key(SHEET_ID)
@@ -104,6 +116,7 @@ def upload_to_google_sheets(df):
     
     except Exception as e:
         print(f"Error uploading to Google Sheets: {e}")
+
 
 
 def save_to_csv(df):
