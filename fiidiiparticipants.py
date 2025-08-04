@@ -76,6 +76,11 @@ async def main():
 
 def upload_to_google_sheets(df):
     try:
+        # Clean the DataFrame to handle NaN, inf, and -inf
+        df_cleaned = df.copy()  # Create a copy to avoid modifying the original
+        df_cleaned = df_cleaned.replace([float('inf'), float('-inf')], None)  # Replace infinities with None
+        df_cleaned = df_cleaned.fillna(None)  # Replace NaN with None
+
         # Open the Google Sheet by ID
         sheet = client.open_by_key(SHEET_ID)
         
@@ -84,15 +89,17 @@ def upload_to_google_sheets(df):
             worksheet = sheet.worksheet("FiiDii_OI")
             print("Tab 'FiiDii_OI' already exists.")
         except gspread.exceptions.WorksheetNotFound:
-            # If the tab doesn't exist, create it
-            worksheet = sheet.add_worksheet(title="FiiDii_OI", rows="1000", cols="20")
+            # If the tab doesn't exist, create it with dynamic dimensions
+            rows = len(df_cleaned) + 1  # +1 for header
+            cols = len(df_cleaned.columns)
+            worksheet = sheet.add_worksheet(title="FiiDii_OI", rows=rows, cols=cols)
             print("Tab 'FiiDii_OI' created.")
         
-        # Clear the existing content in the sheet (if necessary)
+        # Clear the existing content in the sheet
         worksheet.clear()
         
-        # Update with the new data from DataFrame
-        worksheet.update([df.columns.values.tolist()] + df.values.tolist())
+        # Update with the cleaned data
+        worksheet.update([df_cleaned.columns.values.tolist()] + df_cleaned.values.tolist(), value_input_option='RAW')
         print("Data successfully uploaded to Google Sheets.")
     
     except Exception as e:
