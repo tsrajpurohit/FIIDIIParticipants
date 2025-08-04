@@ -3,7 +3,7 @@ name: Run fiireports Script
 on:
   schedule:
     # Run every day at 10 PM IST, Monday to Friday
-    - cron: '30 14 * * 1-5'  # 8:00 PM IST
+    - cron: '45 14 * * 1-5'  # 8:00 PM IST
 
   workflow_dispatch:  # Allows manual trigger of the workflow
 
