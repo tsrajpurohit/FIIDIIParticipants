@@ -76,10 +76,24 @@ async def main():
 
 def upload_to_google_sheets(df):
     try:
-        # Clean the DataFrame to handle NaN, inf, and -inf
-        df_cleaned = df.copy()  # Create a copy to avoid modifying the original
-        df_cleaned = df_cleaned.replace([float('inf'), float('-inf')], None)  # Replace infinities with None
-        df_cleaned = df_cleaned.fillna(None)  # Replace NaN with None
+        # Create a copy of the DataFrame to avoid modifying the original
+        df_cleaned = df.copy()
+
+        # Replace inf/-inf with None
+        df_cleaned = df_cleaned.replace([float('inf'), float('-inf')], None)
+
+        # Replace NaN with None explicitly
+        df_cleaned = df_cleaned.fillna(value=None)
+
+        # Verify data types to ensure JSON compliance
+        for col in df_cleaned.columns:
+            if df_cleaned[col].dtype == 'object':
+                # Convert object columns to string to avoid mixed types
+                df_cleaned[col] = df_cleaned[col].astype(str).replace('nan', None)
+            elif df_cleaned[col].dtype in ['float64', 'float32']:
+                # Ensure no remaining NaN/inf in numeric columns
+                if df_cleaned[col].isna().any() or df_cleaned[col].isin([float('inf'), float('-inf')]).any():
+                    print(f"Warning: Column {col} still contains NaN or inf after cleaning.")
 
         # Open the Google Sheet by ID
         sheet = client.open_by_key(SHEET_ID)
@@ -89,7 +103,7 @@ def upload_to_google_sheets(df):
             worksheet = sheet.worksheet("FiiDii_OI")
             print("Tab 'FiiDii_OI' already exists.")
         except gspread.exceptions.WorksheetNotFound:
-            # If the tab doesn't exist, create it with dynamic dimensions
+            # Create a new worksheet with dynamic dimensions
             rows = len(df_cleaned) + 1  # +1 for header
             cols = len(df_cleaned.columns)
             worksheet = sheet.add_worksheet(title="FiiDii_OI", rows=rows, cols=cols)
@@ -104,6 +118,11 @@ def upload_to_google_sheets(df):
     
     except Exception as e:
         print(f"Error uploading to Google Sheets: {e}")
+        # Log a sample of the DataFrame for debugging
+        print("Sample of cleaned DataFrame:")
+        print(df_cleaned.head())
+        print("Data types:")
+        print(df_cleaned.dtypes)
 
 def save_to_csv(df):
     try:
