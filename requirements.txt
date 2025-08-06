@@ -8,4 +8,4 @@ matplotlib>=3.5.0
 pytz
 python-dateutil
 requests
-googleapiclient
+google-api-python-client
