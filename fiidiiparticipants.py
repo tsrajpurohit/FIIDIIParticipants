@@ -56,7 +56,8 @@ async def main():
         tasks = []
         # Create tasks for each day's request between the start and end date
         while start_date <= end_date:
-            csv_url = f'https://archives.nseindia.com/content/nsccl/fao_participant_oi_{start_date.strftime("%d%m%Y")}.csv'
+            csv_url = f'https://nsearchives.nseindia.com/content/nsccl/fao_participant_oi_{start_date.strftime("%d%m%Y")}.csv'
+                       
             tasks.append(fetch_data(session, csv_url, start_date))
             start_date += delta
 
