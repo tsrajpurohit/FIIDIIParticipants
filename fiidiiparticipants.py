@@ -56,7 +56,14 @@ async def main():
         tasks = []
         # Create tasks for each day's request between the start and end date
         while start_date <= end_date:
-            csv_url = f'https://nsearchives.nseindia.com/content/nsccl/fao_participant_oi_{start_date.strftime("%d%m%Y")}.csv'
+            #csv_url = f'https://nsearchives.nseindia.com/content/nsccl/fao_participant_oi_{start_date.strftime("%d%m%Y")}.csv'
+            formatted_date = start_date.strftime("%d-%b-%Y")  # Format: 06-Aug-2025
+            csv_url = (
+                "https://www.nseindia.com/api/reports?"
+                "archives=%5B%7B%22name%22%3A%22F%26O%20-%20Participant%20wise%20Open%20Interest(csv)%22%2C"
+                "%22type%22%3A%22archives%22%2C%22category%22%3A%22derivatives%22%2C%22section%22%3A%22equity%22%7D%5D"
+                f"&date={formatted_date}&type=equity&mode=single"
+            )
                        
             tasks.append(fetch_data(session, csv_url, start_date))
             start_date += delta
