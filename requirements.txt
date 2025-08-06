@@ -4,4 +4,7 @@ pandas
 nsepython
 python-dotenv
 aiohttp
-matplotlib
+matplotlib>=3.5.0
+pytz
+python-dateutil
+requests
