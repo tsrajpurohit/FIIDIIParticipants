@@ -84,7 +84,7 @@ def upload_to_google_sheets(df):
     try:
         sheet = client.open_by_key(SHEET_ID)
         try:
-            worksheet = sheet.worksheet("FiiDii_OI")
+            worksheet = sheet.worksheet("FiiDii_OI_Row")
         except gspread.exceptions.WorksheetNotFound:
             worksheet = sheet.add_worksheet("FiiDii_OI", rows=str(len(df)+1), cols=str(len(df.columns)))
 
