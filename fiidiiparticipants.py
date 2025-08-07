@@ -86,7 +86,7 @@ def upload_to_google_sheets(df):
         try:
             worksheet = sheet.worksheet("FiiDii_OI_Row")
         except gspread.exceptions.WorksheetNotFound:
-            worksheet = sheet.add_worksheet("FiiDii_OI", rows=str(len(df)+1), cols=str(len(df.columns)))
+            worksheet = sheet.add_worksheet("FiiDii_OI_Row", rows=str(len(df)+1), cols=str(len(df.columns)))
 
         worksheet.clear()
         df_cleaned = df.replace([float('inf'), float('-inf')], None).fillna('')
