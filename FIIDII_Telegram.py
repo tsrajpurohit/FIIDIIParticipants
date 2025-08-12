@@ -16,7 +16,9 @@ load_dotenv()
 # Validate environment variables
 SERVICE_ACCOUNT_JSON = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
 TELEGRAM_BOT_TOKEN = "5814838708:AAGMVW2amDqFcdmNMEiAetu0cLlgtMl-Kf8"
-TELEGRAM_CHAT_ID = "-1002355806500"
+#TELEGRAM_CHAT_ID = "-1002355806500" #tewst
+TELEGRAM_CHAT_ID = "-1002387528979"  #indexpulse
+
 
 if not all([SERVICE_ACCOUNT_JSON, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID]):
     print("❌ Missing required environment variables. Ensure GOOGLE_APPLICATION_CREDENTIALS, TELEGRAM_BOT_TOKEN, and TELEGRAM_CHAT_ID are set in .env.")
