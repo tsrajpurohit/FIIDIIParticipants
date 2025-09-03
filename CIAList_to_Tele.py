@@ -43,6 +43,7 @@ except gspread.exceptions.SpreadsheetNotFound:
 
 COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K', 'BT']
 HEADERS = ["Timestamp", "Close", "Symbol", "ST", "Power", "CIA"]
+MAX_COL_WIDTH = 20  # Cap column width to reduce padding
 
 # Fetch column values
 def get_column_values(worksheet, col_letter):
@@ -75,7 +76,7 @@ def escape_markdown_v2(text):
 
 def send_telegram_message(text, chat_id, token):
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    max_length = 4000  # Slightly below 4096 to account for Markdown markers
+    max_length = 4000  # Slightly below 4096 to account for Markdown
     if len(text) <= max_length:
         payload = {"chat_id": chat_id, "text": f"```\n{text}\n```", "parse_mode": "MarkdownV2"}
         response = requests.post(url, data=payload)
@@ -85,14 +86,19 @@ def send_telegram_message(text, chat_id, token):
             print(f"❌ Failed to send message: {response.text}")
         return response.status_code == 200
     else:
-        # Split table into chunks
+        # Split into chunks based on estimated row length
         lines = text.split("\n")
         header_lines = lines[:2]  # Header and separator
         data_lines = lines[2:]
-        chunk_size = 50  # Adjust based on row length; estimate rows per chunk
+        # Estimate average row length (including separators)
+        avg_row_length = sum(len(line) for line in data_lines[:10]) / max(len(data_lines[:10]), 1) if data_lines else 1
+        chunk_size = max(1, int((max_length - len("\n".join(header_lines))) / max(avg_row_length, 1)))
+        print(f"📏 Estimated chunk size: {chunk_size} rows (avg row length: {avg_row_length:.1f} chars)")
+        
         for i in range(0, len(data_lines), chunk_size):
             chunk_lines = header_lines + data_lines[i:i + chunk_size]
             chunk_text = "\n".join(chunk_lines)
+            print(f"📤 Sending chunk {i//chunk_size + 1} with {len(chunk_lines)-2} rows ({len(chunk_text)} chars)")
             payload = {"chat_id": chat_id, "text": f"```\n{chunk_text}\n```", "parse_mode": "MarkdownV2"}
             response = requests.post(url, data=payload)
             if response.status_code != 200:
@@ -102,7 +108,7 @@ def send_telegram_message(text, chat_id, token):
         return True
 
 if filtered_rows:
-    col_widths = [len(h) for h in HEADERS]
+    col_widths = [min(len(h), MAX_COL_WIDTH) for h in HEADERS]
     for row in filtered_rows:
         for i, val in enumerate(row):
             if HEADERS[i] in ["ST", "Power"]:
@@ -110,7 +116,7 @@ if filtered_rows:
                     val = f"{float(val):.2f}"
                 except (ValueError, TypeError):
                     print(f"⚠️ Warning: Non-numeric value '{val}' in column {HEADERS[i]}")
-            col_widths[i] = max(col_widths[i], len(str(val)))
+            col_widths[i] = min(max(col_widths[i], len(str(val))), MAX_COL_WIDTH)
     
     header_line = " | ".join(h.ljust(col_widths[i]) for i, h in enumerate(HEADERS))
     separator = "-+-".join("-" * col_widths[i] for i in range(len(HEADERS)))
@@ -124,10 +130,13 @@ if filtered_rows:
                     val = f"{float(val):.2f}"
                 except (ValueError, TypeError):
                     pass
-            line_values.append(escape_markdown_v2(str(val)).ljust(col_widths[i]))
+            # Truncate long values
+            val_str = str(val)[:MAX_COL_WIDTH]
+            line_values.append(escape_markdown_v2(val_str).ljust(col_widths[i]))
         row_lines.append(" | ".join(line_values))
     
     table_text = "\n".join([header_line, separator] + row_lines)
+    print(f"📊 Total table size: {len(table_text)} characters, {len(filtered_rows)} rows")
     
     send_telegram_message(table_text, TELEGRAM_CHAT_ID, TELEGRAM_BOT_TOKEN)
 else:
