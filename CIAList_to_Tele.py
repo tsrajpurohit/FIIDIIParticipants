@@ -59,7 +59,10 @@ rows = list(zip(*columns_data))
 
 # ------------------ FILTER TODAY & BT=TRUE ------------------
 tz = pytz.timezone("Asia/Kolkata")
-today_str = datetime.now(tz).strftime("%Y-%m-%d")
+#today_str = datetime.now(tz).strftime("%Y-%m-%d")
+# Yesterday
+today_str = (datetime.now(tz) - timedelta(days=1)).strftime("%Y-%m-%d")
+
 
 filtered_rows = []
 for row in rows:
