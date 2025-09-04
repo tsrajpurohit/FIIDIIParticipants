@@ -41,7 +41,7 @@ except gspread.exceptions.SpreadsheetNotFound:
     print(f"❌ Spreadsheet with ID '{GSHEET_ID}' not found.")
     exit()
 
-COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K']
+COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K','BT']
 HEADERS = ["Timestamp", "Close", "Symbol", "ST", "Power"]
 MAX_COL_WIDTH = 20  # Cap column width to reduce padding
 
