@@ -41,8 +41,8 @@ except gspread.exceptions.SpreadsheetNotFound:
     print(f"❌ Spreadsheet with ID '{GSHEET_ID}' not found.")
     exit()
 
-COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K','BT']
-HEADERS = ["Timestamp", "Close", "Symbol", "ST", "Power",'CIA']
+COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K']
+HEADERS = ["Timestamp", "Close", "Symbol", "ST", "Power"]
 MAX_COL_WIDTH = 20  # Cap column width to reduce padding
 
 # Fetch column values
@@ -59,11 +59,9 @@ rows = list(zip(*columns_data))
 
 # ------------------ FILTER TODAY & BT=TRUE ------------------
 tz = pytz.timezone("Asia/Kolkata")
-#today_str = datetime.now(tz).strftime("%Y-%m-%d")
+today_str = datetime.now(tz).strftime("%Y-%m-%d")
 # Yesterday
-today_str = (datetime.now(tz) - timedelta(days=1)).strftime("%Y-%m-%d")
-
-
+#today_str = (datetime.now(tz) - timedelta(days=1)).strftime("%Y-%m-%d")
 filtered_rows = []
 for row in rows:
     *data, bt = row  # unpack: all data except last, then bt separately
