@@ -41,8 +41,8 @@ except gspread.exceptions.SpreadsheetNotFound:
     print(f"❌ Spreadsheet with ID '{GSHEET_ID}' not found.")
     exit()
 
-COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K']
-HEADERS = ["Timestamp", "Close", "Symbol", "ST", "Power"]
+COLUMNS_TO_SEND = ['A', 'E', 'G', 'H', 'K','BT']
+HEADERS = ["Timestamp", "Close", "Symbol", "ST", "Power",'CIA']
 MAX_COL_WIDTH = 20  # Cap column width to reduce padding
 
 # Fetch column values
@@ -64,11 +64,12 @@ tz = pytz.timezone("Asia/Kolkata")
 today_str = (datetime.now(tz) - timedelta(days=1)).strftime("%Y-%m-%d")
 
 
-#filtered_rows = []
-#for row in rows:
-    #timestamp, *rest, bt = row
-    #if timestamp.startswith(today_str) and bt.strip().upper() == "TRUE":
-       # filtered_rows.append(row)
+filtered_rows = []
+for row in rows:
+    *data, bt = row  # unpack: all data except last, then bt separately
+    timestamp = data[0]
+    if timestamp.startswith(today_str) and bt.strip().upper() == "TRUE":
+        filtered_rows.append(data)   # only keep data (exclude BT)
 
 # ------------------ FORMAT AS TABULAR TEXT ------------------
 def escape_markdown_v2(text):
