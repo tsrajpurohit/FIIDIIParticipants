@@ -114,27 +114,37 @@ def send_telegram_message(text, chat_id, token):
 # ------------------ FORMAT AS TABULAR TEXT ------------------
 if filtered_rows:
     # Auto-adjust column widths based on data length (with safe cap)
+    # Auto-adjust column widths based on data length (with safe cap)
     col_widths = []
     for i in range(len(HEADERS)):
-        max_len = max((len(str(row[i])) for row in filtered_rows), default=0)
-        max_len = min(max_len, 60)  # cap max column width to 60 chars
+        max_len = max(
+            (len(str(row[i])) for row in filtered_rows if len(row) > i),  # only if col exists
+            default=0
+        )
+        max_len = min(max_len, 60)  # cap max column width
         col_widths.append(max(max_len, len(HEADERS[i])))
+
 
     header_line = " | ".join(h.ljust(col_widths[i]) for i, h in enumerate(HEADERS))
     separator = "-+-".join("-" * col_widths[i] for i in range(len(HEADERS)))
 
     row_lines = []
     for row in filtered_rows:
-        line_values = []
-        for i, val in enumerate(row):
-            if HEADERS[i] in ["ST", "Power"]:
-                try:
-                    val = f"{float(val):.2f}"
-                except (ValueError, TypeError):
-                    pass
-            val_str = str(val)  # no truncation, we handle with col_widths
-            line_values.append(escape_markdown_v2(val_str).ljust(col_widths[i]))
-        row_lines.append(" | ".join(line_values))
+    line_values = []
+    for i in range(len(HEADERS)):
+        if i < len(row):
+            val = row[i]
+        else:
+            val = ""  # fill empty if row shorter
+        if HEADERS[i] in ["ST", "Power"]:
+            try:
+                val = f"{float(val):.2f}"
+            except (ValueError, TypeError):
+                pass
+        val_str = str(val)
+        line_values.append(escape_markdown_v2(val_str).ljust(col_widths[i]))
+    row_lines.append(" | ".join(line_values))
+
 
     table_text = "\n".join([header_line, separator] + row_lines)
     print(f"📊 Total table size: {len(table_text)} characters, {len(filtered_rows)} rows")
