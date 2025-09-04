@@ -64,11 +64,11 @@ tz = pytz.timezone("Asia/Kolkata")
 today_str = (datetime.now(tz) - timedelta(days=1)).strftime("%Y-%m-%d")
 
 
-filtered_rows = []
-for row in rows:
-    timestamp, *rest, bt = row
-    if timestamp.startswith(today_str) and bt.strip().upper() == "TRUE":
-        filtered_rows.append(row)
+#filtered_rows = []
+#for row in rows:
+    #timestamp, *rest, bt = row
+    #if timestamp.startswith(today_str) and bt.strip().upper() == "TRUE":
+       # filtered_rows.append(row)
 
 # ------------------ FORMAT AS TABULAR TEXT ------------------
 def escape_markdown_v2(text):
