@@ -1,12 +1,12 @@
 [
   [
     "Date",
-    "6-May-2026",
+    "7-May-2026",
     "",
     "FII Long/Short ",
     "Index (%)",
-    "13.44",
-    "86.56"
+    "13.75",
+    "86.25"
   ],
   [
     "",
@@ -20,8 +20,8 @@
   [
     "",
     "Stock Future",
-    "2964791",
-    "23765",
+    "3026067",
+    "61276",
     "Bought net",
     "Bullish",
     "100.00"
@@ -29,29 +29,29 @@
   [
     "Summary",
     "Index Future",
-    "130320",
-    "-11384",
-    "Sold net",
-    "Bearish",
-    "71.93"
+    "140145",
+    "9825",
+    "Bought net",
+    "Bullish",
+    "72.79"
   ],
   [
     "",
     "Index Call",
-    "31689",
-    "-183347",
-    "Sold net",
-    "Bearish",
-    "50.39"
+    "141265",
+    "109576",
+    "Bought net",
+    "Bullish",
+    "51.45"
   ],
   [
     "",
     "Index Put",
-    "-576738",
-    "67588",
-    "Bought net",
-    "Bearish",
-    "43.44"
+    "-720985",
+    "-144247",
+    "Sold net",
+    "Bullish",
+    "42.57"
   ],
   [],
   [
@@ -66,38 +66,38 @@
   [
     "",
     "Stock Future",
-    "4086060",
-    "26534",
-    "Bought net",
-    "Bullish",
+    "4074387",
+    "-11673",
+    "Sold net",
+    "Bearish",
     "100.00"
   ],
   [
     "Summary",
     "Index Future",
-    "-194595",
-    "3538",
-    "Bought net",
-    "Bullish",
-    "13.44"
+    "-195948",
+    "-1353",
+    "Sold net",
+    "Bearish",
+    "13.75"
   ],
   [
     "",
     "Index Call",
-    "-190420",
-    "17064",
-    "Bought net",
-    "Bullish",
-    "39.74"
+    "-256900",
+    "-66480",
+    "Sold net",
+    "Bearish",
+    "36.76"
   ],
   [
     "",
     "Index Put",
-    "356403",
-    "-25888",
-    "Sold net",
-    "Bullish",
-    "65.53"
+    "378186",
+    "21783",
+    "Bought net",
+    "Bearish",
+    "65.97"
   ],
   [],
   [
@@ -112,8 +112,8 @@
   [
     "",
     "Stock Future",
-    "867102",
-    "20828",
+    "867220",
+    "118",
     "Bought net",
     "Bullish",
     "100.00"
@@ -121,29 +121,29 @@
   [
     "Summary",
     "Index Future",
-    "28282",
-    "7206",
-    "Bought net",
-    "Bullish",
-    "65.17"
+    "18663",
+    "-9619",
+    "Sold net",
+    "Bearish",
+    "59.56"
   ],
   [
     "",
     "Index Call",
-    "157998",
-    "166069",
-    "Bought net",
-    "Bullish",
-    "55.17"
+    "114902",
+    "-43096",
+    "Sold net",
+    "Bearish",
+    "53.26"
   ],
   [
     "",
     "Index Put",
-    "154100",
-    "-42135",
-    "Sold net",
-    "Bullish",
-    "54.05"
+    "283765",
+    "129665",
+    "Bought net",
+    "Bearish",
+    "57.04"
   ],
   [],
   [
@@ -158,8 +158,8 @@
   [
     "",
     "Stock Future",
-    "295710",
-    "14357",
+    "303723",
+    "8013",
     "Bought net",
     "Bullish",
     "100.00"
@@ -167,28 +167,28 @@
   [
     "Summary",
     "Index Future",
-    "35993",
-    "640",
+    "37140",
+    "1147",
     "Bought net",
     "Bullish",
-    "65.68"
+    "66.36"
   ],
   [
     "",
     "Index Call",
     "732",
-    "214",
-    "Bought net",
-    "Bullish",
+    "0",
+    "Sold net",
+    "Bearish",
     "67.13"
   ],
   [
     "",
     "Index Put",
-    "66234",
-    "434",
-    "Bought net",
-    "Bearish",
-    "99.91"
+    "59034",
+    "-7200",
+    "Sold net",
+    "Bullish",
+    "99.90"
   ]
 ]
