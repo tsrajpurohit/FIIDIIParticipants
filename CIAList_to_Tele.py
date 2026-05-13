@@ -12,9 +12,9 @@ load_dotenv()
 
 SERVICE_ACCOUNT_JSON = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-TELEGRAM_CHAT_IDs = os.getenv("TELEGRAM_CHAT_IDs")
+TELEGRAM_CHAT_IDS = os.getenv("TELEGRAM_CHAT_IDS")
 
-if not all([SERVICE_ACCOUNT_JSON, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_IDs]):
+if not all([SERVICE_ACCOUNT_JSON, TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_IDS]):
     print("❌ Missing required environment variables. Exiting.")
     exit()
 
@@ -145,8 +145,8 @@ if filtered_rows:
     table_text = "\n".join([header_line, separator] + row_lines)
     print(f"📊 Total table size: {len(table_text)} characters, {len(filtered_rows)} rows")
 
-    send_telegram_message(table_text, TELEGRAM_CHAT_IDs, TELEGRAM_BOT_TOKEN)
+    send_telegram_message(table_text, TELEGRAM_CHAT_IDS, TELEGRAM_BOT_TOKEN)
 else:
-    send_telegram_message("No rows found for today with BT=TRUE", TELEGRAM_CHAT_IDs, TELEGRAM_BOT_TOKEN)
+    send_telegram_message("No rows found for today with BT=TRUE", TELEGRAM_CHAT_IDS, TELEGRAM_BOT_TOKEN)
     print("No rows found for today with BT=TRUE")
 
