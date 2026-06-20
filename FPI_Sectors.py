@@ -2,11 +2,12 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import time
-from datetime import datetime, timedelta
+import random
 import json
 import os
 import gspread
 from google.oauth2.service_account import Credentials
+from datetime import datetime, timedelta
 
 # =========================
 # CONFIG
@@ -17,13 +18,16 @@ TAB_NAME = "FPI_Sectors"
 BASE_URL = "https://www.fpi.nsdl.co.in/web/StaticReports/Fortnightly_Sector_wise_FII_Investment_Data/FIIInvestSector_"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36"
 }
 
 # =========================
 # GOOGLE SHEETS AUTH
 # =========================
 credentials_json = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
+
+if not credentials_json:
+    raise ValueError("GOOGLE_SHEETS_CREDENTIALS not set")
 
 creds = Credentials.from_service_account_info(
     json.loads(credentials_json),
@@ -35,40 +39,61 @@ client = gspread.authorize(creds)
 # =========================
 # DATE GENERATION
 # =========================
-def generate_nsdl_date_strings():
-    date_strings = []
-    current_date = datetime.now()
+def generate_dates():
+    dates = []
+    now = datetime.now()
 
     for i in range(370):
-        d = current_date - timedelta(days=i)
-        day = d.day
+        d = now - timedelta(days=i)
 
-        is_eom = (d + timedelta(days=1)).day == 1
+        is_month_end = (d + timedelta(days=1)).day == 1
 
-        if day == 15:
-            date_strings.append(d.strftime("%b15%Y"))
-        elif is_eom:
-            date_strings.append(d.strftime(f"%b{day}%Y"))
+        if d.day == 15:
+            dates.append(d.strftime("%b15%Y"))
+        elif is_month_end:
+            dates.append(d.strftime(f"%b{d.day}%Y"))
 
-    return list(dict.fromkeys(date_strings))[:24]
+    return list(dict.fromkeys(dates))[:24]
 
 # =========================
-# SCRAPING
+# SAFE REQUEST (IMPORTANT FIX)
 # =========================
-def download_fpi_data():
-    dates = generate_nsdl_date_strings()
-    frames = []
+def safe_get(url):
+    for attempt in range(3):
+        try:
+            res = requests.get(url, headers=HEADERS, timeout=15)
+
+            if res.status_code == 200:
+                return res
+
+        except Exception as e:
+            print(f"Retry {attempt+1}: {e}")
+            time.sleep(random.uniform(3, 6))
+
+    return None
+
+# =========================
+# SCRAPE DATA
+# =========================
+def fetch_data():
+    dates = generate_dates()
+    all_data = []
+
+    print(f"Total periods: {len(dates)}")
 
     for token in dates:
         url = f"{BASE_URL}{token}.html"
 
+        print(f"Fetching {token}")
+
+        response = safe_get(url)
+
+        if not response:
+            print(f"Skipped {token}")
+            continue
+
         try:
-            res = requests.get(url, headers=HEADERS, timeout=10)
-
-            if res.status_code != 200:
-                continue
-
-            soup = BeautifulSoup(res.text, "html.parser")
+            soup = BeautifulSoup(response.text, "html.parser")
             table = soup.find("table")
 
             if not table:
@@ -76,13 +101,12 @@ def download_fpi_data():
 
             rows = table.find_all("tr")
 
-            data = []
-            for tr in rows:
-                cols = [c.text.strip().replace(",", "") for c in tr.find_all("td")]
+            for r in rows:
+                cols = [c.text.strip().replace(",", "") for c in r.find_all("td")]
 
                 if len(cols) >= 3 and cols[0].isdigit():
                     try:
-                        data.append({
+                        all_data.append({
                             "Report_Date": token,
                             "Sector": cols[1],
                             "AUC_Cr": float(cols[2]) if cols[2].replace(".", "", 1).isdigit() else 0,
@@ -91,38 +115,30 @@ def download_fpi_data():
                     except:
                         pass
 
-            if data:
-                df = pd.DataFrame(data)
-                frames.append(df)
-                print(f"Downloaded {token}: {len(df)} rows")
-
-            time.sleep(1)
-
         except Exception as e:
-            print(f"Error {token}: {e}")
+            print(f"Error parsing {token}: {e}")
 
-    if frames:
-        return pd.concat(frames, ignore_index=True)
+        # 🔥 IMPORTANT: slow down requests (ANTI-BLOCK FIX)
+        time.sleep(random.uniform(3, 5))
 
-    return pd.DataFrame()
+    df = pd.DataFrame(all_data)
+    return df
 
 # =========================
 # CLEAN DATA
 # =========================
 def clean_df(df):
     df = df.copy()
-    df = df.fillna("")
 
-    # convert everything safe for Google Sheets
     for col in df.columns:
         df[col] = df[col].apply(lambda x: str(x))
 
-    return df
+    return df.fillna("")
 
 # =========================
-# UPLOAD TO SHEETS
+# UPLOAD TO GOOGLE SHEETS
 # =========================
-def upload_to_gsheet(df):
+def upload(df):
     sheet = client.open_by_key(SHEET_ID)
 
     try:
@@ -143,16 +159,18 @@ def upload_to_gsheet(df):
 # MAIN
 # =========================
 def main():
-    df = download_fpi_data()
+    df = fetch_data()
 
     if df.empty:
-        print("No data found")
+        print("No data fetched")
         return
 
-    df.to_csv("fpi_sectors.csv", index=False)
+    print(f"Total rows: {len(df)}")
+
+    df.to_csv("FPI_Sectors.csv", index=False)
     print("CSV saved")
 
-    upload_to_gsheet(df)
+    upload(df)
 
     print("DONE")
 
