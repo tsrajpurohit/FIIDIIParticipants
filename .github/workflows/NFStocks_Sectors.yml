@@ -1,4 +1,4 @@
-name: Run fiireports Script
+name: Run NFStocks_Sectors Script
 
 on:
   schedule:
