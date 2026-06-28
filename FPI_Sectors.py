@@ -66,44 +66,24 @@ def extract_latest_auc(url, report_date):
 
     target_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
 
-    # AUC
     auc_keep = [0, 1]
-    auc_names = ["Sr_No", "Sector"]
-
-    # Net Investment
     net_keep = [0, 1]
-    net_names = ["Sr_No", "Sector"]
-
-    equity_net_found = False
-    total_net_found = False
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
        
-        # AUC
         if target_str in col_text and "inr" in col_text and "usd" not in col_text:
             auc_keep.append(col_idx)
-            if "equity" in col_text:
-                auc_names.append("AUC_Equity_Cr")
-            elif "total" in col_text:
-                auc_names.append("AUC_Total_Cr")
-
-        # Net Investment
+        
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
             net_keep.append(col_idx)
-            if "equity" in col_text and not equity_net_found:
-                net_names.append("Net_Equity_Cr")
-                equity_net_found = True
-            elif "total" in col_text and not total_net_found:
-                net_names.append("Net_Total_Cr")
-                total_net_found = True
 
     # SAFE SLICING
     auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
-    auc_df.columns = auc_names[:len(auc_df.columns)]
+    auc_df.columns = ["Sr_No", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr"][:len(auc_df.columns)]
 
     net_df = data_rows.iloc[:, :len(net_keep)].copy()
-    net_df.columns = net_names[:len(net_df.columns)]
+    net_df.columns = ["Sr_No", "Sector", "Net_Equity_Cr", "Net_Total_Cr"][:len(net_df.columns)]
 
     # Clean
     for d in [auc_df, net_df]:
