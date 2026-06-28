@@ -1,14 +1,13 @@
 import io
 import json
 import os
-import random
-import re
-import time
-from datetime import datetime, timedelta
-import gspread
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
+from datetime import datetime
+import calendar
+import time
+import gspread
 from google.oauth2.service_account import Credentials
 
 # =========================
@@ -17,241 +16,161 @@ from google.oauth2.service_account import Credentials
 SHEET_ID = "1IUChF0UFKMqVLxTI69lXBi-g48f-oTYqI1K9miipKgY"
 TAB_NAME = "FPI_Sectors"
 
-BASE_URL = "https://www.fpi.nsdl.co.in/web/StaticReports/Fortnightly_Sector_wise_FII_Investment_Data/FIIInvestSector_"
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120 Safari/537.36"
-}
-
 # =========================
 # GOOGLE SHEETS AUTH
 # =========================
 credentials_json = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
-
 if not credentials_json:
-    raise ValueError("GOOGLE_SHEETS_CREDENTIALS not set")
+    raise ValueError("GOOGLE_SHEETS_CREDENTIALS environment variable not set!")
 
 creds = Credentials.from_service_account_info(
     json.loads(credentials_json),
-    scopes=["https://www.googleapis.com/auth/spreadsheets"],
+    scopes=["https://www.googleapis.com/auth/spreadsheets"]
 )
-
 client = gspread.authorize(creds)
 
-
-# =========================
-# DATE GENERATION
-# =========================
-def generate_dates():
-    dates = []
-    now = datetime.now()
-
-    for i in range(370):
-        d = now - timedelta(days=i)
-        is_month_end = (d + timedelta(days=1)).day == 1
-
-        if d.day == 15:
-            dates.append(d.strftime("%b15%Y"))
-        elif is_month_end:
-            dates.append(d.strftime(f"%b{d.day}%Y"))
-
-    return list(dict.fromkeys(dates))[:24]
-
-
-# =========================
-# SAFE REQUEST
-# =========================
-def safe_get(url):
-    for attempt in range(3):
-        try:
-            res = requests.get(url, headers=HEADERS, timeout=15)
-            if res.status_code == 200:
-                return res
-        except Exception as e:
-            print(f"Retry {attempt+1}: {e}")
-            time.sleep(random.uniform(3, 6))
-    return None
-
-
-# =========================
-# SCRAPE & PARSE DATA
-# =========================
-def fetch_data():
-    dates = generate_dates()
-    compiled_dfs = []
-
-    print(f"Total periods to process: {len(dates)}")
-
-    for token in dates:
-        url = f"{BASE_URL}{token}.html"
-        print(f"Fetching {token}...")
-
-        response = safe_get(url)
-        if not response:
-            print(f"Skipped {token}")
-            continue
-
-        try:
-            soup = BeautifulSoup(response.content, "html.parser")
-            table = soup.find("table")
-            if not table:
-                continue
-
-            # Parse structural raw table
-            html_stream = io.StringIO(str(table))
-            df = pd.read_html(html_stream, header=None)[0]
-
-            # Find data starting boundary
-            data_start_idx = None
-            for idx, row in df.iterrows():
-                val = str(row.iloc[0]).strip()
-                if val in ["1", "1.0"]:
-                    data_start_idx = idx
-                    break
-
-            if data_start_idx is None:
-                continue
-
-            header_rows = df.iloc[:data_start_idx]
-            data_rows = df.iloc[data_start_idx:].copy()
-
-            # =========================================================================
-            # STRICT URL-TO-HEADER MATCHING LOGIC
-            # =========================================================================
-            # 1. Parse date directly from token (e.g., 'June152026' or 'Jun152026')
-            # Handle both long and short month formats gracefully
-            match = re.search(r"([A-Za-z]+)(\d{2})(\d{4})", token)
-            if not match:
-                print(f"Could not parse date token layout for {token}")
-                continue
-                
-            month_str, day_str, year_str = match.groups()
-            
-            # Clean up known discrepancies (like turning 'June' -> 'Jun' or 'Sept' -> 'Sep')
-            cleaned_month = month_str[:3] 
-            
-            # Form standard target search structures
-            # Variant A: "auc as on jun 15, 2026"
-            target_auc_phrase_short = f"auc as on {cleaned_month} {day_str}, {year_str}".lower()
-            # Variant B: "auc as on june 15, 2026"
-            target_auc_phrase_long = f"auc as on {month_str} {day_str}, {year_str}".lower()
-
-            columns_to_keep = [1]  # Sector name column is always index 1
-            final_cols = ["Sector"]
-
-            # 2. Extract only columns matching our specific calculated phrases
-            for col_idx in range(2, len(df.columns)):
-                # Flatten the specific column's multi-row headers into one string
-                col_headers_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
-                
-                # Verify that it matches our target date string, and exclude USD data columns
-                is_target_date = (target_auc_phrase_short in col_headers_text) or (target_auc_phrase_long in col_headers_text)
-                
-                if is_target_date and "usd" not in col_headers_text:
-                    columns_to_keep.append(col_idx)
-                    
-                    # Dynamically name the column based on specific asset sub-headers
-                    if "equity" in col_headers_text:
-                        final_cols.append("AUC_Equity_Cr")
-                    elif "debt general" in col_headers_text:
-                        final_cols.append("AUC_Debt_General_Cr")
-                    elif "debt vrr" in col_headers_text:
-                        final_cols.append("AUC_Debt_VRR_Cr")
-                    elif "debt-far" in col_headers_text or "debt far" in col_headers_text:
-                        final_cols.append("AUC_Debt_FAR_Cr")
-                    elif "hybrid" in col_headers_text:
-                        final_cols.append("AUC_Hybrid_Cr")
-                    elif "solution oriented" in col_headers_text:
-                        final_cols.append("AUC_Debt_Solution_Oriented_Cr")
-                    elif "debt other" in col_headers_text:
-                        final_cols.append("AUC_Debt_Other_Cr")
-                    elif "aif" in col_headers_text:
-                        final_cols.append("AUC_AIF_Cr")
-                    elif "total" in col_headers_text:
-                        final_cols.append("AUC_Total_Cr")
-                    else:
-                        final_cols.append(f"AUC_Metric_Col_{col_idx}_Cr")
-
-            # Validate that columns matching our calculated criteria were found
-            if len(columns_to_keep) <= 1:
-                print(f"Warning: No matching columns found for target criteria: '{target_auc_phrase_short}' on {token}")
-                continue
-
-            # Slice out the target data columns
-            processed_df = data_rows[columns_to_keep].copy()
-            processed_df.columns = final_cols
-
-            # Clean rows structural metadata markers
-            processed_df = processed_df[processed_df["Sector"].notna()]
-            processed_df = processed_df[
-                ~processed_df["Sector"].str.contains(
-                    "Sectors|Total|Grand Total", case=False, na=False
-                )
-            ]
-
-            # Inject the standard historical meta tracking date key
-            processed_df.insert(0, "Report_Date", token)
-
-            # Clear individual row index collisions entirely
-            processed_df.reset_index(drop=True, inplace=True)
-
-            compiled_dfs.append(processed_df)
-
-        except Exception as e:
-            print(f"Error parsing date token {token}: {e}")
-
-        # Throttling API limit defense cooldown
-        time.sleep(random.uniform(3, 5))
-
-    if compiled_dfs:
-        return pd.concat(compiled_dfs, ignore_index=True)
-    return pd.DataFrame()
-
-
-# =========================
-# CLEAN DATA
-# =========================
-def clean_df(df):
-    df = df.copy()
-    for col in df.columns:
-        df[col] = df[col].apply(lambda x: str(x))
-    return df.fillna("")
-
-
-# =========================
-# UPLOAD TO GOOGLE SHEETS
-# =========================
-def upload(df):
-    sheet = client.open_by_key(SHEET_ID)
+# ================== EXTRACTION FUNCTION ==================
+def extract_latest_auc(url, report_date):
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
     try:
-        ws = sheet.worksheet(TAB_NAME)
-        ws.clear()
-    except Exception:
-        ws = sheet.add_worksheet(TAB_NAME, rows="10000", cols="15")
+        response = requests.get(url, headers=headers, timeout=20)
+        response.raise_for_status()
+    except Exception as e:
+        print(f"Failed to fetch {url}: {e}")
+        return None
 
-    df = clean_df(df)
-    values = [df.columns.tolist()] + df.values.tolist()
-    ws.update("A1", values, value_input_option="RAW")
-    print("Uploaded to Google Sheets successfully.")
+    soup = BeautifulSoup(response.content, "html.parser")
+    table = soup.find("table")
+    if not table:
+        print(f"No table found on {url}")
+        return None
+
+    html_stream = io.StringIO(str(table))
+    df = pd.read_html(html_stream, header=None)[0]
+
+    data_start_idx = None
+    for idx, row in df.iterrows():
+        val = str(row.iloc[0]).strip()
+        if val in ["1", "1.0"]:
+            data_start_idx = idx
+            break
+
+    if data_start_idx is None:
+        print("Could not find data rows")
+        return None
+
+    header_rows = df.iloc[:data_start_idx]
+    data_rows = df.iloc[data_start_idx:].copy()
+
+    target_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
+
+    columns_to_keep = [0, 1]
+    final_cols = ["Sr_No", "Sector"]
+
+    equity_count = 0
+    total_count = 0
+
+    for col_idx in range(2, len(df.columns)):
+        col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
+        
+        if target_str in col_text and "inr" in col_text and "usd" not in col_text:
+            columns_to_keep.append(col_idx)
+            
+            if "equity" in col_text:
+                equity_count += 1
+                final_cols.append("AUC_Equity_Cr" if equity_count == 1 else f"AUC_Equity_Cr_{equity_count}")
+            elif "total" in col_text:
+                total_count += 1
+                final_cols.append("AUC_Total_Cr" if total_count == 1 else f"AUC_Total_Cr_{total_count}")
+            else:
+                final_cols.append(f"AUC_Col_{col_idx}")
+
+    processed_df = data_rows[columns_to_keep].copy()
+    processed_df.columns = final_cols[:len(processed_df.columns)]
+
+    processed_df = processed_df[processed_df["Sector"].notna()]
+    processed_df = processed_df[~processed_df["Sector"].str.contains("Sectors|Total|Grand Total", case=False, na=False)]
+    processed_df.reset_index(drop=True, inplace=True)
+
+    processed_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
+    return processed_df
 
 
-# =========================
-# MAIN EXECUTION ROUTINE
-# =========================
-def main():
-    df = fetch_data()
-
-    if df.empty:
-        print("No data fetched.")
-        return
-
-    print(f"Total rows aggregated: {len(df)}")
-    df.to_csv("FPI_Sectors.csv", index=False)
-    print("CSV saved local cache.")
-
-    upload(df)
-    print("All tasks completed successfully.")
+# ================== HELPERS ==================
+def get_nsdl_month_name(dt):
+    full = dt.strftime("%B")
+    return full if full in ["June", "July"] else dt.strftime("%b")
 
 
+def generate_dates_last_12_months():
+    dates = []
+    today = datetime.now()
+    current = today.replace(day=1)
+    for _ in range(14):
+        dates.append(current.replace(day=15))
+        last_day = calendar.monthrange(current.year, current.month)[1]
+        dates.append(current.replace(day=last_day))
+        
+        if current.month == 1:
+            current = current.replace(year=current.year-1, month=12, day=1)
+        else:
+            current = current.replace(month=current.month-1, day=1)
+    return sorted(set(dates), reverse=True)[:26]
+
+
+# ================== MAIN ==================
 if __name__ == "__main__":
-    main()
+    print("Starting FII AUC Downloader → Google Sheets...\n")
+    report_dates = generate_dates_last_12_months()
+    
+    all_data = []
+    base_url = "https://www.fpi.nsdl.co.in/web/StaticReports/Fortnightly_Sector_wise_FII_Investment_Data/FIIInvestSector_{}.html"
+
+    for report_date in report_dates:
+        month_str = get_nsdl_month_name(report_date)
+        day_str = f"{report_date.day:02d}"
+        filename = f"{month_str}{day_str}{report_date.year}"
+        url = base_url.format(filename)
+        
+        print(f"Fetching: {report_date.strftime('%Y-%m-%d')} → {filename}")
+        df = extract_latest_auc(url, report_date)
+        
+        if df is not None and not df.empty:
+            all_data.append(df)
+            print(f"  ✓ Success: {len(df)} sectors")
+        else:
+            print("  ✗ Failed")
+        time.sleep(1.2)
+
+    if all_data:
+        final_df = pd.concat(all_data, ignore_index=True)
+        
+        # Keep only desired columns
+        desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr"]
+        final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
+        
+        final_df = final_df.sort_values(by=["Report_Date", "Sector"]).reset_index(drop=True)
+
+        # === SAVE TO GOOGLE SHEETS ===
+        try:
+            sheet = client.open_by_key(SHEET_ID)
+            worksheet = sheet.worksheet(TAB_NAME)
+            
+            # Clear existing data (optional)
+            worksheet.clear()
+            
+            # Write new data including headers
+            worksheet.update([final_df.columns.values.tolist()] + final_df.values.tolist())
+            
+            print(f"\n✅ SUCCESS! Data uploaded to Google Sheet")
+            print(f"Sheet: {SHEET_ID} | Tab: {TAB_NAME}")
+            print(f"Total Rows: {len(final_df)}")
+            
+        except Exception as e:
+            print(f"Google Sheets upload failed: {e}")
+            print("Saving to CSV instead...")
+            final_df.to_csv("fii_auc_sector_last_12months.csv", index=False)
+    else:
+        print("No data collected.")
