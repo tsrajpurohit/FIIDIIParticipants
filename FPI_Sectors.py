@@ -29,7 +29,7 @@ creds = Credentials.from_service_account_info(
 )
 client = gspread.authorize(creds)
 
-# ================== EXTRACTION FUNCTION (AUC + NET) ==================
+# ================== EXTRACTION FUNCTION ==================
 def extract_latest_auc(url, report_date):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
@@ -66,15 +66,16 @@ def extract_latest_auc(url, report_date):
 
     target_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
 
+    # AUC columns
     columns_to_keep = [0, 1]
     final_cols = ["Sr_No", "Sector"]
 
-    equity_count = 0
-    total_count = 0
-
-    # For Net Investment (latest period)
+    # Net Investment columns (only latest one)
     net_columns_to_keep = [0, 1]
     net_final_cols = ["Sr_No", "Sector"]
+
+    equity_net_found = False
+    total_net_found = False
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
@@ -83,29 +84,26 @@ def extract_latest_auc(url, report_date):
         if target_str in col_text and "inr" in col_text and "usd" not in col_text:
             columns_to_keep.append(col_idx)
             if "equity" in col_text:
-                equity_count += 1
-                final_cols.append("AUC_Equity_Cr" if equity_count == 1 else f"AUC_Equity_Cr_{equity_count}")
+                final_cols.append("AUC_Equity_Cr")
             elif "total" in col_text:
-                total_count += 1
-                final_cols.append("AUC_Total_Cr" if total_count == 1 else f"AUC_Total_Cr_{total_count}")
+                final_cols.append("AUC_Total_Cr")
             else:
                 final_cols.append(f"AUC_Col_{col_idx}")
 
-        # Net Investment (latest fortnight)
+        # Net Investment - take only first (latest) occurrence
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
             net_columns_to_keep.append(col_idx)
-            if "equity" in col_text:
+            if "equity" in col_text and not equity_net_found:
                 net_final_cols.append("Net_Equity_Cr")
-            elif "total" in col_text:
+                equity_net_found = True
+            elif "total" in col_text and not total_net_found:
                 net_final_cols.append("Net_Total_Cr")
-            else:
-                net_final_cols.append(f"Net_Col_{col_idx}")
+                total_net_found = True
 
-    # AUC DataFrame
+    # Create DataFrames
     auc_df = data_rows[columns_to_keep].copy()
     auc_df.columns = final_cols[:len(auc_df.columns)]
 
-    # Net Investment DataFrame
     net_df = data_rows[net_columns_to_keep].copy()
     net_df.columns = net_final_cols[:len(net_df.columns)]
 
@@ -118,7 +116,7 @@ def extract_latest_auc(url, report_date):
     auc_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
     net_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
 
-    # Merge AUC + Net
+    # Merge
     final_df = pd.merge(auc_df, net_df.drop(columns=['Sr_No'], errors='ignore'), 
                        on=['Report_Date', 'Sector'], how='left')
 
@@ -144,12 +142,12 @@ def generate_dates_last_12_months():
             current = current.replace(year=current.year-1, month=12, day=1)
         else:
             current = current.replace(month=current.month-1, day=1)
-    return sorted(set(dates), reverse=True)[:26]
+    return sorted(set(dates), reverse=True)[:6]
 
 
 # ================== MAIN ==================
 if __name__ == "__main__":
-    print("Starting FII AUC + Net Investment Downloader → Google Sheets...\n")
+    print("Starting FII AUC + Net Investment Downloader...\n")
     report_dates = generate_dates_last_12_months()
    
     all_data = []
@@ -174,7 +172,7 @@ if __name__ == "__main__":
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
        
-        # Keep desired columns
+        # Final clean columns
         desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr", 
                        "Net_Equity_Cr", "Net_Total_Cr"]
         final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
@@ -185,7 +183,6 @@ if __name__ == "__main__":
         final_df["Report_Date"] = final_df["Report_Date"].dt.strftime("%Y-%m-%d")
         final_df = final_df.reset_index(drop=True)
 
-        # Save to Google Sheets
         try:
             sheet = client.open_by_key(SHEET_ID)
             worksheet = sheet.worksheet(TAB_NAME)
@@ -199,6 +196,5 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"Google Sheets upload failed: {e}")
             final_df.to_csv("fii_auc_sector_last_12months.csv", index=False)
-            print("Saved to CSV backup.")
     else:
         print("No data collected.")
