@@ -173,6 +173,10 @@ def fetch_data():
 
             # Inject the standard historical meta tracking date key
             processed_df.insert(0, "Report_Date", token)
+
+            # 🔥 FIX: Reset individual dataframe index before stacking
+            processed_df.reset_index(drop=True, inplace=True)
+
             compiled_dfs.append(processed_df)
 
         except Exception as e:
