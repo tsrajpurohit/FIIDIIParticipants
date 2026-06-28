@@ -111,9 +111,9 @@ def extract_fpi_data(url, report_date):
 # Rest of the helpers and main remain the same as previous version...
 # (I kept it short here - use the full main from previous response)
 
-# ================== MAIN (same as before) ==================
+# ================== MAIN ==================
 if __name__ == "__main__":
-    print("Starting FII AUC Downloader → Google Sheets (Newest to Oldest)...\n")
+    print("Starting FII Sector Data Download...\n")
     report_dates = generate_dates_last_12_months()
     
     all_data = []
@@ -126,46 +126,38 @@ if __name__ == "__main__":
         url = base_url.format(filename)
         
         print(f"Fetching: {report_date.strftime('%Y-%m-%d')} → {filename}")
-        df = extract_latest_auc(url, report_date)
+        df = extract_fpi_data(url, report_date)
         
         if df is not None and not df.empty:
             all_data.append(df)
             print(f"  ✓ Success: {len(df)} sectors")
         else:
             print("  ✗ Failed")
-        time.sleep(1.2)
+        time.sleep(1.3)
 
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
         
-        # Keep only desired columns
-        desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr"]
-        final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
+        desired = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr", 
+                  "Net_Equity_Cr", "Net_Total_Cr"]
+        final_df = final_df[[col for col in desired if col in final_df.columns]]
         
-        # Sort: Newest to Oldest
         final_df["Report_Date"] = pd.to_datetime(final_df["Report_Date"])
-        final_df = final_df.sort_values(by=["Report_Date", "Sector"], ascending=[False, True])
+        final_df = final_df.sort_values(by="Report_Date", ascending=False)
         final_df["Report_Date"] = final_df["Report_Date"].dt.strftime("%Y-%m-%d")
-        
         final_df = final_df.reset_index(drop=True)
 
-        # === SAVE TO GOOGLE SHEETS ===
+        # Upload to Google Sheets
         try:
             sheet = client.open_by_key(SHEET_ID)
             worksheet = sheet.worksheet(TAB_NAME)
-            
             worksheet.clear()
-            
-            # Upload with headers
             worksheet.update([final_df.columns.values.tolist()] + final_df.values.tolist())
             
-            print(f"\n✅ SUCCESS! Data uploaded to Google Sheet (Newest → Oldest)")
-            print(f"Sheet ID: {SHEET_ID} | Tab: {TAB_NAME}")
-            print(f"Total Rows: {len(final_df)}")
-            
+            print(f"\n✅ SUCCESS! Uploaded {len(final_df)} rows to Google Sheet")
+            print(f"Tab: {TAB_NAME}")
         except Exception as e:
-            print(f"Google Sheets upload failed: {e}")
-            print("Saving to CSV as backup...")
-            final_df.to_csv("fii_auc_sector_last_12months.csv", index=False)
+            print(f"Google Sheets failed: {e}")
+            final_df.to_csv("fii_auc_net.csv", index=False)
     else:
         print("No data collected.")
