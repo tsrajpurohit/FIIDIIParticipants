@@ -29,7 +29,7 @@ creds = Credentials.from_service_account_info(
 )
 client = gspread.authorize(creds)
 
-# ================== MAIN EXTRACTION FUNCTION ==================
+# ================== EXTRACTION FUNCTION ==================
 def extract_fpi_data(url, report_date):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     try:
@@ -63,40 +63,45 @@ def extract_fpi_data(url, report_date):
 
     target_auc_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
 
-    auc_cols = [0, 1]   # Sr_No, Sector
+    # Collect AUC columns
+    auc_keep = [0, 1]
     auc_names = ["Sr_No", "Sector"]
-    net_cols = [0, 1]
-    net_names = ["Sr_No", "Sector"]
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
-
-        # AUC (Latest)
+        
         if target_auc_str in col_text and "inr" in col_text and "usd" not in col_text:
-            auc_cols.append(col_idx)
+            auc_keep.append(col_idx)
             if "equity" in col_text:
                 auc_names.append("AUC_Equity_Cr")
             elif "total" in col_text:
                 auc_names.append("AUC_Total_Cr")
+            else:
+                auc_names.append(f"AUC_Col_{col_idx}")
 
-        # Net Investment (Latest period - usually the one just before AUC)
+    # Create AUC DataFrame safely
+    auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
+    auc_df.columns = auc_names[:len(auc_df.columns)]
+
+    # Net Investment (latest period)
+    net_keep = [0, 1]
+    net_names = ["Sr_No", "Sector"]
+
+    for col_idx in range(2, len(df.columns)):
+        col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
-            # Take the rightmost / latest net investment block
-            net_cols.append(col_idx)
+            net_keep.append(col_idx)
             if "equity" in col_text:
                 net_names.append("Net_Equity_Cr")
             elif "total" in col_text:
                 net_names.append("Net_Total_Cr")
+            else:
+                net_names.append(f"Net_Col_{col_idx}")
 
-    # Process AUC
-    auc_df = data_rows[auc_cols].copy()
-    auc_df.columns = auc_names[:len(auc_df.columns)]
-
-    # Process Net Investment
-    net_df = data_rows[net_cols].copy()
+    net_df = data_rows.iloc[:, :len(net_keep)].copy()
     net_df.columns = net_names[:len(net_df.columns)]
 
-    # Clean both
+    # Clean
     for d in [auc_df, net_df]:
         d = d[d["Sector"].notna()]
         d = d[~d["Sector"].str.contains("Sectors|Total|Grand Total", case=False, na=False)]
@@ -104,10 +109,10 @@ def extract_fpi_data(url, report_date):
 
     auc_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
     net_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
-    net_df["Net_Period"] = f"Net Investment {report_date.strftime('%B %d, %Y')}"
 
-    # Merge AUC + Net
-    final = pd.merge(auc_df, net_df.drop(columns=['Sr_No']), on=['Report_Date', 'Sector'], how='left')
+    # Merge
+    final = pd.merge(auc_df, net_df.drop(columns=['Sr_No'], errors='ignore'), 
+                    on=['Report_Date', 'Sector'], how='left')
     return final
 
 
@@ -129,12 +134,12 @@ def generate_dates_last_12_months():
             current = current.replace(year=current.year-1, month=12, day=1)
         else:
             current = current.replace(month=current.month-1, day=1)
-    return sorted(set(dates), reverse=True)[:26]
+    return sorted(set(dates), reverse=True)[:6]
 
 
 # ================== MAIN ==================
 if __name__ == "__main__":
-    print("Downloading FII Sector Data (AUC + Net Investment) → Google Sheets...\n")
+    print("Starting FII Sector Data Download...\n")
     report_dates = generate_dates_last_12_months()
     
     all_data = []
@@ -159,12 +164,10 @@ if __name__ == "__main__":
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
         
-        # Final columns
         desired = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr", 
-                  "Net_Equity_Cr", "Net_Total_Cr", "Net_Period"]
+                  "Net_Equity_Cr", "Net_Total_Cr"]
         final_df = final_df[[col for col in desired if col in final_df.columns]]
         
-        # Newest to Oldest
         final_df["Report_Date"] = pd.to_datetime(final_df["Report_Date"])
         final_df = final_df.sort_values(by="Report_Date", ascending=False)
         final_df["Report_Date"] = final_df["Report_Date"].dt.strftime("%Y-%m-%d")
@@ -175,15 +178,12 @@ if __name__ == "__main__":
             sheet = client.open_by_key(SHEET_ID)
             worksheet = sheet.worksheet(TAB_NAME)
             worksheet.clear()
-            
             worksheet.update([final_df.columns.values.tolist()] + final_df.values.tolist())
             
-            print(f"\n✅ UPLOADED TO GOOGLE SHEETS!")
-            print(f"Tab: {TAB_NAME} | Rows: {len(final_df)}")
-            
+            print(f"\n✅ SUCCESS! Uploaded {len(final_df)} rows to Google Sheet")
+            print(f"Tab: {TAB_NAME}")
         except Exception as e:
-            print(f"Google Sheets error: {e}")
-            final_df.to_csv("fii_auc_net_last_12months.csv", index=False)
-            print("Saved to CSV backup instead.")
+            print(f"Google Sheets failed: {e}")
+            final_df.to_csv("fii_auc_net.csv", index=False)
     else:
         print("No data collected.")
