@@ -2,6 +2,7 @@ import io
 import json
 import os
 import random
+import re
 import time
 from datetime import datetime, timedelta
 import gspread
@@ -100,7 +101,7 @@ def fetch_data():
             html_stream = io.StringIO(str(table))
             df = pd.read_html(html_stream, header=None)[0]
 
-            # Find data starting boundary (row where row number markers begin)
+            # Find data starting boundary
             data_start_idx = None
             for idx, row in df.iterrows():
                 val = str(row.iloc[0]).strip()
@@ -115,25 +116,41 @@ def fetch_data():
             data_rows = df.iloc[data_start_idx:].copy()
 
             # =========================================================================
-            # DYNAMIC LATEST-COLUMN FINDER (NO HARDCODED INDEXES)
+            # STRICT URL-TO-HEADER MATCHING LOGIC
             # =========================================================================
-            # 1. Identify the label of the very last column in the top header row
-            # Due to colspans, this text will span across all current AUC columns
-            latest_auc_label = str(header_rows.iloc[0].iloc[-1]).strip().lower()
+            # 1. Parse date directly from token (e.g., 'June152026' or 'Jun152026')
+            # Handle both long and short month formats gracefully
+            match = re.search(r"([A-Za-z]+)(\d{2})(\d{4})", token)
+            if not match:
+                print(f"Could not parse date token layout for {token}")
+                continue
+                
+            month_str, day_str, year_str = match.groups()
+            
+            # Clean up known discrepancies (like turning 'June' -> 'Jun' or 'Sept' -> 'Sep')
+            cleaned_month = month_str[:3] 
+            
+            # Form standard target search structures
+            # Variant A: "auc as on jun 15, 2026"
+            target_auc_phrase_short = f"auc as on {cleaned_month} {day_str}, {year_str}".lower()
+            # Variant B: "auc as on june 15, 2026"
+            target_auc_phrase_long = f"auc as on {month_str} {day_str}, {year_str}".lower()
 
             columns_to_keep = [1]  # Sector name column is always index 1
             final_cols = ["Sector"]
 
-            # 2. Iterate through columns and capture only those matching the latest label
+            # 2. Extract only columns matching our specific calculated phrases
             for col_idx in range(2, len(df.columns)):
-                # Flatten the specific column's headers to check for text markers
+                # Flatten the specific column's multi-row headers into one string
                 col_headers_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
                 
-                # Check if it belongs to the latest AUC segment and filter out USD counterparts
-                if latest_auc_label in col_headers_text and "usd" not in col_headers_text:
+                # Verify that it matches our target date string, and exclude USD data columns
+                is_target_date = (target_auc_phrase_short in col_headers_text) or (target_auc_phrase_long in col_headers_text)
+                
+                if is_target_date and "usd" not in col_headers_text:
                     columns_to_keep.append(col_idx)
                     
-                    # Dynamically name the column based on subheader contents
+                    # Dynamically name the column based on specific asset sub-headers
                     if "equity" in col_headers_text:
                         final_cols.append("AUC_Equity_Cr")
                     elif "debt general" in col_headers_text:
@@ -154,6 +171,11 @@ def fetch_data():
                         final_cols.append("AUC_Total_Cr")
                     else:
                         final_cols.append(f"AUC_Metric_Col_{col_idx}_Cr")
+
+            # Validate that columns matching our calculated criteria were found
+            if len(columns_to_keep) <= 1:
+                print(f"Warning: No matching columns found for target criteria: '{target_auc_phrase_short}' on {token}")
+                continue
 
             # Slice out the target data columns
             processed_df = data_rows[columns_to_keep].copy()
@@ -182,7 +204,6 @@ def fetch_data():
         time.sleep(random.uniform(3, 5))
 
     if compiled_dfs:
-        # Combine all processed snapshots together
         return pd.concat(compiled_dfs, ignore_index=True)
     return pd.DataFrame()
 
