@@ -161,7 +161,19 @@ def fetch_data():
 
             # Slice and construct clean localized segment
             processed_df = data_rows[columns_to_keep].copy()
-            processed_df.columns = final_cols
+
+            # 🔥 FIX: Handle duplicate column names dynamically
+            unique_cols = []
+            col_counts = {}
+            for col in final_cols:
+                if col in col_counts:
+                    col_counts[col] += 1
+                    unique_cols.append(f"{col}_{col_counts[col]}")
+                else:
+                    col_counts[col] = 1
+                    unique_cols.append(col)
+
+            processed_df.columns = unique_cols
 
             # Clean rows structural metadata markers
             processed_df = processed_df[processed_df["Sector"].notna()]
@@ -174,7 +186,7 @@ def fetch_data():
             # Inject the standard historical meta tracking date key
             processed_df.insert(0, "Report_Date", token)
 
-            # 🔥 FIX: Reset individual dataframe index before stacking
+            # Reset row index
             processed_df.reset_index(drop=True, inplace=True)
 
             compiled_dfs.append(processed_df)
@@ -186,6 +198,7 @@ def fetch_data():
         time.sleep(random.uniform(3, 5))
 
     if compiled_dfs:
+        # Columns are now guaranteed unique per dataframe, preventing InvalidIndexError
         return pd.concat(compiled_dfs, ignore_index=True)
     return pd.DataFrame()
 
