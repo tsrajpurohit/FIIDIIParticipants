@@ -67,42 +67,45 @@ def extract_latest_auc(url, report_date):
     target_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
 
     # AUC
-    auc_keep = [0, 1]
-    auc_names = ["Sr_No", "Sector"]
+    columns_to_keep = [0, 1]
+    final_cols = ["Sr_No", "Sector"]
 
-    # Net Investment
-    net_keep = [0, 1]
-    net_names = ["Sr_No", "Sector"]
+    # Net Investment (only latest)
+    net_columns_to_keep = [0, 1]
+    net_final_cols = ["Sr_No", "Sector"]
+
+    equity_net_found = False
+    total_net_found = False
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
        
         # AUC
         if target_str in col_text and "inr" in col_text and "usd" not in col_text:
-            auc_keep.append(col_idx)
+            columns_to_keep.append(col_idx)
             if "equity" in col_text:
-                auc_names.append("AUC_Equity_Cr")
+                final_cols.append("AUC_Equity_Cr")
             elif "total" in col_text:
-                auc_names.append("AUC_Total_Cr")
+                final_cols.append("AUC_Total_Cr")
             else:
-                auc_names.append(f"AUC_Col_{col_idx}")
+                final_cols.append(f"AUC_Col_{col_idx}")
 
-        # Net Investment (only latest)
+        # Net Investment - take only the latest one
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
-            net_keep.append(col_idx)
-            if "equity" in col_text:
-                net_names.append("Net_Equity_Cr")
-            elif "total" in col_text:
-                net_names.append("Net_Total_Cr")
-            else:
-                net_names.append(f"Net_Col_{col_idx}")
+            net_columns_to_keep.append(col_idx)
+            if "equity" in col_text and not equity_net_found:
+                net_final_cols.append("Net_Equity_Cr")
+                equity_net_found = True
+            elif "total" in col_text and not total_net_found:
+                net_final_cols.append("Net_Total_Cr")
+                total_net_found = True
 
-    # SAFE CREATION
-    auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
-    auc_df.columns = auc_names[:len(auc_df.columns)]
+    # Create DataFrames
+    auc_df = data_rows[columns_to_keep].copy()
+    auc_df.columns = final_cols[:len(auc_df.columns)]
 
-    net_df = data_rows.iloc[:, :len(net_keep)].copy()
-    net_df.columns = net_names[:len(net_df.columns)]
+    net_df = data_rows[net_columns_to_keep].copy()
+    net_df.columns = net_final_cols[:len(net_df.columns)]
 
     # Clean
     for d in [auc_df, net_df]:
@@ -113,6 +116,7 @@ def extract_latest_auc(url, report_date):
     auc_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
     net_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
 
+    # Merge
     final_df = pd.merge(auc_df, net_df.drop(columns=['Sr_No'], errors='ignore'), 
                        on=['Report_Date', 'Sector'], how='left')
 
