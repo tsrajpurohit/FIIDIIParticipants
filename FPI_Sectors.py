@@ -2,7 +2,6 @@ import io
 import json
 import os
 import random
-import re
 import time
 from datetime import datetime, timedelta
 import gspread
@@ -112,68 +111,46 @@ def fetch_data():
             if data_start_idx is None:
                 continue
 
-            header_rows = df.iloc[:data_start_idx]
             data_rows = df.iloc[data_start_idx:].copy()
 
-            # Dynamic date token string matching setup
-            match = re.search(r"FIIInvestSector_([A-Za-z]+)(\d{2})(\d{4})", url)
-            if match:
-                month, day, year = match.groups()
-                target_date_str = (
-                    f"AUC as on {month} {day}, {year}".lower().strip()
-                )
-            else:
-                target_date_str = "auc as on"
+            # =========================================================================
+            # TAIL-SLICING POSITION EXTRACTOR (TARGETS NEWEST AUC)
+            # =========================================================================
+            # Total columns variant structure checking
+            total_cols = len(df.columns)
 
-            # Flatten compound header row texts
-            flattened_headers = []
-            for col_idx in range(len(df.columns)):
-                col_text = " ".join(
-                    header_rows[col_idx].dropna().astype(str).tolist()
-                ).lower()
-                flattened_headers.append(col_text)
+            # NSDL structure layouts are wide. The final block spans the last 24 columns:
+            # - First 12 columns: Asset breakdown fields calculated in INR Crore.
+            # - Last 12 columns: Duplicate asset fields configured in USD Million.
+            # By slicing from (total_cols - 24) to (total_cols - 12), we lock onto only INR Crore.
+            columns_to_keep = [1] + list(range(total_cols - 24, total_cols - 12))
 
-            # Sift out specific matching metric columns
-            columns_to_keep = [1]  # Track index 1 (Sectors name)
-            final_cols = ["Sector"]
+            # Base normalized metrics mapping names for target column layout alignment
+            final_cols = [
+                "Sector",
+                "AUC_Equity_Cr",
+                "AUC_Debt_General_Cr",
+                "AUC_Debt_VRR_Cr",
+                "AUC_Debt_FAR_Cr",
+                "AUC_Hybrid_Cr",
+                "AUC_Debt_Solution_Oriented_Cr",
+                "AUC_Debt_Other_Cr",
+                "AUC_AIF_Cr",
+                "AUC_Total_Cr",
+            ]
 
-            for idx, header_text in enumerate(flattened_headers):
-                if idx < 2:
-                    continue
-                # Isolate target section metrics (filtering out duplicate USD counterparts)
-                if target_date_str in header_text and "usd" not in header_text:
-                    columns_to_keep.append(idx)
-
-                    if "equity" in header_text:
-                        final_cols.append("AUC_Equity_Cr")
-                    elif "debt general" in header_text:
-                        final_cols.append("AUC_Debt_General_Cr")
-                    elif "debt vrr" in header_text:
-                        final_cols.append("AUC_Debt_VRR_Cr")
-                    elif "debt-far" in header_text or "debt far" in header_text:
-                        final_cols.append("AUC_Debt_FAR_Cr")
-                    elif "hybrid" in header_text:
-                        final_cols.append("AUC_Hybrid_Cr")
-                    elif "total" in header_text:
-                        final_cols.append("AUC_Total_Cr")
-                    else:
-                        final_cols.append(f"AUC_Col_{idx}_Cr")
-
-            # Slice and construct clean localized segment
+            # Slice localized target segments from index data block
             processed_df = data_rows[columns_to_keep].copy()
 
-            # 🔥 FIX: Handle duplicate column names dynamically
-            unique_cols = []
-            col_counts = {}
-            for col in final_cols:
-                if col in col_counts:
-                    col_counts[col] += 1
-                    unique_cols.append(f"{col}_{col_counts[col]}")
-                else:
-                    col_counts[col] = 1
-                    unique_cols.append(col)
-
-            processed_df.columns = unique_cols
+            # Assign labels gracefully or use safety index fallbacks if structure shifts
+            if len(processed_df.columns) == len(final_cols):
+                processed_df.columns = final_cols
+            else:
+                generated_cols = ["Sector"] + [
+                    f"AUC_Metric_Col_{i}"
+                    for i in range(len(processed_df.columns) - 1)
+                ]
+                processed_df.columns = generated_cols
 
             # Clean rows structural metadata markers
             processed_df = processed_df[processed_df["Sector"].notna()]
@@ -186,7 +163,7 @@ def fetch_data():
             # Inject the standard historical meta tracking date key
             processed_df.insert(0, "Report_Date", token)
 
-            # Reset row index
+            # Clear individual row index collisions entirely
             processed_df.reset_index(drop=True, inplace=True)
 
             compiled_dfs.append(processed_df)
@@ -198,7 +175,7 @@ def fetch_data():
         time.sleep(random.uniform(3, 5))
 
     if compiled_dfs:
-        # Columns are now guaranteed unique per dataframe, preventing InvalidIndexError
+        # Concatenate completely unique schemas safely
         return pd.concat(compiled_dfs, ignore_index=True)
     return pd.DataFrame()
 
