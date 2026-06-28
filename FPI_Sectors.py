@@ -117,12 +117,12 @@ def generate_dates_last_12_months():
             current = current.replace(year=current.year-1, month=12, day=1)
         else:
             current = current.replace(month=current.month-1, day=1)
-    return sorted(set(dates), reverse=True)[:26]
+    return sorted(set(dates), reverse=True)[:26]   # Newest first
 
 
 # ================== MAIN ==================
 if __name__ == "__main__":
-    print("Starting FII AUC Downloader → Google Sheets...\n")
+    print("Starting FII AUC Downloader → Google Sheets (Newest to Oldest)...\n")
     report_dates = generate_dates_last_12_months()
     
     all_data = []
@@ -151,26 +151,30 @@ if __name__ == "__main__":
         desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr"]
         final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
         
-        final_df = final_df.sort_values(by=["Report_Date", "Sector"]).reset_index(drop=True)
+        # Sort: Newest to Oldest
+        final_df["Report_Date"] = pd.to_datetime(final_df["Report_Date"])
+        final_df = final_df.sort_values(by=["Report_Date", "Sector"], ascending=[False, True])
+        final_df["Report_Date"] = final_df["Report_Date"].dt.strftime("%Y-%m-%d")
+        
+        final_df = final_df.reset_index(drop=True)
 
         # === SAVE TO GOOGLE SHEETS ===
         try:
             sheet = client.open_by_key(SHEET_ID)
             worksheet = sheet.worksheet(TAB_NAME)
             
-            # Clear existing data (optional)
             worksheet.clear()
             
-            # Write new data including headers
+            # Upload with headers
             worksheet.update([final_df.columns.values.tolist()] + final_df.values.tolist())
             
-            print(f"\n✅ SUCCESS! Data uploaded to Google Sheet")
-            print(f"Sheet: {SHEET_ID} | Tab: {TAB_NAME}")
+            print(f"\n✅ SUCCESS! Data uploaded to Google Sheet (Newest → Oldest)")
+            print(f"Sheet ID: {SHEET_ID} | Tab: {TAB_NAME}")
             print(f"Total Rows: {len(final_df)}")
             
         except Exception as e:
             print(f"Google Sheets upload failed: {e}")
-            print("Saving to CSV instead...")
+            print("Saving to CSV as backup...")
             final_df.to_csv("fii_auc_sector_last_12months.csv", index=False)
     else:
         print("No data collected.")
