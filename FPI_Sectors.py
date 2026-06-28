@@ -100,7 +100,7 @@ def fetch_data():
             html_stream = io.StringIO(str(table))
             df = pd.read_html(html_stream, header=None)[0]
 
-            # Find data starting boundary
+            # Find data starting boundary (row where row number markers begin)
             data_start_idx = None
             for idx, row in df.iterrows():
                 val = str(row.iloc[0]).strip()
@@ -111,46 +111,53 @@ def fetch_data():
             if data_start_idx is None:
                 continue
 
+            header_rows = df.iloc[:data_start_idx]
             data_rows = df.iloc[data_start_idx:].copy()
 
             # =========================================================================
-            # TAIL-SLICING POSITION EXTRACTOR (TARGETS NEWEST AUC)
+            # DYNAMIC LATEST-COLUMN FINDER (NO HARDCODED INDEXES)
             # =========================================================================
-            # Total columns variant structure checking
-            total_cols = len(df.columns)
+            # 1. Identify the label of the very last column in the top header row
+            # Due to colspans, this text will span across all current AUC columns
+            latest_auc_label = str(header_rows.iloc[0].iloc[-1]).strip().lower()
 
-            # NSDL structure layouts are wide. The final block spans the last 24 columns:
-            # - First 12 columns: Asset breakdown fields calculated in INR Crore.
-            # - Last 12 columns: Duplicate asset fields configured in USD Million.
-            # By slicing from (total_cols - 24) to (total_cols - 12), we lock onto only INR Crore.
-            columns_to_keep = [1] + list(range(total_cols - 24, total_cols - 12))
+            columns_to_keep = [1]  # Sector name column is always index 1
+            final_cols = ["Sector"]
 
-            # Base normalized metrics mapping names for target column layout alignment
-            final_cols = [
-                "Sector",
-                "AUC_Equity_Cr",
-                "AUC_Debt_General_Cr",
-                "AUC_Debt_VRR_Cr",
-                "AUC_Debt_FAR_Cr",
-                "AUC_Hybrid_Cr",
-                "AUC_Debt_Solution_Oriented_Cr",
-                "AUC_Debt_Other_Cr",
-                "AUC_AIF_Cr",
-                "AUC_Total_Cr",
-            ]
+            # 2. Iterate through columns and capture only those matching the latest label
+            for col_idx in range(2, len(df.columns)):
+                # Flatten the specific column's headers to check for text markers
+                col_headers_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
+                
+                # Check if it belongs to the latest AUC segment and filter out USD counterparts
+                if latest_auc_label in col_headers_text and "usd" not in col_headers_text:
+                    columns_to_keep.append(col_idx)
+                    
+                    # Dynamically name the column based on subheader contents
+                    if "equity" in col_headers_text:
+                        final_cols.append("AUC_Equity_Cr")
+                    elif "debt general" in col_headers_text:
+                        final_cols.append("AUC_Debt_General_Cr")
+                    elif "debt vrr" in col_headers_text:
+                        final_cols.append("AUC_Debt_VRR_Cr")
+                    elif "debt-far" in col_headers_text or "debt far" in col_headers_text:
+                        final_cols.append("AUC_Debt_FAR_Cr")
+                    elif "hybrid" in col_headers_text:
+                        final_cols.append("AUC_Hybrid_Cr")
+                    elif "solution oriented" in col_headers_text:
+                        final_cols.append("AUC_Debt_Solution_Oriented_Cr")
+                    elif "debt other" in col_headers_text:
+                        final_cols.append("AUC_Debt_Other_Cr")
+                    elif "aif" in col_headers_text:
+                        final_cols.append("AUC_AIF_Cr")
+                    elif "total" in col_headers_text:
+                        final_cols.append("AUC_Total_Cr")
+                    else:
+                        final_cols.append(f"AUC_Metric_Col_{col_idx}_Cr")
 
-            # Slice localized target segments from index data block
+            # Slice out the target data columns
             processed_df = data_rows[columns_to_keep].copy()
-
-            # Assign labels gracefully or use safety index fallbacks if structure shifts
-            if len(processed_df.columns) == len(final_cols):
-                processed_df.columns = final_cols
-            else:
-                generated_cols = ["Sector"] + [
-                    f"AUC_Metric_Col_{i}"
-                    for i in range(len(processed_df.columns) - 1)
-                ]
-                processed_df.columns = generated_cols
+            processed_df.columns = final_cols
 
             # Clean rows structural metadata markers
             processed_df = processed_df[processed_df["Sector"].notna()]
@@ -175,7 +182,7 @@ def fetch_data():
         time.sleep(random.uniform(3, 5))
 
     if compiled_dfs:
-        # Concatenate completely unique schemas safely
+        # Combine all processed snapshots together
         return pd.concat(compiled_dfs, ignore_index=True)
     return pd.DataFrame()
 
