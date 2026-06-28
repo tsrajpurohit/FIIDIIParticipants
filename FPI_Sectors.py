@@ -125,7 +125,6 @@ def extract_latest_auc(url, report_date):
             # Keep the 3rd Equity column found (corresponds to latest fortnight)
             if len(equity_indices) >= 3 and i == equity_indices[2]:
                 net_cols_mask.append(True)
-            # Fallback if structure changes
             elif len(equity_indices) < 3 and i == equity_indices[0]:
                 net_cols_mask.append(True)
             else:
@@ -134,7 +133,6 @@ def extract_latest_auc(url, report_date):
             # Keep the 2nd Total column found (corresponds to latest fortnight)
             if len(total_indices) >= 2 and i == total_indices[1]:
                 net_cols_mask.append(True)
-            # Fallback if structure changes
             elif len(total_indices) < 2 and i == total_indices[0]:
                 net_cols_mask.append(True)
             else:
@@ -200,11 +198,19 @@ if __name__ == "__main__":
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
       
-        # Keep desired columns and filter explicitly
+        # Explicit column structure strategy & renaming alignment
         desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr",
                         "Net_Equity_Cr", "Net_Total_Cr"]
         final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
       
+        # --- RENAME COLUMNS ---
+        # Net_Equity_Cr -> Net_Investment_Cr
+        # Net_Total_Cr  -> Total_Investment_cr
+        final_df = final_df.rename(columns={
+            "Net_Equity_Cr": "Net_Investment_Cr",
+            "Net_Total_Cr": "Total_Investment_cr"
+        })
+
         # Sort Newest to Oldest
         final_df["Report_Date"] = pd.to_datetime(final_df["Report_Date"])
         final_df = final_df.sort_values(by=["Report_Date", "Sector"], ascending=[False, True])
