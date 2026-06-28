@@ -78,22 +78,18 @@ def extract_latest_auc(url, report_date):
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
             net_keep.append(col_idx)
 
-    # SAFE CREATION WITH DYNAMIC NAMES
+    # === SAFE COLUMN CREATION ===
     auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
-    auc_names = ["Sr_No", "Sector"]
+    auc_col_names = ["Sr_No", "Sector"]
     if len(auc_keep) > 2:
-        auc_names.append("AUC_Equity_Cr")
-    if len(auc_keep) > 3:
-        auc_names.append("AUC_Total_Cr")
-    auc_df.columns = auc_names[:len(auc_df.columns)]
+        auc_col_names += ["AUC_Equity_Cr"] * (len(auc_keep) - 2)  # safety
+    auc_df.columns = auc_col_names[:len(auc_df.columns)]
 
     net_df = data_rows.iloc[:, :len(net_keep)].copy()
-    net_names = ["Sr_No", "Sector"]
+    net_col_names = ["Sr_No", "Sector"]
     if len(net_keep) > 2:
-        net_names.append("Net_Equity_Cr")
-    if len(net_keep) > 3:
-        net_names.append("Net_Total_Cr")
-    net_df.columns = net_names[:len(net_df.columns)]
+        net_col_names += ["Net_Equity_Cr"] * (len(net_keep) - 2)
+    net_df.columns = net_col_names[:len(net_df.columns)]
 
     # Clean
     for d in [auc_df, net_df]:
