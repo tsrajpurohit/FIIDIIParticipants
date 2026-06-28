@@ -83,11 +83,9 @@ def fetch_data():
 
     for token in dates:
         url = f"{BASE_URL}{token}.html"
-
         print(f"Fetching {token}")
 
         response = safe_get(url)
-
         if not response:
             print(f"Skipped {token}")
             continue
@@ -104,21 +102,31 @@ def fetch_data():
             for r in rows:
                 cols = [c.text.strip().replace(",", "") for c in r.find_all("td")]
 
-                if len(cols) >= 3 and cols[0].isdigit():
+                # Ensure it's a valid data row (starts with a sector number)
+                if len(cols) > 30 and cols[0].isdigit():
                     try:
+                        # NSDL Layout structure from the end of the row (Latest Date):
+                        # Block 4 (Latest AUC): Last 24 columns -> 12 USD Mn columns, preceded by 12 INR Cr columns
+                        # Block 3 (Latest Net Investment Fortnight): Previous 24 columns -> 12 USD Mn, preceded by 12 INR Cr
+                        
+                        # Target columns for the requested date:
+                        auc_cr_total = cols[-13]       # Total AUC in INR Cr for the current date
+                        net_flow_cr_total = cols[-37]  # Total Net Investment in INR Cr for the current fortnight
+                        
                         all_data.append({
                             "Report_Date": token,
                             "Sector": cols[1],
-                            "AUC_Cr": float(cols[2]) if cols[2].replace(".", "", 1).isdigit() else 0,
-                            "Net_Flow_Cr": float(cols[-1]) if cols[-1].replace(".", "", 1).isdigit() else 0
+                            "AUC_Cr": float(auc_cr_total) if auc_cr_total.replace("-", "", 1).replace(".", "", 1).isdigit() else 0.0,
+                            "Net_Flow_Cr": float(net_flow_cr_total) if net_flow_cr_total.replace("-", "", 1).replace(".", "", 1).isdigit() else 0.0
                         })
-                    except:
+                    except Exception as e:
+                        print(f"Error processing row in {token}: {e}")
                         pass
 
         except Exception as e:
             print(f"Error parsing {token}: {e}")
 
-        # 🔥 IMPORTANT: slow down requests (ANTI-BLOCK FIX)
+        # Anti-block delay
         time.sleep(random.uniform(3, 5))
 
     df = pd.DataFrame(all_data)
