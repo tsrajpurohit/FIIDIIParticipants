@@ -71,14 +71,14 @@ def extract_latest_auc(url, report_date):
     equity_count = 0
     total_count = 0
 
-    # For Net Investment (latest period)
+    # For Net Investment (collecting all matches to slice by position later)
     net_columns_to_keep = [0, 1]
     net_final_cols = ["Sr_No", "Sector"]
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
       
-        # AUC Processing
+        # AUC
         if target_str in col_text and "inr" in col_text and "usd" not in col_text:
             columns_to_keep.append(col_idx)
             if "equity" in col_text:
@@ -90,30 +90,60 @@ def extract_latest_auc(url, report_date):
             else:
                 final_cols.append(f"AUC_Col_{col_idx}")
 
-        # Net Investment Processing (Stops extra duplicated columns from being added)
+        # Net Investment (Collects all matching columns dynamically)
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
+            net_columns_to_keep.append(col_idx)
             if "equity" in col_text:
-                if "Net_Equity_Cr" not in net_final_cols:
-                    net_columns_to_keep.append(col_idx)
-                    net_final_cols.append("Net_Equity_Cr")
+                net_final_cols.append("Net_Equity_Cr")
             elif "total" in col_text:
-                if "Net_Total_Cr" not in net_final_cols:
-                    net_columns_to_keep.append(col_idx)
-                    net_final_cols.append("Net_Total_Cr")
+                net_final_cols.append("Net_Total_Cr")
+            else:
+                net_final_cols.append(f"Net_Col_{col_idx}")
 
     # AUC DataFrame
     auc_df = data_rows[columns_to_keep].copy()
     auc_df.columns = final_cols[:len(auc_df.columns)]
 
-    # Net Investment DataFrame
+    # Net Investment DataFrame (Handles positional filtering to keep correct data)
     net_df = data_rows[net_columns_to_keep].copy()
     net_df.columns = net_final_cols[:len(net_df.columns)]
 
-    # Clean
+    # Clean row elements
     for d in [auc_df, net_df]:
         d = d[d["Sector"].notna()]
         d = d[~d["Sector"].str.contains("Sectors|Total|Grand Total", case=False, na=False)]
         d.reset_index(drop=True, inplace=True)
+
+    # --- POSITION FILTER FOR DUPLICATE NET COLUMNS ---
+    # Tracks positions of all matching strings to precisely slice out the older fortnight data
+    equity_indices = [i for i, col in enumerate(net_df.columns) if col == 'Net_Equity_Cr']
+    total_indices = [i for i, col in enumerate(net_df.columns) if col == 'Net_Total_Cr']
+
+    net_cols_mask = []
+    for i, col in enumerate(net_df.columns):
+        if col == 'Net_Equity_Cr':
+            # Keep the 3rd Equity column found (corresponds to latest fortnight)
+            if len(equity_indices) >= 3 and i == equity_indices[2]:
+                net_cols_mask.append(True)
+            # Fallback if structure changes
+            elif len(equity_indices) < 3 and i == equity_indices[0]:
+                net_cols_mask.append(True)
+            else:
+                net_cols_mask.append(False)
+        elif col == 'Net_Total_Cr':
+            # Keep the 2nd Total column found (corresponds to latest fortnight)
+            if len(total_indices) >= 2 and i == total_indices[1]:
+                net_cols_mask.append(True)
+            # Fallback if structure changes
+            elif len(total_indices) < 2 and i == total_indices[0]:
+                net_cols_mask.append(True)
+            else:
+                net_cols_mask.append(False)
+        else:
+            net_cols_mask.append(True)
+
+    # Apply positional mask to drop the undesired redundant columns
+    net_df = net_df.loc[:, net_cols_mask]
 
     auc_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
     net_df["Report_Date"] = report_date.strftime("%Y-%m-%d")
@@ -170,7 +200,7 @@ if __name__ == "__main__":
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
       
-        # Keep desired columns
+        # Keep desired columns and filter explicitly
         desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr",
                         "Net_Equity_Cr", "Net_Total_Cr"]
         final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
