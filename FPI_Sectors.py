@@ -64,30 +64,36 @@ def extract_latest_auc(url, report_date):
     header_rows = df.iloc[:data_start_idx]
     data_rows = df.iloc[data_start_idx:].copy()
 
-    target_auc = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
+    target_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
 
     auc_keep = [0, 1]
     net_keep = [0, 1]
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
-        
-        # Latest AUC
-        if target_auc in col_text and "inr" in col_text and "usd" not in col_text:
+       
+        if target_str in col_text and "inr" in col_text and "usd" not in col_text:
             auc_keep.append(col_idx)
         
-        # Latest Net Investment (the one just before AUC or the rightmost net)
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
             net_keep.append(col_idx)
 
-    # SAFE CREATION
+    # === SAFE COLUMN ASSIGNMENT ===
     auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
-    auc_names = ["Sr_No", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr"][:len(auc_keep)]
-    auc_df.columns = auc_names
+    auc_names = ["Sr_No", "Sector"]
+    if len(auc_keep) > 2:
+        auc_names.append("AUC_Equity_Cr")
+    if len(auc_keep) > 3:
+        auc_names.append("AUC_Total_Cr")
+    auc_df.columns = auc_names[:len(auc_df.columns)]
 
     net_df = data_rows.iloc[:, :len(net_keep)].copy()
-    net_names = ["Sr_No", "Sector", "Net_Equity_Cr", "Net_Total_Cr"][:len(net_keep)]
-    net_df.columns = net_names
+    net_names = ["Sr_No", "Sector"]
+    if len(net_keep) > 2:
+        net_names.append("Net_Equity_Cr")
+    if len(net_keep) > 3:
+        net_names.append("Net_Total_Cr")
+    net_df.columns = net_names[:len(net_df.columns)]
 
     # Clean
     for d in [auc_df, net_df]:
