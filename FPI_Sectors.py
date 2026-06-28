@@ -78,7 +78,7 @@ def extract_latest_auc(url, report_date):
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
             net_keep.append(col_idx)
 
-    # === SAFE COLUMN ASSIGNMENT ===
+    # === DYNAMIC COLUMN NAMES ===
     auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
     auc_names = ["Sr_No", "Sector"]
     if len(auc_keep) > 2:
