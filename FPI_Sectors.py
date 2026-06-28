@@ -29,7 +29,7 @@ creds = Credentials.from_service_account_info(
 )
 client = gspread.authorize(creds)
 
-# ================== DEBUG EXTRACTION FUNCTION ==================
+# ================== EXTRACTION FUNCTION ==================
 def extract_latest_auc(url, report_date):
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
@@ -64,26 +64,22 @@ def extract_latest_auc(url, report_date):
     header_rows = df.iloc[:data_start_idx]
     data_rows = df.iloc[data_start_idx:].copy()
 
-    target_str = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
-    print(f"Target AUC: {target_str}")
+    target_auc = f"AUC as on {report_date.strftime('%B %d, %Y')}".lower()
+    target_net = f"Net Investment {report_date.strftime('%B')} {report_date.day:02d}".lower()  # approximate
 
     auc_keep = [0, 1]
     net_keep = [0, 1]
 
     for col_idx in range(2, len(df.columns)):
         col_text = " ".join(header_rows[col_idx].dropna().astype(str).tolist()).lower()
-        print(f"Col {col_idx}: {col_text[:100]}...")  # DEBUG
-
-        if target_str in col_text and "inr" in col_text and "usd" not in col_text:
+       
+        # Latest AUC
+        if target_auc in col_text and "inr" in col_text and "usd" not in col_text:
             auc_keep.append(col_idx)
-            print(f"  → AUC column found at {col_idx}")
         
-        if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
+        # Latest Net Investment (the one for the current period)
+        if ("net investment" in col_text and report_date.strftime("%B").lower() in col_text) and "inr" in col_text and "usd" not in col_text:
             net_keep.append(col_idx)
-            print(f"  → Net column found at {col_idx}")
-
-    print(f"AUC columns count: {len(auc_keep)}")
-    print(f"Net columns count: {len(net_keep)}")
 
     # SAFE CREATION
     auc_df = data_rows.iloc[:, :len(auc_keep)].copy()
@@ -147,13 +143,13 @@ if __name__ == "__main__":
     all_data = []
     base_url = "https://www.fpi.nsdl.co.in/web/StaticReports/Fortnightly_Sector_wise_FII_Investment_Data/FIIInvestSector_{}.html"
     
-    for report_date in report_dates[:3]:  # Test only 3 dates
+    for report_date in report_dates:
         month_str = get_nsdl_month_name(report_date)
         day_str = f"{report_date.day:02d}"
         filename = f"{month_str}{day_str}{report_date.year}"
         url = base_url.format(filename)
        
-        print(f"\nFetching: {report_date.strftime('%Y-%m-%d')} → {filename}")
+        print(f"Fetching: {report_date.strftime('%Y-%m-%d')} → {filename}")
         df = extract_latest_auc(url, report_date)
        
         if df is not None and not df.empty:
@@ -165,7 +161,28 @@ if __name__ == "__main__":
 
     if all_data:
         final_df = pd.concat(all_data, ignore_index=True)
-        print("\nFinal Columns:", list(final_df.columns))
-        print(final_df.head(5))
+       
+        desired_cols = ["Report_Date", "Sector", "AUC_Equity_Cr", "AUC_Total_Cr", 
+                       "Net_Equity_Cr", "Net_Total_Cr"]
+        final_df = final_df[[col for col in desired_cols if col in final_df.columns]]
+       
+        final_df["Report_Date"] = pd.to_datetime(final_df["Report_Date"])
+        final_df = final_df.sort_values(by=["Report_Date", "Sector"], ascending=[False, True])
+        final_df["Report_Date"] = final_df["Report_Date"].dt.strftime("%Y-%m-%d")
+        final_df = final_df.reset_index(drop=True)
+
+        try:
+            sheet = client.open_by_key(SHEET_ID)
+            worksheet = sheet.worksheet(TAB_NAME)
+            worksheet.clear()
+            worksheet.update([final_df.columns.values.tolist()] + final_df.values.tolist())
+           
+            print(f"\n✅ SUCCESS! Data uploaded to Google Sheet")
+            print(f"Sheet ID: {SHEET_ID} | Tab: {TAB_NAME}")
+            print(f"Total Rows: {len(final_df)}")
+           
+        except Exception as e:
+            print(f"Google Sheets upload failed: {e}")
+            final_df.to_csv("fii_auc_sector_last_12months.csv", index=False)
     else:
         print("No data collected.")
