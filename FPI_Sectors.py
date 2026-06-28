@@ -129,7 +129,7 @@ def generate_dates_last_12_months():
             current = current.replace(year=current.year-1, month=12, day=1)
         else:
             current = current.replace(month=current.month-1, day=1)
-    return sorted(set(dates), reverse=True)[:6]
+    return sorted(set(dates), reverse=True)[:26]
 
 
 # ================== MAIN ==================
