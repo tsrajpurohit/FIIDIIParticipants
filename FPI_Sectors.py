@@ -13,7 +13,7 @@ from google.oauth2.service_account import Credentials
 # =========================
 # CONFIG
 # =========================
-SHEET_ID = "1IUChF0UFKMqXBi-g48f-oTYqI1K9miipKgY"
+SHEET_ID = "1IUChF0UFKMqVLxTI69lXBi-g48f-oTYqI1K9miipKgY"
 TAB_NAME = "FPI_Sectors"
 
 # =========================
@@ -29,7 +29,7 @@ creds = Credentials.from_service_account_info(
 )
 client = gspread.authorize(creds)
 
-# ================== EXTRACTION FUNCTION ==================
+# ================== SAFE EXTRACTION ==================
 def extract_fpi_data(url, report_date):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
     try:
@@ -45,10 +45,9 @@ def extract_fpi_data(url, report_date):
         print(f"No table found on {url}")
         return None
 
-    html_stream = io.StringIO(str(table))
-    df = pd.read_html(html_stream, header=None)[0]
+    df = pd.read_html(io.StringIO(str(table)), header=None)[0]
 
-    # Find start of data
+    # Find data start
     data_start = None
     for i in range(len(df)):
         if str(df.iloc[i, 0]).strip() in ["1", "1.0"]:
@@ -59,7 +58,7 @@ def extract_fpi_data(url, report_date):
         return None
 
     header_part = df.iloc[:data_start]
-    data_part = df.iloc[data_start:].copy()
+    data_part = df.iloc[data_start:].copy().reset_index(drop=True)
 
     target_date = report_date.strftime("%B %d, %Y").lower()
 
@@ -71,28 +70,36 @@ def extract_fpi_data(url, report_date):
     for c in range(2, df.shape[1]):
         col_text = " ".join(header_part[c].dropna().astype(str)).lower()
         
-        # AUC
         if target_date in col_text and "inr" in col_text and "usd" not in col_text:
             auc_keep.append(c)
             if "equity" in col_text:
                 auc_names.append("AUC_Equity_Cr")
             elif "total" in col_text:
                 auc_names.append("AUC_Total_Cr")
-        
-        # Net Investment
+            else:
+                auc_names.append(f"AUC_Other_{c}")
+
         if ("net investment" in col_text or "net inv" in col_text) and "inr" in col_text and "usd" not in col_text:
             net_keep.append(c)
             if "equity" in col_text:
                 net_names.append("Net_Equity_Cr")
             elif "total" in col_text:
                 net_names.append("Net_Total_Cr")
+            else:
+                net_names.append(f"Net_Other_{c}")
 
-    # Safe DataFrame creation
+    # SAFE COLUMN ASSIGNMENT
     auc_df = data_part.iloc[:, :len(auc_keep)].copy()
-    auc_df.columns = auc_names[:len(auc_df.columns)]
+    if len(auc_df.columns) == len(auc_names):
+        auc_df.columns = auc_names
+    else:
+        auc_df.columns = auc_names[:len(auc_df.columns)]
 
     net_df = data_part.iloc[:, :len(net_keep)].copy()
-    net_df.columns = net_names[:len(net_df.columns)]
+    if len(net_df.columns) == len(net_names):
+        net_df.columns = net_names
+    else:
+        net_df.columns = net_names[:len(net_df.columns)]
 
     # Clean
     for d in [auc_df, net_df]:
@@ -131,7 +138,7 @@ def generate_dates_last_12_months():
 
 # ================== MAIN ==================
 if __name__ == "__main__":
-    print("Starting FII Sector Data Download (AUC + Net Investment)...\n")
+    print("Starting FII Sector Data Download...\n")
     report_dates = generate_dates_last_12_months()
     
     all_data = []
@@ -170,10 +177,9 @@ if __name__ == "__main__":
             worksheet = sheet.worksheet(TAB_NAME)
             worksheet.clear()
             worksheet.update([final_df.columns.values.tolist()] + final_df.values.tolist())
-            print(f"\n✅ SUCCESS! Uploaded {len(final_df)} rows to Google Sheet '{TAB_NAME}'")
+            print(f"\n✅ SUCCESS! Uploaded {len(final_df)} rows to Google Sheet")
         except Exception as e:
             print(f"Google Sheets error: {e}")
             final_df.to_csv("fii_data_backup.csv", index=False)
-            print("Saved to CSV backup.")
     else:
         print("No data collected.")
