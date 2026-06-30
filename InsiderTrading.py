@@ -1,16 +1,7 @@
 import json
-import os
 from datetime import datetime, timedelta
 import pandas as pd
 import requests
-import gspread
-from google.oauth2.service_account import Credentials
-
-# =========================
-# CONFIG
-# =========================
-SHEET_ID = "1IUChF0UFKMqVLxTI69lXBi-g48f-oTYqI1K9miipKgY"
-TAB_NAME = "InsiderTrading"
 
 # 1. Dynamically calculate dates for the last 12 months
 today = datetime.now()
@@ -37,6 +28,7 @@ HEADERS = {
 }
 
 
+
 def fetch_nse_data(api_url):
     session = requests.Session()
     session.headers.update(HEADERS)
@@ -61,7 +53,7 @@ def fetch_nse_data(api_url):
         return None
 
 
-def process_and_upload_to_gsheet(json_data):
+def save_to_csv(json_data, output_filename):
     if not json_data or "data" not in json_data:
         print("No valid data found to save.")
         return
@@ -88,48 +80,19 @@ def process_and_upload_to_gsheet(json_data):
         "sellquantity", "sellValue", "remarks", "pid", "exchange", 
         "did", "derivativeType", "buyValue", "buyQuantity", "anex"
     ]
+    # errors='ignore' ensures the code won't break if any column is missing from the API
     df = df.drop(columns=columns_to_drop, errors="ignore")
 
-    # Replace NaN/Null values with empty strings for safe JSON serialization
-    df = df.fillna("")
-
-    # =========================
-    # GOOGLE SHEETS AUTH & UPLOAD
-    # =========================
-    print("Connecting to Google Sheets...")
-    credentials_json = os.getenv("GOOGLE_SHEETS_CREDENTIALS")
-    if not credentials_json:
-        raise ValueError("GOOGLE_SHEETS_CREDENTIALS environment variable not set!")
-
-    try:
-        creds = Credentials.from_service_account_info(
-            json.loads(credentials_json),
-            scopes=["https://www.googleapis.com/auth/spreadsheets"]
-        )
-        client = gspread.authorize(creds)
-        
-        # Open using the Spreadsheet ID and specific Tab Name
-        spreadsheet = client.open_by_key(SHEET_ID)
-        sheet = spreadsheet.worksheet(TAB_NAME)
-        
-        # Clear previous data before refreshing
-        sheet.clear()
-        
-        # Convert DataFrame to list format (headers + row values)
-        data_to_upload = [df.columns.values.tolist()] + df.values.tolist()
-        
-        print(f"Uploading {len(df)} filtered records to sheet tab '{TAB_NAME}'...")
-        sheet.update('A1', data_to_upload)
-        print("Successfully uploaded data to Google Sheets!")
-
-    except Exception as e:
-        print(f"Failed to complete Google Sheet operation: {e}")
+    # Save the filtered DataFrame to CSV
+    df.to_csv(output_filename, index=False)
+    print(f"Successfully filtered and saved {len(df)} records to '{output_filename}'")
 
 
 if __name__ == "__main__":
     # Fetch the dynamic data
     data = fetch_nse_data(API_URL)
 
-    # Process filters and push to Google Sheets
+    # Save it with a dynamically named file
     if data:
-        process_and_upload_to_gsheet(data)
+        filename = f"nse_pit_last_12M_Filtered.csv"
+        save_to_csv(data, filename)
