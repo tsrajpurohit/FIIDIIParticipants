@@ -16,21 +16,23 @@ TAB_NAME = "InsiderTrading"
 today = datetime.now()
 twelve_months_ago = today - timedelta(days=365)
 
-# Format dates to DD-MM-YYYY as required by NSE API
 from_date_str = twelve_months_ago.strftime("%d-%m-%Y")
 to_date_str = today.strftime("%d-%m-%Y")
 
-# Construct the dynamic API URL
 API_URL = f"https://www.nseindia.com/api/corporates-pit?index=equities&from_date={from_date_str}&to_date={to_date_str}"
 BASE_URL = "https://www.nseindia.com"
 
 print(f"Generated Dynamic URL: {API_URL}")
 
-# Standard headers to simulate a browser session
+# CRITICAL: Enhanced headers to look like legitimate browser navigation on the exchange
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
     "Accept-Language": "en-US,en;q=0.9",
     "Accept-Encoding": "gzip, deflate, br",
+    "Referer": "https://www.nseindia.com/companies-listing/corporate-filings-insider-trading",
+    "X-Requested-With": "XMLHttpRequest",
+    "Connection": "keep-alive",
 }
 
 
@@ -41,27 +43,27 @@ def fetch_nse_data(api_url):
     try:
         # Step 1: Visit home page to generate required session cookies
         print("Visiting NSE home page for session cookies...")
-        session.get(BASE_URL, timeout=10)
+        session.get(BASE_URL, timeout=15)
 
         # Step 2: Fetch data using the dynamic API URL
         print("Fetching PIT data for the last 12 months...")
-        response = session.get(api_url, timeout=15)
+        response = session.get(api_url, timeout=20)
 
         if response.status_code == 200:
-            # Check if the content type is actually JSON
-            if "application/json" in response.headers.get("Content-Type", ""):
+            # Check if the response is actually JSON before parsing
+            content_type = response.headers.get("Content-Type", "")
+            if "application/json" in content_type:
                 return response.json()
             else:
-                print("Error: NSE returned HTML instead of JSON. You are likely being blocked by their firewall.")
-                print(f"First 200 characters of response: {response.text[:200]}")
+                print("\n[BLOCKED] NSE returned an HTML block page instead of data.")
+                print("GitHub Actions cloud IP range is likely flagged by NSE's security firewall.")
                 return None
         else:
             print(f"Failed. HTTP Status Code: {response.status_code}")
-            print(f"Response text: {response.text[:200]}")
             return None
 
     except Exception as e:
-        print(f"An error occurred: {e}")
+        print(f"An error occurred during fetch: {e}")
         return None
 
 
@@ -74,15 +76,12 @@ def process_and_upload_to_gsheet(json_data):
     df = pd.DataFrame(records)
 
     # ------------------ FILTERING ROWS ------------------
-    # 1. Keep only "Market Purchase" and "Market Sale"
     if "acqMode" in df.columns:
         df = df[df["acqMode"].isin(["Market Purchase", "Market Sale"])]
 
-    # 2. Keep only specified promoter/director categories
     if "personCategory" in df.columns:
         df = df[df["personCategory"].isin(["Promoters", "Promoter Group", "Director"])]
 
-    # 3. Keep only "Equity Shares"
     if "secType" in df.columns:
         df = df[df["secType"].isin(["Equity Shares"])]
 
@@ -93,8 +92,6 @@ def process_and_upload_to_gsheet(json_data):
         "did", "derivativeType", "buyValue", "buyQuantity", "anex"
     ]
     df = df.drop(columns=columns_to_drop, errors="ignore")
-
-    # Replace NaN/Null values with empty strings for safe JSON serialization
     df = df.fillna("")
 
     # =========================
@@ -112,14 +109,10 @@ def process_and_upload_to_gsheet(json_data):
         )
         client = gspread.authorize(creds)
         
-        # Open using the Spreadsheet ID and specific Tab Name
         spreadsheet = client.open_by_key(SHEET_ID)
         sheet = spreadsheet.worksheet(TAB_NAME)
         
-        # Clear previous data before refreshing
         sheet.clear()
-        
-        # Convert DataFrame to list format (headers + row values)
         data_to_upload = [df.columns.values.tolist()] + df.values.tolist()
         
         print(f"Uploading {len(df)} filtered records to sheet tab '{TAB_NAME}'...")
@@ -131,9 +124,6 @@ def process_and_upload_to_gsheet(json_data):
 
 
 if __name__ == "__main__":
-    # Fetch the dynamic data
     data = fetch_nse_data(API_URL)
-
-    # Process filters and push to Google Sheets
     if data:
         process_and_upload_to_gsheet(data)
