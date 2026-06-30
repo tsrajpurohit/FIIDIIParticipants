@@ -48,9 +48,16 @@ def fetch_nse_data(api_url):
         response = session.get(api_url, timeout=15)
 
         if response.status_code == 200:
-            return response.json()
+            # Check if the content type is actually JSON
+            if "application/json" in response.headers.get("Content-Type", ""):
+                return response.json()
+            else:
+                print("Error: NSE returned HTML instead of JSON. You are likely being blocked by their firewall.")
+                print(f"First 200 characters of response: {response.text[:200]}")
+                return None
         else:
             print(f"Failed. HTTP Status Code: {response.status_code}")
+            print(f"Response text: {response.text[:200]}")
             return None
 
     except Exception as e:
