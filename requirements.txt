@@ -11,3 +11,4 @@ requests
 google-api-python-client
 beautifulsoup4
 lxml
+curl_cffi
