@@ -2,9 +2,9 @@ name: Run InsiderTrading Script
 
 on:
   schedule:
-    # Monday-Friday 8:15 PM IST (14:45 UTC)
-    - cron: '45 14 * * 1-5'
-
+    
+    - cron: '0 0 15,28-31 * *'  # 8:00 PM IST
+    
   workflow_dispatch:
 
 permissions:
