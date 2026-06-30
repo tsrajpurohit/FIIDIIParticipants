@@ -1,57 +1,67 @@
-name: Run Insidertrading Script
+name: Run InsiderTrading Script
 
 on:
   schedule:
-    # Run every day at 10 PM IST, Monday to Friday
-    - cron: '45 14 * * 1-5'  # 8:00 PM IST
+    # Monday-Friday 8:15 PM IST (14:45 UTC)
+    - cron: '45 14 * * 1-5'
 
-  workflow_dispatch:  # Allows manual trigger of the workflow
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   run-script:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          python-version: '3.9'
+          fetch-depth: 0
 
-      - name: Install dependencies
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.9"
+
+      - name: Install Dependencies
         run: |
-          pip install -r requirements.txt  # Install dependencies from requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      - name: Run script
+      - name: Run Python Script
         env:
-          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}  # Ensure this matches the secret's name in GitHub
-        run: python InsiderTrading.py  # Ensure the path to the script is correct
-
-      - name: Check Git status and file changes
+          GOOGLE_SHEETS_CREDENTIALS: ${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}
         run: |
-          git status -uall  # Show untracked files and all changes
-          ls -lR  # List all files and directories recursively
+          python InsiderTrading.py
 
-      - name: Fix permissions on generated CSV files
+      - name: Show Generated Files
         run: |
-          chmod -R 755 .  # Fix file permissions to ensure Git can track them
-          chown -R $(whoami) .  # Ensure correct ownership for files
+          echo "Current Directory:"
+          pwd
 
-      - name: Commit and push if changes are detected
+          echo "CSV Files:"
+          find . -name "*.csv"
+
+          echo "Repository Contents:"
+          ls -lah
+
+      - name: Commit and Push Changes
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          
-          # Check if there are any changes in the repository
-          changes=$(git diff --name-only)
-          
-          if [ -n "$changes" ]; then
-            echo "Found changes. Adding to commit."
-            git add -A  # Ensure all changes are staged
-            git commit -m "Add or update CSV files"
-            git push
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage everything (new, modified, deleted)
+          git add -A
+
+          echo "Git Status:"
+          git status
+
+          # Commit only if there are staged changes
+          if git diff --cached --quiet; then
+            echo "No changes detected."
           else
-            echo "No changes detected. Skipping commit."
-            exit 0  # Exit gracefully if no changes are detected
+            git commit -m "Auto update generated files ($(date -u +"%Y-%m-%d %H:%M UTC"))"
+            git push origin HEAD
           fi
