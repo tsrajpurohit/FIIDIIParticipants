@@ -5,7 +5,7 @@ import pandas as pd
 import requests
 import gspread
 from google.oauth2.service_account import Credentials
-
+from curl_cffi import requests
 # =========================
 # CONFIG
 # =========================
@@ -37,18 +37,23 @@ HEADERS = {
 }
 
 
+
+
 def fetch_nse_data(api_url):
-    session = requests.Session()
+    # curl_cffi automatically mimics browser TLS fingerprints
+    session = requests.Session(impersonate="chrome") 
     session.headers.update(HEADERS)
 
     try:
-        # Step 1: Visit home page to generate required session cookies
         print("Visiting NSE home page for session cookies...")
-        session.get(BASE_URL, timeout=10)
+        session.get(BASE_URL, timeout=30)
 
-        # Step 2: Fetch data using the dynamic API URL
+        # Add a tiny sleep to mimic human behavior
+        import time
+        time.sleep(2)
+
         print("Fetching PIT data for the last 12 months...")
-        response = session.get(api_url, timeout=15)
+        response = session.get(api_url, timeout=30)
 
         if response.status_code == 200:
             return response.json()
