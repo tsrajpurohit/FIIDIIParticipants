@@ -57,31 +57,9 @@ def save_to_csv(json_data, output_filename):
     records = json_data["data"]
     df = pd.DataFrame(records)
 
-    # ------------------ FILTERING ROWS ------------------
-    # 1. Keep only "Market Purchase" and "Market Sale"
-    if "acqMode" in df.columns:
-        df = df[df["acqMode"].isin(["Market Purchase", "Market Sale"])]
-
-    # 2. Keep only specified promoter/director categories
-    if "personCategory" in df.columns:
-        df = df[df["personCategory"].isin(["Promoters", "Promoter Group", "Director"])]
-
-    # 3. Keep only "Equity Shares"
-    if "secType" in df.columns:
-        df = df[df["secType"].isin(["Equity Shares"])]
-
-    # ------------------ REMOVING COLUMNS ------------------
-    columns_to_drop = [
-        "xbrlFileSize", "xbrl", "tkdAcqm", "tdpDerivativeContractType", 
-        "sellquantity", "sellValue", "remarks", "pid", "exchange", 
-        "did", "derivativeType", "buyValue", "buyQuantity", "anex"
-    ]
-    # errors='ignore' ensures the code won't break if any column is missing from the API
-    df = df.drop(columns=columns_to_drop, errors="ignore")
-
-    # Save the filtered DataFrame to CSV
+    # Save DataFrame to CSV
     df.to_csv(output_filename, index=False)
-    print(f"Successfully filtered and saved {len(df)} records to '{output_filename}'")
+    print(f"Successfully saved {len(df)} records to '{output_filename}'")
 
 
 if __name__ == "__main__":
@@ -90,5 +68,5 @@ if __name__ == "__main__":
 
     # Save it with a dynamically named file
     if data:
-        filename = f"nse_pit_last_12M_Filtered.csv"
+        filename = f"nse_pit_last_12M_{from_date_str}_to_{to_date_str}.csv"
         save_to_csv(data, filename)
