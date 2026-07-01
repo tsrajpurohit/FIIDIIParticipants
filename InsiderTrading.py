@@ -1,4 +1,4 @@
-import json
+import json 
 import os
 from datetime import datetime, timedelta
 import pandas as pd
@@ -6,11 +6,14 @@ import requests
 import gspread
 from google.oauth2.service_account import Credentials
 from curl_cffi import requests
+import time
+
 # =========================
 # CONFIG
 # =========================
 SHEET_ID = "1IUChF0UFKMqVLxTI69lXBi-g48f-oTYqI1K9miipKgY"
 TAB_NAME = "InsiderTrading"
+CSV_FILENAME = "InsiderTrading_Data.csv"
 
 # 1. Dynamically calculate dates for the last 12 months
 today = datetime.now()
@@ -37,8 +40,6 @@ HEADERS = {
 }
 
 
-
-
 def fetch_nse_data(api_url):
     # curl_cffi automatically mimics browser TLS fingerprints
     session = requests.Session(impersonate="chrome") 
@@ -49,7 +50,6 @@ def fetch_nse_data(api_url):
         session.get(BASE_URL, timeout=30)
 
         # Add a tiny sleep to mimic human behavior
-        import time
         time.sleep(2)
 
         print("Fetching PIT data for the last 12 months...")
@@ -95,8 +95,24 @@ def process_and_upload_to_gsheet(json_data):
     ]
     df = df.drop(columns=columns_to_drop, errors="ignore")
 
+    # ------------------ DATE FORMATTING ------------------
+    # Convert specified columns to a clean YYYY-MM-DD date format string
+    date_columns = ["date", "intimDt", "acqfromDt", "acqtoDt"]
+    for col in date_columns:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors='coerce').dt.strftime('%Y-%m-%d')
+
     # Replace NaN/Null values with empty strings for safe JSON serialization
     df = df.fillna("")
+
+    # =========================
+    # SAVE TO LOCAL CSV
+    # =========================
+    try:
+        df.to_csv(CSV_FILENAME, index=False)
+        print(f"Successfully saved data locally to '{CSV_FILENAME}'")
+    except Exception as e:
+        print(f"Failed to save CSV file: {e}")
 
     # =========================
     # GOOGLE SHEETS AUTH & UPLOAD
@@ -135,6 +151,6 @@ if __name__ == "__main__":
     # Fetch the dynamic data
     data = fetch_nse_data(API_URL)
 
-    # Process filters and push to Google Sheets
+    # Process filters, save CSV, and push to Google Sheets
     if data:
         process_and_upload_to_gsheet(data)
