@@ -1915,6 +1915,7 @@ Market Purchase,KALIDINDI RAVI,2025-12-30,2025-12-30,2979240,6.58,2977696,6.58,N
 Market Sale,Jai Ambey Share Broking Ltd.,2025-12-31,2025-12-31,1070000,0.51,1110000,0.53,Smc Global Securities Limited,2025-12-31,2025-12-31,Promoter Group,40000,Equity Shares,3661027,Equity Shares,SMCGLOBAL,Sell
 Market Purchase,Vijay Bansal,2025-12-30,2025-12-30,21450000,25.65,21350000,25.53,Cantabil Retail India Limited,2025-12-31,2025-12-30,Promoters,100000,Equity Shares,25876896,Equity Shares,CANTABIL,Buy
 Market Sale,Vivira Investment & Trading Private Limited,2025-12-31,2025-12-31,11616561,29.74,15245188,39.03,Privi Speciality Chemicals Limited,2025-12-31,2025-12-31,Promoters,3628627,Equity Shares,10298058145,Equity Shares,PRIVISCL,Sell
+Market Purchase,Anant Bajaj Trust,2025-12-29,2025-12-29,123233,0.04,Nil,0,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,123233,Equity Shares,1122652630,Equity Shares,BAJAJ-AUTO,Buy
 Market Purchase,Nirav Trust,2025-12-29,2025-12-29,162700,0.06,Nil,0,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,162700,Equity Shares,1482197000,Equity Shares,BAJAJ-AUTO,Buy
 Market Sale,Sanjivnayan Bajaj,2025-12-29,2025-12-29,200000,0.07,323233,0.12,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoters,123233,Equity Shares,1122652630,Equity Shares,BAJAJ-AUTO,Sell
 Market Purchase,Rahul Securities Private Limited,2025-12-29,2025-12-29,320600,0.11,267300,0.1,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,53300,Equity Shares,485563000,Equity Shares,BAJAJ-AUTO,Buy
@@ -1922,7 +1923,6 @@ Market Purchase,Rupa Equities Private Limited,2025-12-29,2025-12-29,336803,0.12,
 Market Purchase,Niraj Holdings Private Limited,2025-12-29,2025-12-29,72987,0.03,19361,0.01,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,53626,Equity Shares,488532860,Equity Shares,BAJAJ-AUTO,Buy
 Market Purchase,Rajiv Trust,2025-12-29,2025-12-29,131000,0.05,Nil,0,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,131000,Equity Shares,1193410000,Equity Shares,BAJAJ-AUTO,Buy
 Market Purchase,Sanjiv Trust,2025-12-29,2025-12-29,131126,0.05,Nil,0,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,131126,Equity Shares,1194557860,Equity Shares,BAJAJ-AUTO,Buy
-Market Purchase,Anant Bajaj Trust,2025-12-29,2025-12-29,123233,0.04,Nil,0,Bajaj Auto Limited,2025-12-31,2025-12-31,Promoter Group,123233,Equity Shares,1122652630,Equity Shares,BAJAJ-AUTO,Buy
 Market Purchase,BANWARI LAL MITTAL,2025-12-17,2025-12-29,10738603,33.76,10731768,33.74,Health X Platform Limited,2025-12-31,2025-12-30,Promoters,6835,Equity Shares,2060544,Equity Shares,HEALTHX,Buy
 Market Purchase,RAJEEV GOENKA,2025-12-29,2025-12-30,2567370,12.23,2557770,12.19,Purv Flexipack Limited,2025-12-31,2025-12-31,Promoters,9600,Equity Shares,772360,Equity Shares,PURVFLEXI,Buy
 Market Purchase,Ritesh Shaw,2025-12-31,2025-12-31,7375000,33.8,7350000,33.68,Annapurna Swadisht Limited,2025-12-31,2025-12-31,Promoters,25000,Equity Shares,5074500,Equity Shares,ANNAPURNA,Buy
@@ -1931,22 +1931,22 @@ Market Sale,Saurabh Daswani,2025-12-31,2025-12-31,2570670,10.52,2572470,10.52,Kn
 Market Sale,Rahul Sharma,2025-12-30,2025-12-31,24500,0.01,27000,0.02,Dr. Lal Path Labs Ltd.,2025-12-31,2025-12-31,Director,2500,Equity Shares,3657000,Equity Shares,LALPATHLAB,Sell
 Market Purchase,Ashapura International Limited,2025-12-30,2025-12-30,6277636,5.25,5900000,4.93,ORIENT CERATECH LIMITED,2025-12-31,2025-12-31,Promoter Group,377636,Equity Shares,19210985,Equity Shares,ORIENTCER,Buy
 Market Purchase,Quyosh Energia Private Limited,2025-12-31,2025-12-31,1599529,0.81,1462029,0.74,KPI Green Energy Limited,2025-12-31,2025-12-31,Promoter Group,137500,Equity Shares,68896650,Equity Shares,KPIGREEN,Buy
+Market Sale,ANIL KUMAR JHA,2025-12-30,2025-12-31,1124400,10.9,1184400,11.48,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,60000,Equity Shares,8104800,Equity Shares,RELIABLE,Sell
 Market Sale,SANJAY KUMAR PATHAK,2025-12-30,2025-12-30,1584364,15.35,1634364,15.84,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,50000,Equity Shares,6714000,Equity Shares,RELIABLE,Sell
-Market Sale,SANDEEP KUMAR JHA,2025-12-29,2025-12-29,1307960,12.68,1349964,13.08,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,42004,Equity Shares,5885600,Equity Shares,RELIABLE,Sell
-Market Sale,SUNIL KUMAR RAI,2025-12-30,2025-12-30,1369164,13.27,1429164,13.85,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,60000,Equity Shares,8056800,Equity Shares,RELIABLE,Sell
-Market Sale,RAKESH JHA,2025-12-30,2025-12-30,1551964,15.04,1601964,15.52,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,50000,Equity Shares,6756000,Equity Shares,RELIABLE,Sell
 Market Sale,MEENU RAI,2025-12-30,2025-12-30,1136,0.01,41136,0.39,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoter Group,40000,Equity Shares,5387600,Equity Shares,RELIABLE,Sell
-Market Sale,SANJAY KUMAR PATHAK,2025-12-30,2025-12-30,1584364,15.35,1634364,15.84,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,50000,Equity Shares,6714000,Equity Shares,RELIABLE,Sell
+Market Sale,RAKESH JHA,2025-12-30,2025-12-30,1551964,15.04,1601964,15.52,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,50000,Equity Shares,6756000,Equity Shares,RELIABLE,Sell
+Market Sale,SUNIL KUMAR RAI,2025-12-30,2025-12-30,1369164,13.27,1429164,13.85,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,60000,Equity Shares,8056800,Equity Shares,RELIABLE,Sell
+Market Sale,SANDEEP KUMAR JHA,2025-12-29,2025-12-29,1307960,12.68,1349964,13.08,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,42004,Equity Shares,5885600,Equity Shares,RELIABLE,Sell
 Market Sale,ANIL KUMAR JHA,2025-12-30,2025-12-30,1124400,10.9,1184400,11.48,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,60000,Equity Shares,8104800,Equity Shares,RELIABLE,Sell
+Market Sale,SANJAY KUMAR PATHAK,2025-12-30,2025-12-30,1584364,15.35,1634364,15.84,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,50000,Equity Shares,6714000,Equity Shares,RELIABLE,Sell
 Market Sale,MEENU RAI,2025-12-30,2025-12-30,41136,0.39,41136,0.56,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoter Group,16500,Equity Shares,2409868,Equity Shares,RELIABLE,Sell
 Market Sale,RAKESH JHA,2025-12-30,2025-12-30,1551964,15.04,1601964,15.52,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,50000,Equity Shares,6756000,Equity Shares,RELIABLE,Sell
 Market Sale,SUNIL KUMAR RAI,2025-12-30,2025-12-30,1369164,13.27,1429164,13.85,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,60000,Equity Shares,8056800,Equity Shares,RELIABLE,Sell
 Market Sale,SANDEEP KUMAR JHA,2025-12-29,2025-12-29,1307960,12.68,1349964,13.08,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,42004,Equity Shares,5885600,Equity Shares,RELIABLE,Sell
-Market Sale,ANIL KUMAR JHA,2025-12-30,2025-12-31,1124400,10.9,1184400,11.48,Reliable Data Services Limited,2025-12-31,2025-12-30,Promoters,60000,Equity Shares,8104800,Equity Shares,RELIABLE,Sell
 Market Purchase,Kshitija N. Shah,2025-12-30,2025-12-30,57241,0.21,54300,0.2,Chembond Chemicals Limited,2025-12-31,2025-12-30,Promoter Group,2941,Equity Shares,447032,Equity Shares,CHEMBONDCH,Buy
 Market Sale,VIKAS BHATIA,2025-12-26,2025-12-26,93000,0.04,95000,0.04,Servotech Renewable Power System Limited,2025-12-31,2025-12-30,Promoter Group,2000,Equity Shares,158820,Equity Shares,SERVOTECH,Sell
-Market Purchase,Parth Lallubhai  Desai,2025-12-12,2025-12-29,1236750,12.05,1228750,11.98,Fonebox Retail Limited,2025-12-31,2025-12-30,Promoters,8000,Equity Shares,792200,Equity Shares,FONEBOX,Buy
 Market Purchase,JIGAR LALLUBHAI DESAI,2025-12-16,2025-12-29,1232750,12.02,1212750,11.82,Fonebox Retail Limited,2025-12-31,2025-12-30,Promoters,20000,Equity Shares,1824700,Equity Shares,FONEBOX,Buy
+Market Purchase,Parth Lallubhai  Desai,2025-12-12,2025-12-29,1236750,12.05,1228750,11.98,Fonebox Retail Limited,2025-12-31,2025-12-30,Promoters,8000,Equity Shares,792200,Equity Shares,FONEBOX,Buy
 Market Sale,Dr. Kailash Shantilal Choudhari,2025-12-30,2025-12-30,4252245,2.61,4265992,2.62,Aksh Optifibre Limited,2025-12-31,2025-12-31,Promoters,13747,Equity Shares,89503,Equity Shares,AKSHOPTFBR,Sell
 Market Sale,Modi Rubber Limited,2025-12-29,2025-12-29,2629019,2.69,2629944,2.69,Ester Industries Limited,2025-12-31,2025-12-30,Promoter Group,925,Equity Shares,97569,Equity Shares,ESTER,Sell
 Market Sale,Modi Rubber Limited,2025-12-29,2025-12-29,2629944,2.69,2642705,2.71,Ester Industries Limited,2025-12-31,2025-12-30,Promoter Group,12761,Equity Shares,1346031,Equity Shares,ESTER,Sell
@@ -1958,53 +1958,53 @@ Market Purchase,Destiny Logistics & Infra Limited,2025-12-12,2025-12-29,3917563,
 Market Purchase,Quyosh Energia Private Limited,2025-12-31,2025-12-31,1372029,0.7,1129529,0.57,KPI Green Energy Limited,2025-12-31,2025-12-31,Promoter Group,242500,Equity Shares,121530675,Equity Shares,KPIGREEN,Buy
 Market Purchase,Bijal Ashutosh Juthani,2025-12-30,2025-12-30,369375,1.54,359375,1.5,Mason Infratech Limited,2025-12-30,2025-12-30,Promoter Group,10000,Equity Shares,1960000,Equity Shares,MASON,Buy
 Market Purchase,Calleis Infracon Private Limited,2025-12-26,2025-12-26,67150000,2.89,66150000,2.85,Indiabulls Limited,2025-12-30,2025-12-30,Promoter Group,1000000,Equity Shares,16350626,Equity Shares,IBULLSLTD,Buy
-Market Purchase,Siddhartha Roy Burman,2025-12-24,2025-12-24,1779533,9.68,1729533,9.41,KSR Footwear Limited,2025-12-30,2025-12-26,Promoters,50000,Equity Shares,749913,Equity Shares,KSR,Buy
 Market Purchase,Siddhartha Roy Burman,2025-12-23,2025-12-23,1729533,9.41,1629533,8.87,KSR Footwear Limited,2025-12-30,2025-12-26,Promoters,100000,Equity Shares,1712307,Equity Shares,KSR,Buy
+Market Purchase,Siddhartha Roy Burman,2025-12-24,2025-12-24,1779533,9.68,1729533,9.41,KSR Footwear Limited,2025-12-30,2025-12-26,Promoters,50000,Equity Shares,749913,Equity Shares,KSR,Buy
 Market Purchase,PLACID LIMITED,2025-12-26,2025-12-26,1200224,38.77,1195911,38.63,The Peria Karamalai Tea & Produce Company Limited,2025-12-30,2025-12-30,Promoter Group,4313,Equity Shares,3678978,Equity Shares,PKTEA,Buy
 Market Purchase,Gandhar Coals & Mines Private Limited,2025-12-26,2025-12-26,1291177,1.31,1241177,1.26,Gandhar Oil Refinery (India) Limited,2025-12-30,2025-12-30,Promoter Group,50000,Equity Shares,7448263,Equity Shares,GANDHAR,Buy
 Market Purchase,COMPUCOM TECHNOLOGIES PRIVATE LIMITED,2025-12-29,2025-12-30,20008632,25.29,19998318,25.27,Compucom Software Limited,2025-12-30,2025-12-30,Promoter Group,10314,Equity Shares,170111,Equity Shares,COMPUSOFT,Buy
-Market Purchase,D B Power Limited,2025-12-26,2025-12-26,2319801,1.3,2295044,1.29,D.B.Corp Limited,2025-12-30,2025-12-27,Promoter Group,24757,Equity Shares,6456905,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-12-29,2025-12-29,2328020,1.31,2319801,1.3,D.B.Corp Limited,2025-12-30,2025-12-29,Promoter Group,8219,Equity Shares,2148215,Equity Shares,DBCORP,Buy
+Market Purchase,D B Power Limited,2025-12-26,2025-12-26,2319801,1.3,2295044,1.29,D.B.Corp Limited,2025-12-30,2025-12-27,Promoter Group,24757,Equity Shares,6456905,Equity Shares,DBCORP,Buy
 Market Purchase,Anjali Gupta,2025-12-29,2025-12-29,3845,0.03,1600,0.01,AVG Logistics Limited,2025-12-30,2025-12-29,Promoter Group,2245,Equity Shares,407490,Equity Shares,AVG,Buy
 Market Sale,Vijay Punglia,2025-12-26,2025-12-26,6290000,5.05,6790000,5.45,Vishnu Prakash R Punglia Limited,2025-12-30,2025-12-30,Promoter Group,500000,Equity Shares,29940000,Equity Shares,VPRPL,Sell
-Market Sale,Anil Punglia,2025-12-26,2025-12-26,5500000,4.41,6000000,4.81,Vishnu Prakash R Punglia Limited,2025-12-30,2025-12-30,Promoter Group,500000,Equity Shares,29850000,Equity Shares,VPRPL,Sell
 Market Sale,Anil Punglia,2025-12-23,2025-12-23,6000000,4.81,6500000,5.22,Vishnu Prakash R Punglia Limited,2025-12-30,2025-12-26,Promoter Group,500000,Equity Shares,30040000,Equity Shares,VPRPL,Sell
+Market Sale,Anil Punglia,2025-12-26,2025-12-26,5500000,4.41,6000000,4.81,Vishnu Prakash R Punglia Limited,2025-12-30,2025-12-30,Promoter Group,500000,Equity Shares,29850000,Equity Shares,VPRPL,Sell
 Market Sale,Vijay Punglia,2025-12-23,2025-12-23,6790000,5.45,7290000,5.85,Vishnu Prakash R Punglia Limited,2025-12-30,2025-12-26,Promoter Group,500000,Equity Shares,30600000,Equity Shares,VPRPL,Sell
 Market Purchase,KALIDINDI RAVI,2025-12-29,2025-12-29,2977696,6.58,2975696,6.57,NCL Industries Limited,2025-12-30,2025-12-30,Promoters,2000,Equity Shares,396000,Equity Shares,NCLIND,Buy
 Market Purchase,NCL Buildtek Ltd,2025-12-26,2025-12-26,490545,1.08,489312,1.08,NCL Industries Limited,2025-12-30,2025-12-29,Promoter Group,1233,Equity Shares,241732,Equity Shares,NCLIND,Buy
 Market Purchase,Quyosh Energia Private Limited,2025-12-30,2025-12-30,1129529,0.57,1018933,0.52,KPI Green Energy Limited,2025-12-30,2025-12-30,Promoter Group,110596,Equity Shares,48430546,Equity Shares,KPIGREEN,Buy
 Market Purchase,ESSEL MINING & INDUSTRIES LIMITED,2025-12-26,2025-12-26,10000,0.09,Nil,0,Pilani Investment and Industries Corporation Limited,2025-12-30,2025-12-30,Promoter Group,10000,Equity Shares,53626759,Equity Shares,PILANIINVS,Buy
 Market Purchase,Bhavin Suryakant Parikh,2025-12-29,2025-12-29,61192265,13.59,58932265,13.08,GLOBE ENTERPRISES (INDIA) LIMITED,2025-12-30,2025-12-30,Promoters,2260000,Equity Shares,6187080,Equity Shares,GLOBE,Buy
-Market Purchase,M.R.RUIA FAMILY TRUST,2025-12-26,2025-12-26,1000,0,Nil,0,Shekhawati Industries Limited,2025-12-30,2025-12-30,Promoter Group,1000,Equity Shares,19500,Equity Shares,SHEKHAWATI,Buy
 Market Purchase,VINAYAK CLOTHINGS PRIVATE LIMITED,2025-12-26,2025-12-26,1000,0,Nil,0,Shekhawati Industries Limited,2025-12-30,2025-12-30,Promoter Group,1000,Equity Shares,19490,Equity Shares,SHEKHAWATI,Buy
+Market Purchase,M.R.RUIA FAMILY TRUST,2025-12-26,2025-12-26,1000,0,Nil,0,Shekhawati Industries Limited,2025-12-30,2025-12-30,Promoter Group,1000,Equity Shares,19500,Equity Shares,SHEKHAWATI,Buy
 Market Purchase,Quyosh Energia Private Limited,2025-12-30,2025-12-30,1018933,0.52,933,0,KPI Green Energy Limited,2025-12-30,2025-12-30,Promoter Group,1018000,Equity Shares,464638791,Equity Shares,KPIGREEN,Buy
 Market Purchase,Quyosh Energia Private Limited,2025-12-29,2025-12-29,933,0,500,0,KPI Green Energy Limited,2025-12-30,2025-12-30,Promoter Group,433,Equity Shares,175270,Equity Shares,KPIGREEN,Buy
 Market Purchase,ANJANA SONI THAKUR,2025-12-26,2025-12-29,341170,0.68,316140,0.63,Sangam (India) Limited,2025-12-30,2025-12-29,Promoters,25030,Equity Shares,11419314,Equity Shares,SANGAMIND,Buy
 Market Purchase,MIDASTECH VENTURES PRIVATE LIMITED,2025-12-29,2025-12-29,18256156,35.87,18231852,35.82,Global Education Limited,2025-12-30,2025-12-30,Promoters,24304,Equity Shares,2208427,Equity Shares,GLOBAL,Buy
 Market Purchase,GIRISHKUMAR OCHCHHAVLAL RAVAL,2025-12-29,2025-12-29,5930081,31.87,5924881,31.85,Rachana Infrastructure Limited,2025-12-30,2025-12-30,Promoters,5200,Equity Shares,195624,Equity Shares,RILINFRA,Buy
-Market Purchase,Siddhantnayan Bajaj,2025-12-29,2025-12-29,1553040,0.02,651040,0.01,Bajaj Finance Limited,2025-12-29,2025-12-29,Promoter Group,902000,Equity Shares,899603178,Equity Shares,BAJFINANCE,Buy
 Market Purchase,Sanjali Bajaj,2025-12-29,2025-12-29,1553540,0.02,651040,0.01,Bajaj Finance Limited,2025-12-29,2025-12-29,Promoter Group,902500,Equity Shares,899787838,Equity Shares,BAJFINANCE,Buy
+Market Purchase,Siddhantnayan Bajaj,2025-12-29,2025-12-29,1553040,0.02,651040,0.01,Bajaj Finance Limited,2025-12-29,2025-12-29,Promoter Group,902000,Equity Shares,899603178,Equity Shares,BAJFINANCE,Buy
 Market Purchase,JASPALSINGH PREHLADSINGH CHANDOCK,2025-12-29,2025-12-29,60459024,53.04,60450024,53.03,Balu Forge Industries Limited,2025-12-29,2025-12-29,Promoters,9000,Equity Shares,5499090,Equity Shares,BALUFORGE,Buy
 Market Purchase,JASPALSINGH PREHLADSINGH CHANDOCK,2025-12-26,2025-12-26,60450024,53.03,60440024,53.02,Balu Forge Industries Limited,2025-12-29,2025-12-26,Promoters,10000,Equity Shares,6029400,Equity Shares,BALUFORGE,Buy
 Market Purchase,Capstan Trading LLP,2025-12-24,2025-12-24,9034168,8.2,9008297,8.18,Shoppers Stop Limited,2025-12-29,2025-12-24,Promoter Group,25871,Equity Shares,10861681,Equity Shares,SHOPERSTOP,Buy
 Market Purchase,PLACID LIMITED,2025-12-24,2025-12-24,1195911,38.63,1187470,38.36,The Peria Karamalai Tea & Produce Company Limited,2025-12-29,2025-12-29,Promoter Group,8441,Equity Shares,7804658,Equity Shares,PKTEA,Buy
-Market Purchase,Sanjay Aggarwal,2025-12-29,2025-12-29,14192013,4.65,14117013,4.63,Paramount Communications Limited,2025-12-29,2025-12-29,Promoters,75000,Equity Shares,3020167,Equity Shares,PARACABLES,Buy
 Market Purchase,Sandeep Aggarwal,2025-12-29,2025-12-29,14130033,4.63,14055033,4.61,Paramount Communications Limited,2025-12-29,2025-12-29,Promoters,75000,Equity Shares,2987085,Equity Shares,PARACABLES,Buy
+Market Purchase,Sanjay Aggarwal,2025-12-29,2025-12-29,14192013,4.65,14117013,4.63,Paramount Communications Limited,2025-12-29,2025-12-29,Promoters,75000,Equity Shares,3020167,Equity Shares,PARACABLES,Buy
 Market Purchase,Jagran Vyapaar Pvt Ltd,2025-12-23,2025-12-24,42239526,7.45,41352526,7.3,MSP Steel & Power Limited,2025-12-29,2025-12-26,Promoter Group,887000,Equity Shares,32557918,Equity Shares,MSPL,Buy
 Market Purchase,Shree Vinay Finvest P Ltd..,2025-12-22,2025-12-22,13552443,2.39,13367443,2.36,MSP Steel & Power Limited,2025-12-29,2025-12-24,Promoter Group,185000,Equity Shares,6779584,Equity Shares,MSPL,Buy
 Market Purchase,Manish Bindal,2025-12-23,2025-12-23,8990206,37.63,8987406,37.62,Tejas Cargo India Limited,2025-12-29,2025-12-29,Promoters,2800,Equity Shares,405681,Equity Shares,TEJASCARGO,Buy
 Market Purchase,Manish Bindal,2025-12-23,2025-12-23,8990206,37.63,8987406,37.62,Tejas Cargo India Limited,2025-12-29,2025-12-29,Promoters,2800,Equity Shares,405681,Equity Shares,TEJASCARGO,Buy
-Market Sale,Kavita Dhirendrakumar Chopra,2025-12-22,2025-12-22,39620000,22.39,39920000,22.56,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,300000,Equity Shares,5091000,Equity Shares,OSIAHYPER,Sell
-Market Sale,Dhirendra Gautamkumar Chopra,2025-12-22,2025-12-22,30586363,17.28,30606363,17.3,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,20000,Equity Shares,339400,Equity Shares,OSIAHYPER,Sell
-Market Sale,Dhirendra Gautamkumar Chopra,2025-12-22,2025-12-22,30220183,17.08,30586363,17.28,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,366180,Equity Shares,5917468,Equity Shares,OSIAHYPER,Sell
 Market Sale,Dhirendra Gautamkumar Chopra,2025-12-26,2025-12-26,29303300,16.56,29841300,16.86,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,538000,Equity Shares,7854800,Equity Shares,OSIAHYPER,Sell
 Market Sale,Dhirendra Gautamkumar Chopra,2025-12-24,2025-12-24,29841300,16.86,30220183,17.08,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,378883,Equity Shares,5823431,Equity Shares,OSIAHYPER,Sell
+Market Sale,Dhirendra Gautamkumar Chopra,2025-12-22,2025-12-22,30220183,17.08,30586363,17.28,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,366180,Equity Shares,5917468,Equity Shares,OSIAHYPER,Sell
+Market Sale,Dhirendra Gautamkumar Chopra,2025-12-22,2025-12-22,30586363,17.28,30606363,17.3,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,20000,Equity Shares,339400,Equity Shares,OSIAHYPER,Sell
+Market Sale,Kavita Dhirendrakumar Chopra,2025-12-22,2025-12-22,39620000,22.39,39920000,22.56,Osia Hyper Retail Limited,2025-12-29,2025-12-27,Promoters,300000,Equity Shares,5091000,Equity Shares,OSIAHYPER,Sell
 Market Purchase,Utpal Patel,2025-12-26,2025-12-26,1262940,2.01,1239690,1.97,Jash Engineering Limited,2025-12-29,2025-12-26,Promoter Group,23250,Equity Shares,9976976,Equity Shares,JASH,Buy
 Market Purchase,Aarti Devesh Sahney,2025-12-29,2025-12-29,941405,3.88,913834,3.77,NRB Industrial Bearings Limited,2025-12-29,2025-12-29,Promoters,27571,Equity Shares,818032,Equity Shares,NIBL,Buy
 Market Purchase,SURENDRA SAI NALLAMALLI,2025-12-26,2025-12-26,25955,0.11,22855,0.1,Best Agrolife Limited,2025-12-29,2025-12-29,Director,3100,Equity Shares,1200808,Equity Shares,BESTAGRO,Buy
-Market Sale,Hari Prasad Agarwala & Ors.,2025-12-22,2025-12-22,570768,0.27,600768,0.28,Shyam Century Ferrous Limited,2025-12-29,2025-12-24,Promoter Group,30000,Equity Shares,188700,Equity Shares,SHYAMCENT,Sell
-Market Sale,Sumitra Devi Agarwal,2025-12-23,2025-12-23,118517,0.07,148517,0.07,Shyam Century Ferrous Limited,2025-12-29,2025-12-24,Promoter Group,30000,Equity Shares,188700,Equity Shares,SHYAMCENT,Sell
 Market Sale,Bhawna Agarwal,2025-12-22,2025-12-22,185989,0.09,215989,0.1,Shyam Century Ferrous Limited,2025-12-29,2025-12-24,Promoter Group,30000,Equity Shares,188753,Equity Shares,SHYAMCENT,Sell
+Market Sale,Sumitra Devi Agarwal,2025-12-23,2025-12-23,118517,0.07,148517,0.07,Shyam Century Ferrous Limited,2025-12-29,2025-12-24,Promoter Group,30000,Equity Shares,188700,Equity Shares,SHYAMCENT,Sell
+Market Sale,Hari Prasad Agarwala & Ors.,2025-12-22,2025-12-22,570768,0.27,600768,0.28,Shyam Century Ferrous Limited,2025-12-29,2025-12-24,Promoter Group,30000,Equity Shares,188700,Equity Shares,SHYAMCENT,Sell
 Market Purchase,ARPIT DEEPAKKUMAR  SHAH,2025-12-19,2025-12-19,2081200,17.66,2080000,17.65,Remus Pharmaceuticals Limited,2025-12-29,2025-12-29,Promoters,1200,Equity Shares,884640,Equity Shares,REMUS,Buy
 Market Purchase,TV Praveen,2025-12-26,2025-12-26,264539,8.75,262752,8.69,HALEOS LABS LIMITED,2025-12-29,2025-12-29,Promoter Group,1787,Equity Shares,2234000,Equity Shares,HALEOSLABS,Buy
 Market Purchase,RAJEEV GOENKA,2025-12-26,2025-12-26,2557770,12.19,2536970,12.09,Purv Flexipack Limited,2025-12-29,2025-12-27,Promoters,20800,Equity Shares,1776960,Equity Shares,PURVFLEXI,Buy
@@ -2036,10 +2036,10 @@ Market Purchase,S. Aravindan,2025-12-23,2025-12-23,4593018,6.96,4569018,6.93,W S
 Market Purchase,GIRISHKUMAR OCHCHHAVLAL RAVAL,2025-12-24,2025-12-24,5920781,31.82,5919181,31.82,Rachana Infrastructure Limited,2025-12-25,2025-12-25,Promoters,1600,Equity Shares,59040,Equity Shares,RILINFRA,Buy
 Market Purchase,Jai Ambey Share Broking Ltd.,2025-12-23,2025-12-23,1110000,0.53,2973340,1.42,Smc Global Securities Limited,2025-12-24,2025-12-24,Promoter Group,1863340,Equity Shares,159408737,Equity Shares,SMCGLOBAL,Sell
 Market Sale,P N Raju,2025-12-22,2025-12-22,375500,0.83,425500,0.94,NCL Industries Limited,2025-12-24,2025-12-22,Promoter Group,50000,Equity Shares,9860500,Equity Shares,NCLIND,Sell
-Market Purchase,AUV Innovations LLP,2025-12-24,2025-12-24,58834375,9.41,43718761,6.99,Zee Media Corporation Limited,2025-12-24,2025-12-24,Promoter Group,15115614,Equity Shares,142321063,Equity Shares,ZEEMEDIA,Buy
 Market Purchase,AUV Innovations LLP,2025-12-22,2025-12-22,43718761,6.99,38984375,6.23,Zee Media Corporation Limited,2025-12-24,2025-12-24,Promoter Group,4734386,Equity Shares,43232519,Equity Shares,ZEEMEDIA,Buy
-Market Purchase,MADHAV DOSHI,2025-12-19,2025-12-19,1092079,12.2,1091079,12.19,Madhav Marbles and Granites Limited,2025-12-24,2025-12-22,Director,1000,Equity Shares,41768,Equity Shares,MADHAV,Buy
+Market Purchase,AUV Innovations LLP,2025-12-24,2025-12-24,58834375,9.41,43718761,6.99,Zee Media Corporation Limited,2025-12-24,2025-12-24,Promoter Group,15115614,Equity Shares,142321063,Equity Shares,ZEEMEDIA,Buy
 Market Purchase,-,2025-12-23,2025-12-23,1095314,12.23,1092079,12.2,Madhav Marbles and Granites Limited,2025-12-24,2025-12-24,Director,3235,Equity Shares,135115,Equity Shares,MADHAV,Buy
+Market Purchase,MADHAV DOSHI,2025-12-19,2025-12-19,1092079,12.2,1091079,12.19,Madhav Marbles and Granites Limited,2025-12-24,2025-12-22,Director,1000,Equity Shares,41768,Equity Shares,MADHAV,Buy
 Market Purchase,LIVING MEDIA INDIA LIMITED,2025-12-23,2025-12-23,36791078,61.66,36341078,60.9,TV Today Network Limited,2025-12-24,2025-12-24,Promoters,450000,Equity Shares,60480000,Equity Shares,TVTODAY,Buy
 Market Purchase,NCL Buildtek Ltd,2025-12-22,2025-12-22,489312,1.08,472003,1.04,NCL Industries Limited,2025-12-24,2025-12-23,Promoter Group,17309,Equity Shares,3409873,Equity Shares,NCLIND,Buy
 Market Sale,Dr. Kailash Shantilal Choudhari,2025-12-22,2025-12-23,4265992,2.62,4438058,2.73,Aksh Optifibre Limited,2025-12-24,2025-12-24,Promoters,172066,Equity Shares,1122466,Equity Shares,AKSHOPTFBR,Sell
@@ -2072,14 +2072,14 @@ Market Purchase,Nitin Sachdeva,2025-12-22,2025-12-22,3593895,39.45,3592695,39.44
 Market Purchase,Nitin Sachdeva,2025-12-22,2025-12-22,3599895,39.52,3593895,39.45,Delaplex Limited,2025-12-23,2025-12-23,Promoters,6000,Equity Shares,780600,Equity Shares,DELAPLEX,Buy
 Market Purchase,Nitin Sachdeva,2025-12-22,2025-12-22,3601095,39.53,3599895,39.52,Delaplex Limited,2025-12-23,2025-12-23,Promoters,1200,Equity Shares,162000,Equity Shares,DELAPLEX,Buy
 Market Purchase,Amit Vinod Sheth,2025-12-22,2025-12-22,34293304,50.84,34226055,50.74,Focus Lighting and Fixtures Limited,2025-12-23,2025-12-23,Promoters,67249,Equity Shares,4776596,Equity Shares,FOCUS,Buy
-Market Sale,Pushpa Pungalia,2025-12-17,2025-12-17,7090000,5.69,7590000,6.09,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-19,Promoter Group,500000,Equity Shares,36500000,Equity Shares,VPRPL,Sell
-Market Sale,Pushpa Devi Pungalia,2025-12-22,2025-12-22,6010000,4.82,6510000,5.22,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,500000,Equity Shares,31800000,Equity Shares,VPRPL,Sell
-Market Sale,Pushpa Pungalia,2025-12-18,2025-12-18,6990000,5.61,7090000,5.69,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-22,Promoter Group,100000,Equity Shares,6751000,Equity Shares,VPRPL,Sell
-Market Sale,Pushpa Devi Pungalia,2025-12-18,2025-12-18,6510000,5.22,7110000,5.7,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-22,Promoter Group,600000,Equity Shares,41310000,Equity Shares,VPRPL,Sell
 Market Sale,Vijay Punglia,2025-12-18,2025-12-18,7690000,6.17,8190000,6.57,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-22,Promoter Group,500000,Equity Shares,33550000,Equity Shares,VPRPL,Sell
-Market Sale,Pushpa Pungalia,2025-12-19,2025-12-22,6090000,4.89,6990000,5.61,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,900000,Equity Shares,57393000,Equity Shares,VPRPL,Sell
-Market Sale,Anil Punglia,2025-12-19,2025-12-22,6500000,5.22,7500000,6.02,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,1000000,Equity Shares,64147650,Equity Shares,VPRPL,Sell
+Market Sale,Pushpa Devi Pungalia,2025-12-18,2025-12-18,6510000,5.22,7110000,5.7,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-22,Promoter Group,600000,Equity Shares,41310000,Equity Shares,VPRPL,Sell
 Market Sale,Vijay Punglia,2025-12-19,2025-12-19,7290000,5.85,7690000,6.17,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,400000,Equity Shares,25572000,Equity Shares,VPRPL,Sell
+Market Sale,Anil Punglia,2025-12-19,2025-12-22,6500000,5.22,7500000,6.02,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,1000000,Equity Shares,64147650,Equity Shares,VPRPL,Sell
+Market Sale,Pushpa Devi Pungalia,2025-12-22,2025-12-22,6010000,4.82,6510000,5.22,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,500000,Equity Shares,31800000,Equity Shares,VPRPL,Sell
+Market Sale,Pushpa Pungalia,2025-12-17,2025-12-17,7090000,5.69,7590000,6.09,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-19,Promoter Group,500000,Equity Shares,36500000,Equity Shares,VPRPL,Sell
+Market Sale,Pushpa Pungalia,2025-12-18,2025-12-18,6990000,5.61,7090000,5.69,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-22,Promoter Group,100000,Equity Shares,6751000,Equity Shares,VPRPL,Sell
+Market Sale,Pushpa Pungalia,2025-12-19,2025-12-22,6090000,4.89,6990000,5.61,Vishnu Prakash R Punglia Limited,2025-12-23,2025-12-23,Promoter Group,900000,Equity Shares,57393000,Equity Shares,VPRPL,Sell
 Market Purchase,GIRISHKUMAR OCHCHHAVLAL RAVAL,2025-12-22,2025-12-22,5914381,31.79,5912481,31.78,Rachana Infrastructure Limited,2025-12-23,2025-12-23,Promoters,1900,Equity Shares,70395,Equity Shares,RILINFRA,Buy
 Market Purchase,Mr. Gagan Harsh Sharma,2025-12-16,2025-12-16,217123,0.2,215000,0.2,Bliss GVS Pharma Limited,2025-12-23,2025-12-19,Promoters,2123,Equity Shares,299218,Equity Shares,BLISSGVS,Buy
 Market Purchase,GIRISHKUMAR OCHCHHAVLAL RAVAL,2025-12-19,2025-12-19,5912481,31.78,5911681,31.77,Rachana Infrastructure Limited,2025-12-23,2025-12-23,Promoters,800,Equity Shares,28848,Equity Shares,RILINFRA,Buy
@@ -2097,10 +2097,10 @@ Market Purchase,Kamleshkumar Bhagubhai Patel,2025-12-22,2025-12-22,12517172,5.4,
 Market Purchase,Mukesh Kumar Mishra,2025-12-17,2025-12-18,135300,4.19,135000,4.18,Homesfy Realty Limited,2025-12-22,2025-12-22,Director,300,Equity Shares,49500,Equity Shares,HOMESFY,Buy
 Market Purchase,Aniketa Mangal,2025-12-19,2025-12-19,2229962,8.07,2228212,8.06,Mangal Electrical Industries Limited,2025-12-22,2025-12-22,Promoters,1750,Equity Shares,632697,Equity Shares,MEIL,Buy
 Market Purchase,BHORUKA SUPPLY CHAIN SOLUTIONS HOLDINGS LIMITED,2025-12-17,2025-12-17,33848102,44.11,33844712,44.11,Transport Corporation of India Limited,2025-12-22,2025-12-19,Promoter Group,3390,Equity Shares,3491531,Equity Shares,TCI,Buy
-Market Purchase,SUDHA APPARELS LTD,2025-12-18,2025-12-18,3657837,12.62,3622837,12.5,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,35000,Equity Shares,17350506,Equity Shares,JINDRILL,Buy
-Market Purchase,SUDHA APPARELS LTD,2025-12-19,2025-12-19,3767837,13,3657837,12.62,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,110000,Equity Shares,55646148,Equity Shares,JINDRILL,Buy
-Market Purchase,SUDHA APPARELS LTD,2025-12-19,2025-12-19,3792837,13.09,3767837,13,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,25000,Equity Shares,12646851,Equity Shares,JINDRILL,Buy
 Market Purchase,SUDHA APPARELS LTD,2025-12-18,2025-12-18,3622837,12.5,3492837,12.05,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,130000,Equity Shares,64444739,Equity Shares,JINDRILL,Buy
+Market Purchase,SUDHA APPARELS LTD,2025-12-19,2025-12-19,3792837,13.09,3767837,13,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,25000,Equity Shares,12646851,Equity Shares,JINDRILL,Buy
+Market Purchase,SUDHA APPARELS LTD,2025-12-19,2025-12-19,3767837,13,3657837,12.62,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,110000,Equity Shares,55646148,Equity Shares,JINDRILL,Buy
+Market Purchase,SUDHA APPARELS LTD,2025-12-18,2025-12-18,3657837,12.62,3622837,12.5,Jindal Drilling And Industries Limited,2025-12-22,2025-12-22,Promoter Group,35000,Equity Shares,17350506,Equity Shares,JINDRILL,Buy
 Market Purchase,NCL Buildtek Ltd,2025-12-19,2025-12-19,472003,1.04,466235,1.03,NCL Industries Limited,2025-12-20,2025-12-20,Promoter Group,5768,Equity Shares,0,Equity Shares,NCLIND,Buy
 Market Purchase,Manish Bindal,2025-12-18,2025-12-18,8987406,37.62,8985806,37.61,Tejas Cargo India Limited,2025-12-20,2025-12-20,Promoters,1600,Equity Shares,405681,Equity Shares,TEJASCARGO,Buy
 Market Purchase,Manish Bindal,2025-12-17,2025-12-17,8985806,37.61,8979806,37.58,Tejas Cargo India Limited,2025-12-20,2025-12-18,Promoters,6000,Equity Shares,1507788,Equity Shares,TEJASCARGO,Buy
@@ -2110,8 +2110,8 @@ Market Purchase,Aniketa Mangal,2025-12-17,2025-12-17,2227212,8.06,2223712,8.05,M
 Market Purchase,Mukesh Sangla,2025-12-19,2025-12-19,1024419,3.48,1021332,3.47,Signet Industries Limited,2025-12-20,2025-12-20,Promoters,3087,Equity Shares,170094,Equity Shares,SIGIND,Buy
 Market Sale,President of India acting through Department of Financial Services,2025-12-17,2025-12-18,17800488299,92.44,18218326570,94.61,Indian Overseas Bank,2025-12-20,2025-12-19,Promoters,417838271,Equity Shares,4178382710,Equity Shares,IOB,Sell
 Market Sale,MR. RAJESHBHAI ODHAVJIBHAI PATEL,2025-12-17,2025-12-18,17950000,6.31,18000000,6.63,Madhav Copper Limited,2025-12-20,2025-12-18,Promoters,50000,Equity Shares,2505085,Equity Shares,MCL,Sell
-Market Sale,Kirloskar Systems Private Limited,2025-12-17,2025-12-17,Nil,0,2070,0,Kirloskar Oil Engines Limited,2025-12-19,2025-12-19,Promoter Group,2070,Equity Shares,2627659,Equity Shares,KIRLOSENG,Sell
 Market Sale,Geetanjali Vikram Kirloskar,2025-12-17,2025-12-17,Nil,0,31875,0.02,Kirloskar Oil Engines Limited,2025-12-19,2025-12-19,Promoters,31875,Equity Shares,39622375,Equity Shares,KIRLOSENG,Sell
+Market Sale,Kirloskar Systems Private Limited,2025-12-17,2025-12-17,Nil,0,2070,0,Kirloskar Oil Engines Limited,2025-12-19,2025-12-19,Promoter Group,2070,Equity Shares,2627659,Equity Shares,KIRLOSENG,Sell
 Market Sale,KIRLOSKAR SYSTEMS PRIVATE LIMITED,2025-12-17,2025-12-17,Nil,0,2010,0,Kirloskar Pneumatic Company Limited,2025-12-19,2025-12-19,Promoter Group,2010,Equity Shares,2095247,Equity Shares,KIRLPNU,-
 Market Purchase,PLACID LIMITED,2025-12-09,2025-12-17,1185769,38.3,1179608,38.1,The Peria Karamalai Tea & Produce Company Limited,2025-12-19,2025-12-19,Promoter Group,6161,Equity Shares,5134372,Equity Shares,PKTEA,Buy
 Market Purchase,DEBOJYOTI BANERJEE,2025-12-18,2025-12-19,1861779,65.95,1849779,65.53,Veritaas Advertising Limited,2025-12-19,2025-12-19,Promoters,12000,Equity Shares,704400,Equity Shares,VERITAAS,Buy
@@ -2119,33 +2119,33 @@ Market Sale,Geetanjali Kirloskar,2025-12-17,2025-12-17,Nil,0,2125,0.02,Kirloskar
 Market Purchase,Hindustan Cotton Company,2025-12-18,2025-12-18,47651207,57.07,47638834,57.05,Sarla Performance Fibers Limited,2025-12-19,2025-12-19,Promoter Group,12373,Equity Shares,1049129,Equity Shares,SARLAPOLY,Buy
 Market Purchase,Hindustan Cotton Company,2025-12-17,2025-12-17,47638834,57.05,47620586,57.03,Sarla Performance Fibers Limited,2025-12-19,2025-12-19,Promoter Group,18248,Equity Shares,1536972,Equity Shares,SARLAPOLY,Buy
 Market Purchase,Vinod K. Goenka,2025-12-18,2025-12-18,2632108,0.49,2532108,0.34,Valor Estate Limited,2025-12-19,2025-12-19,Promoters,100000,Equity Shares,11601776,Equity Shares,DBREALTY,Buy
-Market Purchase,Jagran Vyapaar Pvt Ltd,2025-12-16,2025-12-16,40802526,7.2,40247526,7.1,MSP Steel & Power Limited,2025-12-19,2025-12-17,Promoter Group,555000,Equity Shares,20437264,Equity Shares,MSPL,Buy
 Market Purchase,Shree Vinay Finvest P Ltd..,2025-12-15,2025-12-15,13367443,2.36,12826843,2.26,MSP Steel & Power Limited,2025-12-19,2025-12-17,Promoter Group,540600,Equity Shares,20277906,Equity Shares,MSPL,Buy
+Market Purchase,Jagran Vyapaar Pvt Ltd,2025-12-16,2025-12-16,40802526,7.2,40247526,7.1,MSP Steel & Power Limited,2025-12-19,2025-12-17,Promoter Group,555000,Equity Shares,20437264,Equity Shares,MSPL,Buy
 Market Sale,M V Usha,2025-12-18,2025-12-18,329903,0.03,334903,0.03,Karur Vysya Bank Limited,2025-12-19,2025-12-19,Promoter Group,5000,Equity Shares,1236612,Equity Shares,KARURVYSYA,Sell
 Market Sale,MUNUGOOR K VENKATESAN,2025-12-18,2025-12-18,364182,0.04,369182,0.04,Karur Vysya Bank Limited,2025-12-19,2025-12-19,Promoters,5000,Equity Shares,1236058,Equity Shares,KARURVYSYA,Sell
 Market Purchase,RAGAVAN RAJKUMAR,2025-12-06,2025-12-16,3123880,19.6,3061880,19.21,Globesecure Technologies Limited,2025-12-19,2025-12-19,Promoters,62000,Equity Shares,698120,Equity Shares,GSTL,Buy
 Market Sale,M V PRAJEETH,2025-12-17,2025-12-17,263388,0.03,268388,0.03,Karur Vysya Bank Limited,2025-12-19,2025-12-18,Promoter Group,5000,Equity Shares,1239888,Equity Shares,KARURVYSYA,Sell
 Market Purchase,RIAAN VENTURES PRIVATE LIMITED,2025-12-18,2025-12-18,1299976,1.6,Nil,0,Shradha Infraprojects Limited,2025-12-19,2025-12-19,Promoter Group,1299976,Equity Shares,51132332,Equity Shares,SHRADHA,Buy
 Market Sale,SGR HOLDINGS PRIVATE LIMITED,2025-12-18,2025-12-18,22824937,28.18,24121504,29.78,Shradha Infraprojects Limited,2025-12-19,2025-12-19,Promoter Group,1296567,Equity Shares,50735604,Equity Shares,SHRADHA,Sell
-Market Purchase,D B Power Limited,2025-12-17,2025-12-17,2246062,1.26,2234801,1.25,D.B.Corp Limited,2025-12-19,2025-12-18,Promoter Group,11261,Equity Shares,2886769,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-12-18,2025-12-18,2272396,1.27,2246062,1.26,D.B.Corp Limited,2025-12-19,2025-12-18,Promoter Group,26334,Equity Shares,6832088,Equity Shares,DBCORP,Buy
+Market Purchase,D B Power Limited,2025-12-17,2025-12-17,2246062,1.26,2234801,1.25,D.B.Corp Limited,2025-12-19,2025-12-18,Promoter Group,11261,Equity Shares,2886769,Equity Shares,DBCORP,Buy
 Market Purchase,SOFREAL MERCANTRADE PRIVATE LTD,2025-12-17,2025-12-17,171010,0.93,155010,0.84,Stel Holdings Limited,2025-12-19,2025-12-18,Promoter Group,16000,Equity Shares,9345911,Equity Shares,STEL,Buy
 Market Sale,SAFARI COMMERCIAL LLP,2025-12-18,2025-12-18,3900000,7.96,4000000,8.16,Safari Industries (India) Limited,2025-12-19,2025-12-19,Promoter Group,100000,Equity Shares,219003000,Equity Shares,SAFARI,Sell
+Market Purchase,NCL Buildtek Ltd,2025-12-18,2025-12-18,466235,1.03,455241,0.99,NCL Industries Limited,2025-12-19,2025-12-19,Promoter Group,10994,Equity Shares,2187806,Equity Shares,NCLIND,Buy
 Market Purchase,KALIDINDI RAVI,2025-12-18,2025-12-18,2975696,6.57,2973696,6.57,NCL Industries Limited,2025-12-19,2025-12-19,Director,2000,Equity Shares,395380,Equity Shares,NCLIND,Buy
 Market Purchase,Kakatiya Industries (P) Ltd,2025-12-18,2025-12-18,112369,0.24,112299,0.24,NCL Industries Limited,2025-12-19,2025-12-19,Promoter Group,70,Equity Shares,13930,Equity Shares,NCLIND,Buy
-Market Purchase,NCL Buildtek Ltd,2025-12-18,2025-12-18,466235,1.03,455241,0.99,NCL Industries Limited,2025-12-19,2025-12-19,Promoter Group,10994,Equity Shares,2187806,Equity Shares,NCLIND,Buy
 Market Purchase,Krishan Lalit Bansal,2025-12-18,2025-12-18,35200366,50.82,35190366,50.8,DEE Development Engineers Limited,2025-12-19,2025-12-19,Promoters,10000,Equity Shares,2158686,Equity Shares,DEEDEV,Buy
 Market Purchase,Cubitex Marketing Private Limited,2025-12-18,2025-12-18,19804597,9.1,19754597,9.08,Surya Roshni Limited,2025-12-19,2025-12-19,Promoter Group,50000,Equity Shares,13483149,Equity Shares,SURYAROSNI,Buy
-Market Purchase,Goel Die Cast Limited,2025-12-18,2025-12-18,7712848,3.54,7711848,3.54,Surya Roshni Limited,2025-12-19,2025-12-19,Promoter Group,1000,Equity Shares,267700,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-12-16,2025-12-16,22905929,10.52,22864076,10.51,Surya Roshni Limited,2025-12-19,2025-12-17,Promoter Group,41853,Equity Shares,11198034,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-12-17,2025-12-17,22914076,10.52,22905929,10.52,Surya Roshni Limited,2025-12-19,2025-12-18,Promoter Group,8147,Equity Shares,2141790,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Vinay Surya,2025-12-15,2025-12-15,2232810,1.03,2232630,1.03,Surya Roshni Limited,2025-12-19,2025-12-17,Promoter Group,180,Equity Shares,46993,Equity Shares,SURYAROSNI,Buy
+Market Purchase,Goel Die Cast Limited,2025-12-18,2025-12-18,7712848,3.54,7711848,3.54,Surya Roshni Limited,2025-12-19,2025-12-19,Promoter Group,1000,Equity Shares,267700,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Harsha Farms Private Limited,2025-12-18,2025-12-18,489020,1.78,484740,1.77,Royal Orchid Hotels Limited,2025-12-19,2025-12-19,Promoter Group,4280,Equity Shares,1657869,Equity Shares,ROHLTD,Buy
 Market Purchase,GIRISHKUMAR OCHCHHAVLAL RAVAL,2025-12-18,2025-12-18,5911681,31.77,5911181,31.77,Rachana Infrastructure Limited,2025-12-19,2025-12-19,Promoters,500,Equity Shares,17750,Equity Shares,RILINFRA,Buy
 Market Sale,SYNTIA MOSES D,2025-12-05,2025-12-10,577600,3.63,621400,3.9,Phantom Digital Effects Limited,2025-12-18,2025-12-16,Promoter Group,43800,Equity Shares,10794158,Equity Shares,PHANTOMFX,Sell
 Market Sale,Bejoy Arputharaj Sam Manohar,2025-12-05,2025-12-10,6083100,38.2,6154200,38.65,Phantom Digital Effects Limited,2025-12-18,2025-12-16,Promoters,71100,Equity Shares,17476448,Equity Shares,PHANTOMFX,Sell
-Market Purchase,Mr. Gagan Harsh Sharma,2025-12-15,2025-12-15,215000,0.2,210000,0.19,Bliss GVS Pharma Limited,2025-12-18,2025-12-16,Promoters,5000,Equity Shares,710500,Equity Shares,BLISSGVS,Buy
 Market Purchase,Mr. Gagan Harsh Sharma,2025-12-12,2025-12-12,210000,0.19,200000,0.19,Bliss GVS Pharma Limited,2025-12-18,2025-12-16,Promoters,10000,Equity Shares,1441000,Equity Shares,BLISSGVS,Buy
+Market Purchase,Mr. Gagan Harsh Sharma,2025-12-15,2025-12-15,215000,0.2,210000,0.19,Bliss GVS Pharma Limited,2025-12-18,2025-12-16,Promoters,5000,Equity Shares,710500,Equity Shares,BLISSGVS,Buy
 Market Purchase,Harish Chandra Gupta HUF,2025-12-12,2025-12-16,7518456,3.99,7483677,3.97,Roto Pumps Limited,2025-12-18,2025-12-16,Promoter Group,34779,Equity Shares,2139366,Equity Shares,ROTO,Buy
 Market Purchase,Raghukool Estate Development LLP,2025-12-15,2025-12-15,8983065,8.16,8977560,8.15,Shoppers Stop Limited,2025-12-18,2025-12-16,Promoter Group,5505,Equity Shares,2424512,Equity Shares,SHOPERSTOP,Buy
 Market Purchase,Palm Shelter Estate Development LLP,2025-12-15,2025-12-15,9041215,8.21,9031215,8.2,Shoppers Stop Limited,2025-12-18,2025-12-16,Promoter Group,10000,Equity Shares,4399900,Equity Shares,SHOPERSTOP,Buy
@@ -2159,24 +2159,24 @@ Market Purchase,Harsha Farms Private Limited,2025-12-17,2025-12-17,484740,1.77,4
 Market Purchase,Renosen Pharmaceuticals Private Limited,2025-12-17,2025-12-17,2712719,5.89,2708719,5.88,Senores Pharmaceuticals Limited,2025-12-18,2025-12-18,Promoter Group,4000,Equity Shares,3215683,Equity Shares,SENORES,Buy
 Market Purchase,KRITISH TEKRIWAL,,,2508,0.01,2008,0.01,Monolithisch India Limited,2025-12-18,2025-12-18,Promoters,500,Equity Shares,482,Equity Shares,MONOLITH,Buy
 Market Purchase,Gallantt Industry Private Limited,2025-12-16,2025-12-16,2174089,0.9,967089,0.4,Gallantt Ispat Limited,2025-12-18,2025-12-17,Promoter Group,1207000,Equity Shares,712130000,Equity Shares,GALLANTT,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,497,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,500,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,495,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,500,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,491,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,494,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134460,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,500,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134460,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,495,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,481,Equity Shares,MONOLITH,Buy
+Market Purchase,PRABHAT TEKRIWAL,,,2134960,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,1000,Equity Shares,500,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,500,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,484,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,497,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,500,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134960,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,1000,Equity Shares,476,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,484,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2138710,9.84,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,4750,Equity Shares,496,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134460,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,500,Equity Shares,MONOLITH,Buy
 Market Purchase,PRABHAT TEKRIWAL,,,2134460,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,490,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134460,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,500,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,494,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134960,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,1000,Equity Shares,500,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,481,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134460,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,500,Equity Shares,495,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,500,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,491,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,495,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2134210,9.82,2133960,9.82,Monolithisch India Limited,2025-12-18,2025-12-17,Promoters,250,Equity Shares,500,Equity Shares,MONOLITH,Buy
 Market Purchase,Mukesh Sangla,2025-12-16,2025-12-16,1021332,3.47,1018241,3.46,Signet Industries Limited,2025-12-18,2025-12-17,Promoters,3091,Equity Shares,170437,Equity Shares,SIGIND,Buy
 Market Purchase,Manish Bajoria,2025-12-15,2025-12-15,3545280,34.43,3512280,34.11,ARC Insulation & Insulators Limited,2025-12-18,2025-12-16,Promoters,33000,Equity Shares,2466200,Equity Shares,ARCIIL,Buy
 Market Purchase,Gandhar Coals & Mines Private Limited,2025-12-15,2025-12-15,824368,0.84,624368,0.64,Gandhar Oil Refinery (India) Limited,2025-12-17,2025-12-17,Promoter Group,200000,Equity Shares,26310040,Equity Shares,GANDHAR,Buy
@@ -2199,13 +2199,13 @@ Market Purchase,HARDIK JAIN,2025-12-15,2025-12-17,8709333,3.37,8708412,3.37,T T 
 Market Purchase,KALIDINDI RAVI,2025-12-16,2025-12-16,2973696,6.57,2973196,6.57,NCL Industries Limited,2025-12-17,2025-12-17,Director,500,Equity Shares,99755,Equity Shares,NCLIND,Buy
 Market Purchase,Kakatiya Industries (P) Ltd,2025-12-16,2025-12-16,110586,0.24,110287,0.24,NCL Industries Limited,2025-12-17,2025-12-17,Promoter Group,299,Equity Shares,59501,Equity Shares,NCLIND,Buy
 Market Purchase,MONIKA GAURAV PATEL,2025-12-15,2025-12-15,650,0,Nil,0,Ice Make Refrigeration Limited,2025-12-17,2025-12-17,Promoter Group,650,Equity Shares,501736,Equity Shares,ICEMAKE,Buy
-Market Purchase,Ravi Agrawal,2025-12-17,2025-12-17,9441035,44.78,9422035,44.69,Orissa Bengal Carrier Limited,2025-12-17,2025-12-17,Promoters,19000,Equity Shares,1046900,Equity Shares,OBCL,Buy
 Market Purchase,Ravi Agrawal,2025-12-16,2025-12-16,9422035,44.69,9373035,44.46,Orissa Bengal Carrier Limited,2025-12-17,2025-12-17,Promoters,49000,Equity Shares,2699900,Equity Shares,OBCL,Buy
-Market Purchase,Anurag Soni,2025-12-12,2025-12-12,4474079,8.9,4438665,8.83,Sangam (India) Limited,2025-12-17,2025-12-15,Promoters,35414,Equity Shares,15453675,Equity Shares,SANGAMIND,Buy
+Market Purchase,Ravi Agrawal,2025-12-17,2025-12-17,9441035,44.78,9422035,44.69,Orissa Bengal Carrier Limited,2025-12-17,2025-12-17,Promoters,19000,Equity Shares,1046900,Equity Shares,OBCL,Buy
 Market Sale,Anurag Soni,2025-12-12,2025-12-12,4459665,8.88,4474079,8.9,Sangam (India) Limited,2025-12-17,2025-12-15,Promoters,14414,Equity Shares,6275199,Equity Shares,SANGAMIND,Sell
+Market Purchase,Anurag Soni,2025-12-12,2025-12-12,4474079,8.9,4438665,8.83,Sangam (India) Limited,2025-12-17,2025-12-15,Promoters,35414,Equity Shares,15453675,Equity Shares,SANGAMIND,Buy
 Market Sale,POPATBHAI LALJIBHAI PATEL,2025-12-01,2025-12-16,246837,1.56,248972,1.58,Ice Make Refrigeration Limited,2025-12-17,2025-12-17,Promoter Group,2135,Equity Shares,1577347,Equity Shares,ICEMAKE,Sell
-Market Purchase,D B Power Limited,2025-12-16,2025-12-16,2234801,1.25,2226501,1.25,D.B.Corp Limited,2025-12-17,2025-12-16,Promoter Group,8300,Equity Shares,2122415,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-12-15,2025-12-15,2226501,1.25,2180270,1.22,D.B.Corp Limited,2025-12-17,2025-12-15,Promoter Group,46231,Equity Shares,11686115,Equity Shares,DBCORP,Buy
+Market Purchase,D B Power Limited,2025-12-16,2025-12-16,2234801,1.25,2226501,1.25,D.B.Corp Limited,2025-12-17,2025-12-16,Promoter Group,8300,Equity Shares,2122415,Equity Shares,DBCORP,Buy
 Market Purchase,Hindustan Cotton Company,2025-12-16,2025-12-16,47620586,57.03,47610586,57.02,Sarla Performance Fibers Limited,2025-12-17,2025-12-17,Promoter Group,10000,Equity Shares,848000,Equity Shares,SARLAPOLY,Buy
 Market Purchase,Aurum RealEstate Developers Pvt Ltd.,2025-12-16,2025-12-16,36241455,47.31,36231455,47.3,Aurum PropTech Limited,2025-12-17,2025-12-16,Promoters,10000,Equity Shares,1762944,Equity Shares,AURUM,Buy
 Market Purchase,MIDASTECH VENTURES PRIVATE LIMITED,2025-12-16,2025-12-16,18219051,35.79,18215345,35.79,Global Education Limited,2025-12-17,2025-12-17,Promoters,3706,Equity Shares,325125,Equity Shares,GLOBAL,Buy
@@ -2216,8 +2216,8 @@ Market Purchase,KANDULA KRISHNA VENI,2025-12-12,2025-12-12,37189120,18.64,371841
 Market Purchase,Aurum RealEstate Developers Pvt Ltd.,2025-11-27,2025-12-10,36231455,47.3,36032859,47.04,Aurum PropTech Limited,2025-12-16,2025-12-12,Promoters,198596,Equity Shares,33048639,Equity Shares,AURUM,Buy
 Market Sale,MUNUGOOR K VENKATESAN,2025-12-15,2025-12-15,369182,0.04,374182,0.04,Karur Vysya Bank Limited,2025-12-16,2025-12-16,Promoters,5000,Equity Shares,1224912,Equity Shares,KARURVYSYA,Sell
 Market Purchase,VANSH GOENKA,2025-12-12,2025-12-12,2891071,5.65,2891007,5.65,Hindcon Chemicals Limited,2025-12-16,2025-12-15,Promoters,64,Equity Shares,1034,Equity Shares,HINDCON,Buy
-Market Sale,HINDCON SOLUTIONS PRIVATE LIMITED,2025-12-12,2025-12-12,12829829,25.06,12830500,25.06,Hindcon Chemicals Limited,2025-12-16,2025-12-15,Promoter Group,671,Equity Shares,19566,Equity Shares,HINDCON,Sell
 Market Purchase,VANSH GOENKA,2025-12-12,2025-12-12,2891071,5.65,2890336,5.65,Hindcon Chemicals Limited,2025-12-16,2025-12-15,Promoters,735,Equity Shares,20601,Equity Shares,HINDCON,Buy
+Market Sale,HINDCON SOLUTIONS PRIVATE LIMITED,2025-12-12,2025-12-12,12829829,25.06,12830500,25.06,Hindcon Chemicals Limited,2025-12-16,2025-12-15,Promoter Group,671,Equity Shares,19566,Equity Shares,HINDCON,Sell
 Market Purchase,OSTWAL PHOSCHEM ( INDIA) LIMITED,2025-12-15,2025-12-15,41667453,67.39,41642111,67.35,Krishana Phoschem Limited,2025-12-16,2025-12-16,Promoters,25342,Equity Shares,13504304,Equity Shares,KRISHANA,Buy
 Market Purchase,Kakatiya Industries (P) Ltd,2025-12-15,2025-12-15,110287,0.24,109599,0.24,NCL Industries Limited,2025-12-16,2025-12-16,Promoter Group,688,Equity Shares,135605,Equity Shares,NCLIND,Buy
 Market Sale,BNP Paribas SA,2025-09-12,2025-12-15,20769003,7.44,61769634,22.13,Geojit Financial Services Limited,2025-12-16,2025-12-16,Promoters,41000631,Equity Shares,2788150799,Equity Shares,GEOJITFSL,Sell
@@ -2235,16 +2235,16 @@ Market Purchase,Gandhar Coals & Mines Private Limited,2025-12-11,2025-12-11,4243
 Market Purchase,DHRUVALBEN V SHAH,2025-12-11,2025-12-11,700,0.01,200,0,Remus Pharmaceuticals Limited,2025-12-15,2025-12-15,Promoter Group,500,Equity Shares,360500,Equity Shares,REMUS,Buy
 Market Purchase,C J George,2025-12-15,2025-12-15,54503236,19.53,50503236,18.09,Geojit Financial Services Limited,2025-12-15,2025-12-15,Promoters,4000000,Equity Shares,272645401,Equity Shares,GEOJITFSL,Buy
 Market Purchase,Jagran Vyapaar Pvt Ltd,2025-12-11,2025-12-11,40247526,7.1,40116926,7.08,MSP Steel & Power Limited,2025-12-15,2025-12-15,Promoter Group,130600,Equity Shares,4738507,Equity Shares,MSPL,Buy
-Market Purchase,Jagran Vyapaar Pvt Ltd,2025-12-09,2025-12-09,40116926,7.08,39696926,7,MSP Steel & Power Limited,2025-12-15,2025-12-11,Promoter Group,420000,Equity Shares,15003324,Equity Shares,MSPL,Buy
-Market Purchase,Ilex Private Limited,2025-12-11,2025-12-12,9114800,1.61,8235000,1.45,MSP Steel & Power Limited,2025-12-15,2025-12-15,Promoter Group,879800,Equity Shares,32342137,Equity Shares,MSPL,Buy
 Market Purchase,Shree Vinay Finvest P Ltd..,2025-12-12,2025-12-12,12826843,2.26,12821243,2.26,MSP Steel & Power Limited,2025-12-15,2025-12-15,Promoter Group,5600,Equity Shares,205288,Equity Shares,MSPL,Buy
+Market Purchase,Ilex Private Limited,2025-12-11,2025-12-12,9114800,1.61,8235000,1.45,MSP Steel & Power Limited,2025-12-15,2025-12-15,Promoter Group,879800,Equity Shares,32342137,Equity Shares,MSPL,Buy
 Market Purchase,Shree Vinay Finvest P Ltd..,2025-12-10,2025-12-10,12821243,2.26,12262243,2.16,MSP Steel & Power Limited,2025-12-15,2025-12-11,Promoter Group,559000,Equity Shares,20224452,Equity Shares,MSPL,Buy
+Market Purchase,Jagran Vyapaar Pvt Ltd,2025-12-09,2025-12-09,40116926,7.08,39696926,7,MSP Steel & Power Limited,2025-12-15,2025-12-11,Promoter Group,420000,Equity Shares,15003324,Equity Shares,MSPL,Buy
 Market Purchase,MANJOO SARDANA,2025-12-11,2025-12-11,2491744,7.98,2491344,7.97,Sukhjit Starch & Chemicals Limited,2025-12-15,2025-12-12,Promoters,400,Equity Shares,59500,Equity Shares,SUKHJITS,Buy
 Market Sale,Peterhouse Investments India Limited,2025-12-12,2025-12-12,1746529,0.57,4046529,1.33,Usha Martin Limited,2025-12-15,2025-12-15,Promoter Group,2300000,Equity Shares,989000000,Equity Shares,USHAMART,Sell
 Market Purchase,Ashish Kukreja,2025-12-12,2025-12-15,1529112,47.4,1528212,47.37,Homesfy Realty Limited,2025-12-15,2025-12-15,Promoters,900,Equity Shares,145800,Equity Shares,HOMESFY,Buy
+Market Purchase,Vinay Surya,2025-12-11,2025-12-12,2232630,1.03,2231924,1.03,Surya Roshni Limited,2025-12-15,2025-12-15,Promoter Group,706,Equity Shares,183556,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-12-11,2025-12-11,22864076,10.51,22814076,10.48,Surya Roshni Limited,2025-12-15,2025-12-12,Promoter Group,50000,Equity Shares,12992042,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Cubitex Marketing Private Limited,2025-12-10,2025-12-10,19754597,9.08,19704597,9.05,Surya Roshni Limited,2025-12-15,2025-12-11,Promoter Group,50000,Equity Shares,12797229,Equity Shares,SURYAROSNI,Buy
-Market Purchase,Vinay Surya,2025-12-11,2025-12-12,2232630,1.03,2231924,1.03,Surya Roshni Limited,2025-12-15,2025-12-15,Promoter Group,706,Equity Shares,183556,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Destiny Logistics & Infra Limited,2025-12-08,2025-12-11,3901063,16.58,3873063,16.46,Dynamic Services & Security Limited,2025-12-15,2025-12-12,Promoter Group,28000,Equity Shares,3054827,Equity Shares,DYNAMIC,Buy
 Market Purchase,BHORUKA SUPPLY CHAIN SOLUTIONS HOLDINGS LIMITED,2025-12-12,2025-12-12,33841112,44.11,33840068,44.1,Transport Corporation of India Limited,2025-12-15,2025-12-13,Promoter Group,1044,Equity Shares,1085760,Equity Shares,TCI,Buy
 Market Purchase,NCL Buildtek Ltd,2025-12-11,2025-12-11,455241,1,451305,0.99,NCL Industries Limited,2025-12-15,2025-12-12,Promoter Group,3936,Equity Shares,767520,Equity Shares,NCLIND,Buy
@@ -2264,18 +2264,18 @@ Market Sale,MUNUGOOR K VENKATESAN,2025-12-09,2025-12-09,374182,0.04,379182,0.04,
 Market Purchase,Vinodkumar Gandalal Shah,2025-12-10,2025-12-10,6800,0.06,6300,0.05,Remus Pharmaceuticals Limited,2025-12-12,2025-12-12,Promoter Group,500,Equity Shares,361685,Equity Shares,REMUS,Buy
 Market Purchase,Shri Ashok Sarin Anant Raj LLP,2025-12-12,2025-12-12,1584863,0.44,1569863,0.44,Anant Raj Limited,2025-12-12,2025-12-12,Promoter Group,15000,Equity Shares,8273860,Equity Shares,ANANTRAJ,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-12-10,2025-12-10,3326177,0.32,3082831,0.3,JINDAL STEEL LIMITED,2025-12-12,2025-12-12,Promoter Group,243346,Equity Shares,245283034,Equity Shares,JINDALSTEL,Buy
-Market Purchase,Palm Shelter Estate Development LLP,2025-12-10,2025-12-10,9005921,8.18,8984827,8.16,Shoppers Stop Limited,2025-12-12,2025-12-11,Promoter Group,21094,Equity Shares,8915168,Equity Shares,SHOPERSTOP,Buy
-Market Purchase,Palm Shelter Estate Development LLP,2025-12-11,2025-12-11,9019292,8.19,9005921,8.18,Shoppers Stop Limited,2025-12-12,2025-12-11,Promoter Group,13371,Equity Shares,5674786,Equity Shares,SHOPERSTOP,Buy
-Market Purchase,Palm Shelter Estate Development LLP,2025-12-09,2025-12-09,8984827,8.16,8982839,8.16,Shoppers Stop Limited,2025-12-12,2025-12-11,Promoter Group,1988,Equity Shares,793212,Equity Shares,SHOPERSTOP,Buy
 Market Purchase,Palm Shelter Estate Development LLP,2025-12-12,2025-12-12,9031215,8.2,9019292,8.19,Shoppers Stop Limited,2025-12-12,2025-12-12,Promoter Group,11923,Equity Shares,5223943,Equity Shares,SHOPERSTOP,Buy
+Market Purchase,Palm Shelter Estate Development LLP,2025-12-09,2025-12-09,8984827,8.16,8982839,8.16,Shoppers Stop Limited,2025-12-12,2025-12-11,Promoter Group,1988,Equity Shares,793212,Equity Shares,SHOPERSTOP,Buy
+Market Purchase,Palm Shelter Estate Development LLP,2025-12-11,2025-12-11,9019292,8.19,9005921,8.18,Shoppers Stop Limited,2025-12-12,2025-12-11,Promoter Group,13371,Equity Shares,5674786,Equity Shares,SHOPERSTOP,Buy
+Market Purchase,Palm Shelter Estate Development LLP,2025-12-10,2025-12-10,9005921,8.18,8984827,8.16,Shoppers Stop Limited,2025-12-12,2025-12-11,Promoter Group,21094,Equity Shares,8915168,Equity Shares,SHOPERSTOP,Buy
 Market Purchase,RISHI KAJARIA,2025-12-12,2025-12-12,1955716,1.23,1905716,1.2,Kajaria Ceramics Limited,2025-12-12,2025-12-12,Promoter Group,50000,Equity Shares,52059500,Equity Shares,KAJARIACER,Buy
 Market Purchase,DHANASHREE INVESTMENTS PRIVATE LIMITED,2025-12-12,2025-12-12,2989213,4.74,2979937,4.72,Seshasayee Paper and Boards Limited,2025-12-12,2025-12-12,Promoter Group,9276,Equity Shares,2211967,Equity Shares,SESHAPAPER,Buy
 Market Purchase,Gandhar Coals & Mines Private Limited,2025-12-09,2025-12-09,274368,0.28,273306,0.28,Gandhar Oil Refinery (India) Limited,2025-12-12,2025-12-11,Promoter Group,1062,Equity Shares,129171,Equity Shares,GANDHAR,Buy
 Market Purchase,Krishan Lalit Bansal,2025-12-11,2025-12-11,35190366,50.8,35188310,50.8,DEE Development Engineers Limited,2025-12-12,2025-12-12,Promoters,2056,Equity Shares,441576,Equity Shares,DEEDEV,Buy
 Market Purchase,Krishan Lalit Bansal,2025-12-10,2025-12-10,35188310,50.8,35157324,50.75,DEE Development Engineers Limited,2025-12-12,2025-12-12,Promoters,30986,Equity Shares,6561663,Equity Shares,DEEDEV,Buy
 Market Purchase,SANJAY KUMAR JAIN,2025-12-09,2025-12-09,5984300,2.31,5982358,2.31,T T Limited,2025-12-12,2025-12-09,Promoter Group,1942,Equity Shares,16936,Equity Shares,TTL,Buy
-Market Purchase,Amit Jatia,2025-12-11,2025-12-11,119480,0.07,67980,0.04,WESTLIFE FOODWORLD LIMITED,2025-12-12,2025-12-12,Promoters,51500,Equity Shares,28082950,Equity Shares,WESTLIFE,Buy
 Market Sale,ADMAS Industries Private Limited,2025-12-11,2025-12-11,Nil,0,51500,0.03,WESTLIFE FOODWORLD LIMITED,2025-12-12,2025-12-12,Promoter Group,51500,Equity Shares,28082950,Equity Shares,WESTLIFE,Sell
+Market Purchase,Amit Jatia,2025-12-11,2025-12-11,119480,0.07,67980,0.04,WESTLIFE FOODWORLD LIMITED,2025-12-12,2025-12-12,Promoters,51500,Equity Shares,28082950,Equity Shares,WESTLIFE,Buy
 Market Sale,Ajay Bhagwat,2025-12-11,2025-12-11,2258539,0.82,2260037,0.82,KPIT Technologies Limited,2025-12-12,2025-12-12,Promoters,1498,Equity Shares,1840780,Equity Shares,KPITTECH,Sell
 Market Purchase,Shashikiran Shetty,2025-12-11,2025-12-11,153528898,62.49,153522795,62.49,Transindia Real Estate Limited,2025-12-12,2025-12-11,Promoters,6103,Equity Shares,165835,Equity Shares,TREL,Buy
 Market Purchase,Shashikiran Shetty,2025-12-10,2025-12-10,153522795,62.49,153266952,62.38,Transindia Real Estate Limited,2025-12-12,2025-12-10,Promoters,255843,Equity Shares,6785303,Equity Shares,TREL,Buy
@@ -2295,14 +2295,14 @@ Market Purchase,Gandhar Coals & Mines Private Limited,2025-12-08,2025-12-08,2733
 Market Purchase,Shri Ashok Sarin Anant Raj LLP,2025-12-11,2025-12-11,1569863,0.44,1554863,0.43,Anant Raj Limited,2025-12-11,2025-12-11,Promoter Group,15000,Equity Shares,7592711,Equity Shares,ANANTRAJ,Buy
 Market Purchase,OSTWAL PHOSCHEM (INDIA) LIMITED,2025-12-09,2025-12-10,57155719,65.23,57154113,65.22,Madhya Bharat Agro Products Limited,2025-12-11,2025-12-11,Promoters,1606,Equity Shares,650505,Equity Shares,MBAPL,Buy
 Market Purchase,Samagra Wealthmax Private Limited,2025-12-10,2025-12-10,20196,0.2,10000,0.1,Starteck Finance Limited,2025-12-11,2025-12-11,Promoters,10196,Equity Shares,2834488,Equity Shares,STARTECK,Buy
+Market Purchase,Joita Sen,2025-12-08,2025-12-08,1433630,0.87,1427380,0.87,Senco Gold Limited,2025-12-11,2025-12-10,Promoter Group,6250,Equity Shares,1956938,Equity Shares,SENCO,Buy
 Market Purchase,Suvankar Sen,2025-12-08,2025-12-08,23840156,14.56,23824556,14.55,Senco Gold Limited,2025-12-11,2025-12-10,Promoters,15600,Equity Shares,4897152,Equity Shares,SENCO,Buy
 Market Purchase,Jai Hanuman Shri Siddhivinayak Trust (Trustee- Mr. Suvankar Sen & Mrs. Joita Sen),2025-12-08,2025-12-09,67877696,41.46,67829906,41.43,Senco Gold Limited,2025-12-11,2025-12-10,Promoters,47790,Equity Shares,14840330,Equity Shares,SENCO,Buy
-Market Purchase,Joita Sen,2025-12-08,2025-12-08,1433630,0.87,1427380,0.87,Senco Gold Limited,2025-12-11,2025-12-10,Promoter Group,6250,Equity Shares,1956938,Equity Shares,SENCO,Buy
 Market Purchase,Prem Kumar Bhajanka,2025-12-08,2025-12-08,41269927,10.21,41261927,10.21,Star Cement Limited,2025-12-11,2025-12-09,Promoters,8000,Equity Shares,1785450,Equity Shares,STARCEMENT,Buy
 Market Purchase,DHANASHREE INVESTMENTS PRIVATE LIMITED,2025-12-11,2025-12-11,2979937,4.72,2963507,4.7,Seshasayee Paper and Boards Limited,2025-12-11,2025-12-11,Promoter Group,16430,Equity Shares,3885222,Equity Shares,SESHAPAPER,Buy
 Market Purchase,NAGESWARA RAO KANDULA,2025-12-05,2025-12-05,6888811,3.45,6884987,3.45,Standard Engineering Technology Limited,2025-12-11,2025-12-09,Promoters,3824,Equity Shares,588448,Equity Shares,SETL,Buy
-Market Purchase,M/s Standard Holdings represented by its partners Kandula Krishna Veni and Kandula Ramakrishna,2025-12-09,2025-12-09,4561381,2.28,4551381,2.28,Standard Engineering Technology Limited,2025-12-11,2025-12-09,Promoter Group,10000,Equity Shares,1513558,Equity Shares,SETL,Buy
 Market Purchase,M/s Standard Holdings represented by its partners Kandula Krishna Veni and Kandula Ramakrishna,2025-12-05,2025-12-05,4539252,2.27,4536000,2.27,Standard Engineering Technology Limited,2025-12-11,2025-12-09,Promoter Group,3252,Equity Shares,501382,Equity Shares,SETL,Buy
+Market Purchase,M/s Standard Holdings represented by its partners Kandula Krishna Veni and Kandula Ramakrishna,2025-12-09,2025-12-09,4561381,2.28,4551381,2.28,Standard Engineering Technology Limited,2025-12-11,2025-12-09,Promoter Group,10000,Equity Shares,1513558,Equity Shares,SETL,Buy
 Market Purchase,M/s Standard Holdings represented by its partners Kandula Krishna Veni and Kandula Ramakrishna,2025-12-08,2025-12-08,4551381,2.28,4539252,2.27,Standard Engineering Technology Limited,2025-12-11,2025-12-09,Promoter Group,12129,Equity Shares,1819847,Equity Shares,SETL,Buy
 Market Sale,Maheshbhai Naranbhai Patel,2025-12-10,2025-12-10,357850,3.5,362850,3.54,Magson Retail And Distribution Limited,2025-12-11,2025-12-11,Promoter Group,5000,Equity Shares,578000,Equity Shares,MAGSON,Sell
 Market Sale,Maheshbhai Naranbhai Patel,2025-12-09,2025-12-09,362850,3.54,365850,3.57,Magson Retail And Distribution Limited,2025-12-11,2025-12-11,Promoter Group,3000,Equity Shares,342000,Equity Shares,MAGSON,Sell
@@ -2322,13 +2322,13 @@ Market Purchase,Ashish Kukreja,2025-12-10,2025-12-11,1528212,47.37,1524612,47.26
 Market Purchase,Gaurav Gupta,2025-12-10,2025-12-10,11006876,56.84,10979676,56.7,Suntech Infra Solutions Limited,2025-12-11,2025-12-10,Promoters,27200,Equity Shares,1165120,Equity Shares,SUNTECH,Buy
 Market Purchase,Deepak C. Mehta,2025-12-08,2025-12-08,22550328,16.53,22535241,16.52,Deepak Nitrite Limited,2025-12-11,2025-12-10,Promoters,15087,Equity Shares,23248263,Equity Shares,DEEPAKNTR,Buy
 Market Purchase,Deepak C. Mehta,2025-12-09,2025-12-09,22592689,16.56,22550328,16.53,Deepak Nitrite Limited,2025-12-11,2025-12-10,Promoters,42361,Equity Shares,64781388,Equity Shares,DEEPAKNTR,Buy
-Market Purchase,Priyanka Kapal Pansari,2025-12-10,2025-12-10,111146,0.17,89638,0.14,Rashi Peripherals Limited,2025-12-11,2025-12-11,Promoter Group,21508,Equity Shares,7096545,Equity Shares,RPTECH,Buy
 Market Purchase,Priyanka Kapal Pansari,2025-12-09,2025-12-09,89638,0.14,89300,0.14,Rashi Peripherals Limited,2025-12-11,2025-12-10,Promoter Group,338,Equity Shares,109850,Equity Shares,RPTECH,Buy
-Market Sale,Malavika Hegde,2025-12-08,2025-12-08,1999903,0.95,2080474,0.98,Coffee Day Enterprises Limited,2025-12-11,2025-12-09,Promoters,80571,Equity Shares,2580390,Equity Shares,COFFEEDAY,Sell
-Market Sale,Malavika Hegde,2025-12-05,2025-12-05,2080474,0.98,2148576,1.02,Coffee Day Enterprises Limited,2025-12-11,2025-12-09,Promoters,68102,Equity Shares,2276605,Equity Shares,COFFEEDAY,Sell
+Market Purchase,Priyanka Kapal Pansari,2025-12-10,2025-12-10,111146,0.17,89638,0.14,Rashi Peripherals Limited,2025-12-11,2025-12-11,Promoter Group,21508,Equity Shares,7096545,Equity Shares,RPTECH,Buy
 Market Sale,Malavika Hegde,2025-12-09,2025-12-09,1762956,0.83,1999903,0.95,Coffee Day Enterprises Limited,2025-12-11,2025-12-09,Promoters,236947,Equity Shares,7320833,Equity Shares,COFFEEDAY,Sell
-Market Purchase,Cubitex Marketing Private Limited,2025-12-09,2025-12-09,19704597,9.05,19703947,9.05,Surya Roshni Limited,2025-12-11,2025-12-10,Promoter Group,650,Equity Shares,160140,Equity Shares,SURYAROSNI,Buy
+Market Sale,Malavika Hegde,2025-12-05,2025-12-05,2080474,0.98,2148576,1.02,Coffee Day Enterprises Limited,2025-12-11,2025-12-09,Promoters,68102,Equity Shares,2276605,Equity Shares,COFFEEDAY,Sell
+Market Sale,Malavika Hegde,2025-12-08,2025-12-08,1999903,0.95,2080474,0.98,Coffee Day Enterprises Limited,2025-12-11,2025-12-09,Promoters,80571,Equity Shares,2580390,Equity Shares,COFFEEDAY,Sell
 Market Purchase,Cubitex Marketing Private Limited,2025-12-08,2025-12-08,19703947,9.05,19656500,9.03,Surya Roshni Limited,2025-12-11,2025-12-09,Promoter Group,47447,Equity Shares,11994715,Equity Shares,SURYAROSNI,Buy
+Market Purchase,Cubitex Marketing Private Limited,2025-12-09,2025-12-09,19704597,9.05,19703947,9.05,Surya Roshni Limited,2025-12-11,2025-12-10,Promoter Group,650,Equity Shares,160140,Equity Shares,SURYAROSNI,Buy
 Market Sale,Anil Singhvi,2025-12-09,2025-12-10,800000,0.54,1169492,0.79,Shree Digvijay Cement Co.Ltd,2025-12-10,2025-12-10,Director,369492,Equity Shares,33240334,Equity Shares,SHREDIGCEM,Sell
 Market Purchase,VISWANATH TADIMETY,2025-12-08,2025-12-08,4538233,14.58,4535233,14.57,Cybertech Systems And Software Limited,2025-12-10,2025-12-09,Promoters,3000,Equity Shares,452128,Equity Shares,CYBERTECH,Buy
 Market Sale,Kunal Vikrant Patil,2025-12-08,2025-12-09,395000,2.69,531000,3.62,Vinsys It Services India Limited,2025-12-10,2025-12-10,Promoter Group,136000,Equity Shares,55583300,Equity Shares,VINSYS,Sell
@@ -2339,8 +2339,8 @@ Market Purchase,Palm Shelter Estate Development LLP,2025-12-08,2025-12-08,898283
 Market Purchase,Shri Ashok Sarin Anant Raj LLP,2025-12-10,2025-12-10,1554863,0.43,1539863,0.43,Anant Raj Limited,2025-12-10,2025-12-10,Promoter Group,15000,Equity Shares,7657915,Equity Shares,ANANTRAJ,Buy
 Market Purchase,Aniketa Mangal,2025-12-08,2025-12-08,2223712,8.05,2192302,7.93,Mangal Electrical Industries Limited,2025-12-10,2025-12-10,Promoters,31410,Equity Shares,11373710,Equity Shares,MEIL,Buy
 Market Purchase,BIPIN SHIRISH PANDE,2025-12-09,2025-12-09,1819700,24.26,1817700,24.24,Ameya Precision Engineers Limited,2025-12-10,2025-12-10,Promoters,2000,Equity Shares,188900,Equity Shares,AMEYA,Buy
-Market Sale,DEVANSHI JALAN,2025-12-08,2025-12-08,1686928,2.84,1708228,2.87,Linc Limited,2025-12-10,2025-12-08,Promoter Group,21300,Equity Shares,2477193,Equity Shares,LINC,Sell
 Market Purchase,AJANTA SALES PRIVATE LIMITED,2025-12-08,2025-12-08,1193480,2,1172180,1.97,Linc Limited,2025-12-10,2025-12-08,Promoter Group,21300,Equity Shares,2477234,Equity Shares,LINC,Buy
+Market Sale,DEVANSHI JALAN,2025-12-08,2025-12-08,1686928,2.84,1708228,2.87,Linc Limited,2025-12-10,2025-12-08,Promoter Group,21300,Equity Shares,2477193,Equity Shares,LINC,Sell
 Market Purchase,Adhyan Mangal,2025-12-08,2025-12-08,34403,0.12,24425,0.09,Mangal Electrical Industries Limited,2025-12-10,2025-12-10,Promoter Group,9978,Equity Shares,3601838,Equity Shares,MEIL,Buy
 Market Purchase,Ramakant K Kadam,2025-12-09,2025-12-09,25000,0.04,23500,0.03,Patel Integrated Logistics Limited,2025-12-10,2025-12-10,Director,1500,Equity Shares,20333,Equity Shares,PATINTLOG,Buy
 Market Purchase,Bipul Mittal HUF,2025-12-09,2025-12-09,16720,0.03,15275,0.03,Suraksha Diagnostic Limited,2025-12-10,2025-12-09,Promoter Group,1445,Equity Shares,396938,Equity Shares,SURAKSHA,Buy
@@ -2363,16 +2363,16 @@ Market Purchase,Hindustan Cotton Company,2025-12-08,2025-12-08,47610586,57.02,47
 Market Purchase,VERSHA DEVI KAJARIA,2025-12-09,2025-12-09,1827014,1.15,1777014,1.12,Kajaria Ceramics Limited,2025-12-09,2025-12-09,Promoter Group,50000,Equity Shares,52052000,Equity Shares,KAJARIACER,Buy
 Market Purchase,Prem Kumar Bhajanka,2025-12-04,2025-12-05,41261927,10.21,41244765,10.2,Star Cement Limited,2025-12-09,2025-12-08,Promoters,17162,Equity Shares,3823740,Equity Shares,STARCEMENT,Buy
 Market Purchase,BHORUKA SUPPLY CHAIN SOLUTIONS HOLDINGS LIMITED,2025-12-08,2025-12-08,33838068,44.1,33833155,44.1,Transport Corporation of India Limited,2025-12-09,2025-12-09,Promoter Group,4913,Equity Shares,5109274,Equity Shares,TCI,Buy
-Market Purchase,Priyanka Kapal Pansari,2025-12-08,2025-12-08,89300,0.14,69300,0.11,Rashi Peripherals Limited,2025-12-09,2025-12-08,Promoter Group,20000,Equity Shares,6387816,Equity Shares,RPTECH,Buy
 Market Purchase,Gazal Chaman Pansari,2025-12-08,2025-12-08,56500,0.09,36500,0.06,Rashi Peripherals Limited,2025-12-09,2025-12-08,Promoter Group,20000,Equity Shares,6402296,Equity Shares,RPTECH,Buy
+Market Purchase,Priyanka Kapal Pansari,2025-12-08,2025-12-08,89300,0.14,69300,0.11,Rashi Peripherals Limited,2025-12-09,2025-12-08,Promoter Group,20000,Equity Shares,6387816,Equity Shares,RPTECH,Buy
 Market Purchase,MIDASTECH VENTURES PRIVATE LIMITED,2025-12-08,2025-12-08,18162081,35.68,18138297,35.63,Global Education Limited,2025-12-09,2025-12-09,Promoters,23784,Equity Shares,2073771,Equity Shares,GLOBAL,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-12-08,2025-12-08,2453558,0.62,2398558,0.6,Dhanlaxmi Bank Limited,2025-12-09,2025-12-08,Director,55000,Equity Shares,1377900,Equity Shares,DHANBANK,Buy
 Market Purchase,Rajeev Jhawar,2025-12-05,2025-12-05,4172000,1.37,4163000,1.37,Usha Martin Limited,2025-12-09,2025-12-06,Promoters,9000,Equity Shares,3887479,Equity Shares,USHAMART,Buy
-Market Purchase,Bharat Jiten Madeka,2025-12-08,2025-12-08,4478810,1.64,4471810,1.64,Rolex Rings Limited,2025-12-09,2025-12-09,Promoter Group,7000,Equity Shares,819000,Equity Shares,ROLEXRINGS,Buy
-Market Purchase,Bhautik Dayashankar Madeka,2025-12-08,2025-12-08,23683800,8.7,23658100,8.69,Rolex Rings Limited,2025-12-09,2025-12-09,Promoters,25700,Equity Shares,2992508,Equity Shares,ROLEXRINGS,Buy
 Market Purchase,Manesh Dayashankar Madeka,2025-12-08,2025-12-08,26073650,9.57,25989150,9.54,Rolex Rings Limited,2025-12-09,2025-12-09,Promoters,84500,Equity Shares,9954581,Equity Shares,ROLEXRINGS,Buy
+Market Purchase,Bharat Jiten Madeka,2025-12-08,2025-12-08,4478810,1.64,4471810,1.64,Rolex Rings Limited,2025-12-09,2025-12-09,Promoter Group,7000,Equity Shares,819000,Equity Shares,ROLEXRINGS,Buy
 Market Purchase,Bharat Jiten Madeka,2025-12-08,2025-12-08,4488810,1.65,4478810,1.64,Rolex Rings Limited,2025-12-09,2025-12-09,Promoter Group,10000,Equity Shares,1167000,Equity Shares,ROLEXRINGS,Buy
 Market Purchase,Bharat Jiten Madeka,2025-12-08,2025-12-08,4498810,1.65,4488810,1.65,Rolex Rings Limited,2025-12-09,2025-12-09,Promoter Group,10000,Equity Shares,1165500,Equity Shares,ROLEXRINGS,Buy
+Market Purchase,Bhautik Dayashankar Madeka,2025-12-08,2025-12-08,23683800,8.7,23658100,8.69,Rolex Rings Limited,2025-12-09,2025-12-09,Promoters,25700,Equity Shares,2992508,Equity Shares,ROLEXRINGS,Buy
 Market Purchase,SANJANA VINOD GOENKA,2025-12-05,2025-12-05,2338211,4.33,2288211,4.24,Advent Hotels International Limited,2025-12-08,2025-12-05,Promoter Group,50000,Equity Shares,10052501,Equity Shares,ADVENTHTL,Buy
 Market Sale,Ajay Bhagwat,2025-12-05,2025-12-05,2260037,0.84,2264584,0.84,KPIT Technologies Limited,2025-12-08,2025-12-08,Promoters,4547,Equity Shares,5745816,Equity Shares,KPITTECH,Sell
 Market Purchase,NEW MODERN BUILDWELL PRIVATE LIMITED,2025-12-04,2025-12-08,470411,2.59,464137,2.56,Rudrabhishek Enterprises Limited,2025-12-08,2025-12-08,Promoter Group,6274,Equity Shares,801545,Equity Shares,REPL,Buy
@@ -2387,27 +2387,27 @@ Market Purchase,Amit M Mehta,2025-11-28,2025-11-28,1269369,12.97,1269081,12.97,D
 Market Purchase,Raghunandana Tangirala,2025-12-08,2025-12-08,16160979,24.14,16150979,24.12,Updater Services Limited,2025-12-08,2025-12-08,Promoters,10000,Equity Shares,1673000,Equity Shares,UDS,Buy
 Market Sale,President of India,2025-12-02,2025-12-03,5661059630,73.6,6122627927,79.6,Bank of Maharashtra,2025-12-08,2025-12-05,Promoters,461568297,Equity Shares,4615682970,Equity Shares,MAHABANK,Sell
 Market Purchase,BANWARI LAL MITTAL,2025-12-02,2025-12-05,10718362,33.69,10708082,33.66,Health X Platform Limited,2025-12-08,2025-12-06,Promoters,10280,Equity Shares,3193952,Equity Shares,HEALTHX,Buy
-Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-12-02,2025-12-02,2420683,0.23,2276072,0.22,JINDAL STEEL LIMITED,2025-12-08,2025-12-04,Promoter Group,144611,Equity Shares,149883517,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-12-04,2025-12-04,2523869,0.24,2482082,0.24,JINDAL STEEL LIMITED,2025-12-08,2025-12-04,Promoter Group,41787,Equity Shares,42022261,Equity Shares,JINDALSTEL,Buy
+Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-12-02,2025-12-02,2420683,0.23,2276072,0.22,JINDAL STEEL LIMITED,2025-12-08,2025-12-04,Promoter Group,144611,Equity Shares,149883517,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-12-03,2025-12-03,2482082,0.24,2420683,0.23,JINDAL STEEL LIMITED,2025-12-08,2025-12-04,Promoter Group,61399,Equity Shares,62467957,Equity Shares,JINDALSTEL,Buy
 Market Purchase,A9 Homes Private Limited,2025-12-04,2025-12-04,5207988,1.84,5186200,1.83,NAVA LIMITED,2025-12-08,2025-12-06,Promoter Group,21788,Equity Shares,11519357,Equity Shares,NAVA,Buy
 Market Purchase,A9 Homes Private Limited,2025-12-05,2025-12-05,5256200,1.86,5207988,1.84,NAVA LIMITED,2025-12-08,2025-12-06,Promoter Group,48212,Equity Shares,25674317,Equity Shares,NAVA,Buy
-Market Purchase,Ramaa Devineni,2025-12-05,2025-12-05,8017884,2.83,7945544,2.81,NAVA LIMITED,2025-12-08,2025-12-06,Promoter Group,72340,Equity Shares,38599734,Equity Shares,NAVA,Buy
 Market Purchase,Ramaa Devineni,2025-12-04,2025-12-04,7945544,2.81,7937884,2.8,NAVA LIMITED,2025-12-08,2025-12-06,Promoter Group,7660,Equity Shares,4063958,Equity Shares,NAVA,Buy
+Market Purchase,Ramaa Devineni,2025-12-05,2025-12-05,8017884,2.83,7945544,2.81,NAVA LIMITED,2025-12-08,2025-12-06,Promoter Group,72340,Equity Shares,38599734,Equity Shares,NAVA,Buy
 Market Purchase,Shree Vinay Finvest P Ltd..,2025-12-03,2025-12-04,11932243,2.11,10814743,1.91,MSP Steel & Power Limited,2025-12-08,2025-12-05,Promoter Group,1117500,Equity Shares,41800571,Equity Shares,MSPL,Buy
 Market Purchase,Sunil Kulkarni,2025-12-05,2025-12-05,7636996,55.54,7635996,55.53,Fidel Softech Limited,2025-12-08,2025-12-05,Promoters,1000,Equity Shares,142900,Equity Shares,FIDEL,Buy
-Market Purchase,Diwarkar Marketing Private Limited,2025-12-05,2025-12-05,22814076,10.48,22783000,10.47,Surya Roshni Limited,2025-12-08,2025-12-08,Promoter Group,31076,Equity Shares,8052517,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Cubitex Marketing Private Limited,2025-12-03,2025-12-03,19656500,9.03,19656000,9.03,Surya Roshni Limited,2025-12-08,2025-12-04,Promoter Group,500,Equity Shares,129935,Equity Shares,SURYAROSNI,Buy
-Market Purchase,Krishna Kumar Choudhary,2025-12-05,2025-12-05,1418606,2.15,1409888,2.14,Rashi Peripherals Limited,2025-12-08,2025-12-08,Promoters,8718,Equity Shares,2834357,Equity Shares,RPTECH,Buy
+Market Purchase,Diwarkar Marketing Private Limited,2025-12-05,2025-12-05,22814076,10.48,22783000,10.47,Surya Roshni Limited,2025-12-08,2025-12-08,Promoter Group,31076,Equity Shares,8052517,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Krishna Kumar Choudhary,2025-12-05,2025-12-05,1409888,2.14,1407220,2.14,Rashi Peripherals Limited,2025-12-08,2025-12-08,Promoters,2668,Equity Shares,867527,Equity Shares,RPTECH,Buy
+Market Purchase,Krishna Kumar Choudhary,2025-12-05,2025-12-05,1418606,2.15,1409888,2.14,Rashi Peripherals Limited,2025-12-08,2025-12-08,Promoters,8718,Equity Shares,2834357,Equity Shares,RPTECH,Buy
 Market Purchase,BHORUKA SUPPLY CHAIN SOLUTIONS HOLDINGS LIMITED,2025-12-05,2025-12-05,33833155,44.1,33832517,44.09,Transport Corporation of India Limited,2025-12-08,2025-12-08,Promoter Group,638,Equity Shares,662882,Equity Shares,TCI,Buy
 Market Purchase,D B Power Limited,2025-12-03,2025-12-03,2158262,1.21,2154662,1.21,D.B.Corp Limited,2025-12-08,2025-12-04,Promoter Group,3600,Equity Shares,932749,Equity Shares,DBCORP,Buy
 Market Purchase,Destiny Logistics & Infra Limited,2025-12-03,2025-12-05,3873063,16.46,3847063,16.35,Dynamic Services & Security Limited,2025-12-08,2025-12-06,Promoter Group,26000,Equity Shares,3054827,Equity Shares,DYNAMIC,Buy
 Market Sale,B Ramesh Babu,2025-11-28,2025-11-28,119148,0.01,129148,0.01,Karur Vysya Bank Limited,2025-12-06,2025-12-01,Director,10000,Equity Shares,2495225,Equity Shares,KARURVYSYA,Sell
-Market Purchase,AHIH RESORTS AND RETREAT PRIVATELIMITED,2025-12-04,2025-12-04,9032792,4.27,8983792,4.25,Coffee Day Enterprises Limited,2025-12-06,2025-12-05,Promoter Group,49000,Equity Shares,1645386,Equity Shares,COFFEEDAY,Buy
-Market Sale,Malavika Hegde,2025-12-04,2025-12-04,2148576,1.02,2358065,1.12,Coffee Day Enterprises Limited,2025-12-06,2025-12-05,Promoters,209489,Equity Shares,7055881,Equity Shares,COFFEEDAY,Sell
-Market Purchase,AHIH RESORTS AND RETREAT PRIVATELIMITED,2025-12-03,2025-12-03,8983793,4.25,8828793,4.18,Coffee Day Enterprises Limited,2025-12-06,2025-12-04,Promoter Group,155000,Equity Shares,5343194,Equity Shares,COFFEEDAY,Buy
 Market Sale,Malavika Hegde,2025-12-03,2025-12-03,2358065,1.12,2537060,1.2,Coffee Day Enterprises Limited,2025-12-06,2025-12-04,Promoters,178995,Equity Shares,6143943,Equity Shares,COFFEEDAY,Sell
+Market Purchase,AHIH RESORTS AND RETREAT PRIVATELIMITED,2025-12-03,2025-12-03,8983793,4.25,8828793,4.18,Coffee Day Enterprises Limited,2025-12-06,2025-12-04,Promoter Group,155000,Equity Shares,5343194,Equity Shares,COFFEEDAY,Buy
+Market Sale,Malavika Hegde,2025-12-04,2025-12-04,2148576,1.02,2358065,1.12,Coffee Day Enterprises Limited,2025-12-06,2025-12-05,Promoters,209489,Equity Shares,7055881,Equity Shares,COFFEEDAY,Sell
+Market Purchase,AHIH RESORTS AND RETREAT PRIVATELIMITED,2025-12-04,2025-12-04,9032792,4.27,8983792,4.25,Coffee Day Enterprises Limited,2025-12-06,2025-12-05,Promoter Group,49000,Equity Shares,1645386,Equity Shares,COFFEEDAY,Buy
 Market Purchase,NCL Buildtek Ltd,2025-12-03,2025-12-04,451305,0.99,438744,0.97,NCL Industries Limited,2025-12-06,2025-12-06,Promoter Group,12561,Equity Shares,0,Equity Shares,NCLIND,Buy
 Market Purchase,Mr. Naresh Radheshyam Thard,2025-12-04,2025-12-04,9660154,13.01,9641404,12.99,Rajshree Polypack Limited,2025-12-06,2025-12-06,Promoters,18750,Equity Shares,353063,Equity Shares,RPPL,Buy
 Market Purchase,Bajaj Allianz General Insurance Co. Ltd.,2025-12-05,2025-12-05,921000,0.01,730000,0.01,Bajaj Finance Limited,2025-12-06,2025-12-05,Promoter Group,191000,Equity Shares,201746510,Equity Shares,BAJFINANCE,Buy
@@ -2453,8 +2453,8 @@ Market Purchase,Birju Maheshbhai Patel,2025-12-02,2025-12-02,25708,0.04,20558,0.
 Market Purchase,Raghunandana Tangirala,2025-12-04,2025-12-04,16143979,24.11,16135979,24.1,Updater Services Limited,2025-12-04,2025-12-04,Promoters,8000,Equity Shares,1394000,Equity Shares,UDS,Buy
 Market Sale,Dr. Kailash Shantilal Choudhari,2025-12-02,2025-12-03,4503892,2.77,4706392,2.89,Aksh Optifibre Limited,2025-12-04,2025-12-04,Promoters,202500,Equity Shares,1313106,Equity Shares,AKSHOPTFBR,Sell
 Market Purchase,Kakatiya Industries (P) Ltd,2025-12-02,2025-12-03,109599,0.24,104599,0.23,NCL Industries Limited,2025-12-04,2025-12-04,Promoter Group,5000,Equity Shares,0,Equity Shares,NCLIND,Buy
-Market Purchase,RAM GROVHER,2025-12-02,2025-12-02,31100,0,27552,0,EPack Prefab Technologies Limited,2025-12-04,2025-12-03,Director,3548,Equity Shares,1124386,Equity Shares,EPACKPEB,Buy
 Market Purchase,RAM GROVHER,2025-12-02,2025-12-02,37687,0.01,31100,0,EPack Prefab Technologies Limited,2025-12-04,2025-12-03,Director,6587,Equity Shares,2083956,Equity Shares,EPACKPEB,Buy
+Market Purchase,RAM GROVHER,2025-12-02,2025-12-02,31100,0,27552,0,EPack Prefab Technologies Limited,2025-12-04,2025-12-03,Director,3548,Equity Shares,1124386,Equity Shares,EPACKPEB,Buy
 Market Purchase,SARITABEN VALLABHBHAI SAVANI,2025-12-03,2025-12-03,2525318,20.52,2520318,20.48,Par Drugs And Chemicals Limited,2025-12-04,2025-12-04,Promoter Group,5000,Equity Shares,445356,Equity Shares,PAR,Buy
 Market Sale,Nidhi Manish Pancholi,2025-12-02,2025-12-02,113500,1.11,247500,2.42,Magson Retail And Distribution Limited,2025-12-04,2025-12-04,Promoter Group,134000,Equity Shares,17540600,Equity Shares,MAGSON,Sell
 Market Purchase,Hetal Gogri Gala,2025-12-02,2025-12-03,2815548,3.1,2751779,3.03,Aarti Pharmalabs Limited,2025-12-04,2025-12-04,Promoter Group,63769,Equity Shares,44650851,Equity Shares,AARTIPHARM,Buy
@@ -2477,9 +2477,9 @@ Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-12-01,2025-12-01,2
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-27,2025-11-27,2157624,0.21,2023361,0.2,JINDAL STEEL LIMITED,2025-12-03,2025-12-01,Promoter Group,134263,Equity Shares,139233416,Equity Shares,JINDALSTEL,Buy
 Market Purchase,Abhishek Bhatia,2025-12-01,2025-12-02,1270000,3,823750,1.95,Tree House Education & Accessories Limited,2025-12-03,2025-12-03,Promoter Group,446250,Equity Shares,3690525,Equity Shares,TREEHOUSE,Buy
 Market Purchase,Cherry A Mehta,2025-12-03,2025-12-03,1070374,10.94,1067874,10.91,Diamines & Chemicals Limited,2025-12-03,2025-12-03,Promoters,2500,Equity Shares,667500,Equity Shares,DIAMINESQ,Buy
+Market Purchase,Amit M Mehta,2025-12-03,2025-12-03,1269081,12.97,1266581,12.95,Diamines & Chemicals Limited,2025-12-03,2025-12-03,Promoters,2500,Equity Shares,667529,Equity Shares,DIAMINESQ,Buy
 Market Purchase,Mohak A Mehta,2025-12-03,2025-12-03,499451,5.1,496951,5.08,Diamines & Chemicals Limited,2025-12-03,2025-12-03,Promoters,2500,Equity Shares,667500,Equity Shares,DIAMINESQ,Buy
 Market Purchase,Harsh A Mehta,2025-12-03,2025-12-03,507090,5.18,504590,5.16,Diamines & Chemicals Limited,2025-12-03,2025-12-03,Promoters,2500,Equity Shares,667500,Equity Shares,DIAMINESQ,Buy
-Market Purchase,Amit M Mehta,2025-12-03,2025-12-03,1269081,12.97,1266581,12.95,Diamines & Chemicals Limited,2025-12-03,2025-12-03,Promoters,2500,Equity Shares,667529,Equity Shares,DIAMINESQ,Buy
 Market Sale,SARIKA BHATIA,2025-12-02,2025-12-02,30046750,13.3,30096750,13.33,Servotech Renewable Power System Limited,2025-12-03,2025-12-03,Promoters,50000,Equity Shares,4422500,Equity Shares,SERVOTECH,Sell
 Market Sale,RAMAN BHATIA HUF,2025-12-02,2025-12-02,30260550,13.4,30310550,13.42,Servotech Renewable Power System Limited,2025-12-03,2025-12-03,Promoter Group,50000,Equity Shares,4451394,Equity Shares,SERVOTECH,Sell
 Market Purchase,Vinod Goenka HUF,2025-12-01,2025-12-01,103608,0.19,53608,0.1,Advent Hotels International Limited,2025-12-03,2025-12-02,Promoter Group,50000,Equity Shares,11177896,Equity Shares,ADVENTHTL,Buy
@@ -2494,13 +2494,13 @@ Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-12-02,2025-12-02,472727,2.56,
 Market Purchase,SOFREAL MERCANTRADE PRIVATE LTD,2025-12-01,2025-12-01,155010,0.84,154415,0.84,Stel Holdings Limited,2025-12-03,2025-12-02,Promoter Group,595,Equity Shares,308109,Equity Shares,STEL,Buy
 Market Sale,Shekhar Miriyala,2025-11-17,2025-11-27,2146032,9.44,2180832,9.59,Deccan Transcon Leasing Limited,2025-12-03,2025-12-01,Promoters,34800,Equity Shares,1011240,Equity Shares,DECCANTRAN,Sell
 Market Purchase,Diwarkar Marketing Private Limited,2025-12-01,2025-12-01,22783000,10.47,22733000,10.43,Surya Roshni Limited,2025-12-03,2025-12-02,Promoter Group,50000,Equity Shares,13343254,Equity Shares,SURYAROSNI,Buy
-Market Purchase,K.N MADHUSOODANAN,2025-12-02,2025-12-02,2290558,0.58,2282558,0.57,Dhanlaxmi Bank Limited,2025-12-03,2025-12-02,Director,8000,Equity Shares,212000,Equity Shares,DHANBANK,Buy
-Market Purchase,K.N MADHUSOODANAN,2025-12-01,2025-12-01,2272558,0.57,2262558,0.57,Dhanlaxmi Bank Limited,2025-12-03,2025-12-01,Director,10000,Equity Shares,267500,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-12-02,2025-12-02,2282558,0.57,2272558,0.57,Dhanlaxmi Bank Limited,2025-12-03,2025-12-02,Director,10000,Equity Shares,265500,Equity Shares,DHANBANK,Buy
+Market Purchase,K.N MADHUSOODANAN,2025-12-01,2025-12-01,2272558,0.57,2262558,0.57,Dhanlaxmi Bank Limited,2025-12-03,2025-12-01,Director,10000,Equity Shares,267500,Equity Shares,DHANBANK,Buy
+Market Purchase,K.N MADHUSOODANAN,2025-12-02,2025-12-02,2290558,0.58,2282558,0.57,Dhanlaxmi Bank Limited,2025-12-03,2025-12-02,Director,8000,Equity Shares,212000,Equity Shares,DHANBANK,Buy
 Market Purchase,Susmita Jhawar,2025-12-02,2025-12-02,1700000,0.56,1685000,0.55,Usha Martin Limited,2025-12-03,2025-12-02,Promoter Group,15000,Equity Shares,6378249,Equity Shares,USHAMART,Buy
 Market Sale,TAUSEEF AHMAD MIRZA,2025-11-28,2025-11-28,320000,0.06,338000,0.06,Redtape Limited,2025-12-03,2025-11-29,Promoters,18000,Equity Shares,2330280,Equity Shares,REDTAPE,Sell
-Market Purchase,SWOT TRADING & SERVICES LLP,2025-11-28,2025-11-28,542962,-,515462,0,Maharashtra Seamless Limited,2025-12-03,2025-12-02,Promoter Group,27500,Equity Shares,15850432,Equity Shares,MAHSEAMLES,Buy
 Market Purchase,Odd & Even Trades & Finance Limited,2025-11-27,2025-11-28,23991000,-,23936500,17.86,Maharashtra Seamless Limited,2025-12-03,2025-12-01,Promoter Group,54500,Equity Shares,31398492,Equity Shares,MAHSEAMLES,Buy
+Market Purchase,SWOT TRADING & SERVICES LLP,2025-11-28,2025-11-28,542962,-,515462,0,Maharashtra Seamless Limited,2025-12-03,2025-12-02,Promoter Group,27500,Equity Shares,15850432,Equity Shares,MAHSEAMLES,Buy
 Market Purchase,Tarun G Arora,2025-12-01,2025-12-01,11000,0,10000,0,Zydus Wellness Limited,2025-12-02,2025-12-02,Director,1000,Equity Shares,432370,Equity Shares,ZYDUSWELL,Buy
 Market Purchase,Flowtech Industrial Projects Private Limited,2025-11-28,2025-11-28,12151710,5.01,9626710,3.97,Primo Chemicals Limited,2025-12-02,2025-11-29,Promoters,2525000,Equity Shares,64640000,Equity Shares,PRIMO,Buy
 Market Sale,Manvi Talwar,2025-11-19,2025-11-26,1176550,9.02,1382550,10.6,Bikewo Green Tech Limited,2025-12-02,2025-11-28,Promoters,206000,Equity Shares,4102500,Equity Shares,BIKEWO,Sell
@@ -2511,12 +2511,12 @@ Market Purchase,BANWARI LAL MITTAL,2025-11-28,2025-11-28,10708082,33.66,10696582
 Market Purchase,NEW MODERN BUILDWELL PRIVATE LIMITED,2025-12-01,2025-12-02,464137,2.56,462637,2.55,Rudrabhishek Enterprises Limited,2025-12-02,2025-12-02,Promoter Group,1500,Equity Shares,193762,Equity Shares,REPL,Buy
 Market Purchase,Nirmal V. Shah,2025-12-01,2025-12-01,3659872,13.61,3656872,13.6,Chembond Chemicals Limited,2025-12-02,2025-12-01,Promoters,3000,Equity Shares,453900,Equity Shares,CHEMBONDCH,Buy
 Market Sale,MAHENDRAKUMAR RIKHAVCHAND SHAH,2025-12-02,2025-12-02,25628624,15.19,25658250,15.21,Arfin India Limited,2025-12-02,2025-12-02,Promoters,29626,Equity Shares,1743490,Equity Shares,ARFIN,Sell
+Market Purchase,SOFREAL MERCANTRADE PRIVATE LTD,2025-11-27,2025-11-27,141815,0.76,132956,0.72,Stel Holdings Limited,2025-12-02,2025-12-01,Promoter Group,8859,Equity Shares,4604445,Equity Shares,STEL,Buy
 Market Purchase,SOFREAL MERCANTRADE PRIVATE LTD,2025-11-27,2025-11-27,142095,0.77,141815,0.76,Stel Holdings Limited,2025-12-02,2025-12-01,Promoter Group,280,Equity Shares,147813,Equity Shares,STEL,Buy
 Market Purchase,SOFREAL MERCANTRADE PRIVATE LTD,2025-11-28,2025-11-28,142866,0.77,142095,0.77,Stel Holdings Limited,2025-12-02,2025-12-01,Promoter Group,771,Equity Shares,370068,Equity Shares,STEL,Buy
-Market Purchase,SOFREAL MERCANTRADE PRIVATE LTD,2025-11-27,2025-11-27,141815,0.76,132956,0.72,Stel Holdings Limited,2025-12-02,2025-12-01,Promoter Group,8859,Equity Shares,4604445,Equity Shares,STEL,Buy
 Market Purchase,Randhir Singh,2025-11-28,2025-11-28,35561,0,30561,0,IndoStar Capital Finance Limited,2025-12-02,2025-12-01,Director,5000,Equity Shares,1152931,Equity Shares,INDOSTAR,Buy
-Market Purchase,Randhir Singh,2025-11-28,2025-11-28,30561,0,Nil,0,IndoStar Capital Finance Limited,2025-12-02,2025-12-01,Director,30561,Equity Shares,6984410,Equity Shares,INDOSTAR,Buy
 Market Purchase,Randhir Singh,2025-12-01,2025-12-01,40561,0,35561,0,IndoStar Capital Finance Limited,2025-12-02,2025-12-02,Director,5000,Equity Shares,1189800,Equity Shares,INDOSTAR,Buy
+Market Purchase,Randhir Singh,2025-11-28,2025-11-28,30561,0,Nil,0,IndoStar Capital Finance Limited,2025-12-02,2025-12-01,Director,30561,Equity Shares,6984410,Equity Shares,INDOSTAR,Buy
 Market Purchase,VISWANATH TADIMETY,2025-11-24,2025-11-28,4525233,14.54,4509233,14.48,Cybertech Systems And Software Limited,2025-12-02,2025-12-01,Promoters,16000,Equity Shares,2348021,Equity Shares,CYBERTECH,Buy
 Market Purchase,Vinay Surya,2025-11-27,2025-11-28,2181924,1,2177595,1,Surya Roshni Limited,2025-12-02,2025-11-29,Promoter Group,4329,Equity Shares,1143639,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Brahmadev Holding and Trading Limited,2025-11-27,2025-11-27,12011484,8.9,11816484,8.82,Maharashtra Seamless Limited,2025-12-02,2025-12-01,Promoter Group,195000,Equity Shares,112094308,Equity Shares,MAHSEAMLES,Buy
@@ -2542,21 +2542,21 @@ Market Purchase,Haryana Capfin Limited,2025-11-26,2025-11-26,6186180,4.62,610428
 Market Purchase,Odd & Even Trades & Finance Limited,2025-11-26,2025-11-26,23936500,17.86,23801500,17.8,Maharashtra Seamless Limited,2025-11-29,2025-11-28,Promoter Group,135000,Equity Shares,78227644,Equity Shares,MAHSEAMLES,Buy
 Market Purchase,Harsha Farms Private Limited,2025-11-28,2025-11-28,464030,1.69,461633,1.68,Royal Orchid Hotels Limited,2025-11-29,2025-11-29,Promoter Group,2397,Equity Shares,1004714,Equity Shares,ROHLTD,Buy
 Market Sale,B Ramesh Babu,2025-11-26,2025-11-27,129148,0.01,149148,0.02,Karur Vysya Bank Limited,2025-11-29,2025-11-28,Director,20000,Equity Shares,4998296,Equity Shares,KARURVYSYA,Sell
+Market Purchase,Harish Chandra Gupta,2025-11-26,2025-11-26,24469862,12.99,24464862,12.98,Roto Pumps Limited,2025-11-29,2025-11-27,Promoters,5000,Equity Shares,307986,Equity Shares,ROTO,Buy
 Market Purchase,Gaisu Saluja,2025-11-25,2025-11-26,35461,0.02,2400,0,Roto Pumps Limited,2025-11-29,2025-11-27,Promoter Group,33061,Equity Shares,1991547,Equity Shares,ROTO,Buy
-Market Purchase,Neera Gupta,2025-11-26,2025-11-26,10226420,5.43,10202403,5.41,Roto Pumps Limited,2025-11-29,2025-11-27,Promoter Group,24017,Equity Shares,1460658,Equity Shares,ROTO,Buy
 Market Purchase,Harish Chandra Gupta,2025-11-25,2025-11-25,24464862,12.98,24439140,12.97,Roto Pumps Limited,2025-11-29,2025-11-27,Promoters,25722,Equity Shares,1499479,Equity Shares,ROTO,Buy
 Market Purchase,Harish Chandra Gupta,2025-11-26,2025-11-27,24488840,13,24469862,12.99,Roto Pumps Limited,2025-11-29,2025-11-27,Promoters,18978,Equity Shares,1170988,Equity Shares,ROTO,Buy
-Market Purchase,Neera Gupta,2025-11-26,2025-11-26,10202403,5.41,10194420,5.41,Roto Pumps Limited,2025-11-29,2025-11-27,Promoter Group,7983,Equity Shares,485507,Equity Shares,ROTO,Buy
 Market Purchase,Harish Chandra Gupta HUF,2025-11-27,2025-11-27,7466494,3.96,7461000,3.96,Roto Pumps Limited,2025-11-29,2025-11-27,Promoter Group,5494,Equity Shares,341204,Equity Shares,ROTO,Buy
-Market Purchase,Harish Chandra Gupta,2025-11-26,2025-11-26,24469862,12.99,24464862,12.98,Roto Pumps Limited,2025-11-29,2025-11-27,Promoters,5000,Equity Shares,307986,Equity Shares,ROTO,Buy
+Market Purchase,Neera Gupta,2025-11-26,2025-11-26,10202403,5.41,10194420,5.41,Roto Pumps Limited,2025-11-29,2025-11-27,Promoter Group,7983,Equity Shares,485507,Equity Shares,ROTO,Buy
+Market Purchase,Neera Gupta,2025-11-26,2025-11-26,10226420,5.43,10202403,5.41,Roto Pumps Limited,2025-11-29,2025-11-27,Promoter Group,24017,Equity Shares,1460658,Equity Shares,ROTO,Buy
 Market Purchase,Dilip Varghese,2025-11-28,2025-11-28,1277615,5.31,1258615,5.23,Tarmat Limited,2025-11-29,2025-11-29,Promoters,19000,Equity Shares,1005839,Equity Shares,TARMAT,Buy
 Market Sale,Sanginita Industries LLP,2025-11-21,2025-11-21,2218183,8.56,2262710,8.73,Sanginita Chemicals Limited,2025-11-29,2025-11-29,Promoters,44527,Equity Shares,453699,Equity Shares,SANGINITA,Sell
 Market Sale,Sanginita Industries LLP,2025-11-28,2025-11-28,2163183,8.35,2218183,8.56,Sanginita Chemicals Limited,2025-11-29,2025-11-29,Promoters,55000,Equity Shares,545705,Equity Shares,SANGINITA,Sell
 Market Sale,YASHPAL SHARMA,2025-11-26,2025-11-26,137500,1.21,126300,1.11,Brace Port Logistics Limited,2025-11-29,2025-11-27,Promoters,11200,Equity Shares,907200,Equity Shares,BRACEPORT,Buy
 Market Purchase,V S SHIRGAOKAR ENTERPRISES LLP,2025-11-27,2025-11-28,3227694,2.86,3215394,2.85,The Ugar Sugar Works Limited,2025-11-29,2025-11-29,Promoter Group,12300,Equity Shares,501999,Equity Shares,UGARSUGAR,Buy
 Market Sale,RISHI TREHAN,2025-11-26,2025-11-26,188300,1.67,199500,1.77,Brace Port Logistics Limited,2025-11-29,2025-11-27,Promoters,11200,Equity Shares,907200,Equity Shares,BRACEPORT,Sell
-Market Sale,TAUSEEF AHMAD MIRZA,2025-11-27,2025-11-28,338000,0.06,341000,0.06,Redtape Limited,2025-11-29,2025-11-28,Promoters,3000,Equity Shares,389100,Equity Shares,REDTAPE,Sell
 Market Sale,TAUSEEF AHMAD MIRZA,2025-11-26,2025-11-27,341000,0.06,374000,0.07,Redtape Limited,2025-11-29,2025-11-28,Promoters,33000,Equity Shares,4402962,Equity Shares,REDTAPE,Sell
+Market Sale,TAUSEEF AHMAD MIRZA,2025-11-27,2025-11-28,338000,0.06,341000,0.06,Redtape Limited,2025-11-29,2025-11-28,Promoters,3000,Equity Shares,389100,Equity Shares,REDTAPE,Sell
 Market Purchase,K.N MADHUSOODANAN,2025-11-28,2025-11-28,2262558,0.57,2242558,0.56,Dhanlaxmi Bank Limited,2025-11-29,2025-11-28,Director,20000,Equity Shares,539000,Equity Shares,DHANBANK,Buy
 Market Purchase,Rajeev Jhawar,2025-11-27,2025-11-27,4090000,1.34,4085000,1.34,Usha Martin Limited,2025-11-29,2025-11-28,Promoters,5000,Equity Shares,2092623,Equity Shares,USHAMART,Buy
 Market Purchase,BANWARI LAL MITTAL,2025-11-25,2025-11-27,10696582,33.63,10686000,33.59,Health X Platform Limited,2025-11-29,2025-11-28,Promoters,10582,Equity Shares,3429242,Equity Shares,HEALTHX,Buy
@@ -2570,15 +2570,15 @@ Market Sale,RISHI TREHAN,2025-11-25,2025-11-25,199500,1.77,209100,1.85,Brace Por
 Market Sale,YASHPAL SHARMA,2025-11-25,2025-11-25,126300,1.11,116700,1.03,Brace Port Logistics Limited,2025-11-28,2025-11-26,Promoters,9600,Equity Shares,781520,Equity Shares,BRACEPORT,Buy
 Market Purchase,Ashish Kukreja,2025-11-27,2025-11-28,1524312,47.25,1523412,47.22,Homesfy Realty Limited,2025-11-28,2025-11-28,Promoters,900,Equity Shares,166482,Equity Shares,HOMESFY,Buy
 Market Purchase,Global Jindal Fin-Invest Limited,2025-11-26,2025-11-26,11561617,8.6,11393417,8.5,Maharashtra Seamless Limited,2025-11-28,2025-11-27,Promoter Group,168200,Equity Shares,97400256,Equity Shares,MAHSEAMLES,Buy
-Market Purchase,Krishna Kumar Choudhary,2025-11-26,2025-11-26,1407220,2.14,1404865,2.13,Rashi Peripherals Limited,2025-11-28,2025-11-27,Promoters,2355,Equity Shares,768309,Equity Shares,RPTECH,Buy
 Market Purchase,Krishna Kumar Choudhary,2025-11-26,2025-11-26,1404865,2.13,1404371,2.13,Rashi Peripherals Limited,2025-11-28,2025-11-27,Promoters,494,Equity Shares,161291,Equity Shares,RPTECH,Buy
+Market Purchase,Krishna Kumar Choudhary,2025-11-26,2025-11-26,1407220,2.14,1404865,2.13,Rashi Peripherals Limited,2025-11-28,2025-11-27,Promoters,2355,Equity Shares,768309,Equity Shares,RPTECH,Buy
 Market Sale,Maheshbhai Naranbhai Patel,2025-11-26,2025-11-26,386850,3.78,387850,3.79,Magson Retail And Distribution Limited,2025-11-28,2025-11-28,Promoter Group,1000,Equity Shares,114000,Equity Shares,MAGSON,Sell
+Market Sale,BERJIS M DESAI,2025-11-27,2025-11-27,1689000,0.98,1726770,1.01,Inventurus Knowledge Solutions Limited,2025-11-28,2025-11-27,Director,37770,Equity Shares,63748186,Equity Shares,IKS,Sell
 Market Sale,BERJIS M DESAI,2025-11-26,2025-11-26,1726770,1.01,1824770,0.11,Inventurus Knowledge Solutions Limited,2025-11-28,2025-11-27,Director,98000,Equity Shares,164703348,Equity Shares,IKS,Sell
 Market Sale,BERJIS M DESAI,2025-11-25,2025-11-25,1824770,1.06,1894770,1.1,Inventurus Knowledge Solutions Limited,2025-11-28,2025-11-26,Director,70000,Equity Shares,116881538,Equity Shares,IKS,Sell
-Market Sale,BERJIS M DESAI,2025-11-27,2025-11-27,1689000,0.98,1726770,1.01,Inventurus Knowledge Solutions Limited,2025-11-28,2025-11-27,Director,37770,Equity Shares,63748186,Equity Shares,IKS,Sell
 Market Purchase,AV Dwellings Private Limited,2025-11-25,2025-11-25,4862007,1.72,4860000,1.72,NAVA LIMITED,2025-11-28,2025-11-27,Promoter Group,2007,Equity Shares,1026597,Equity Shares,NAVA,Buy
-Market Purchase,AV Dwellings Private Limited,2025-11-26,2025-11-26,4885000,1.73,4862007,1.72,NAVA LIMITED,2025-11-28,2025-11-27,Promoter Group,22993,Equity Shares,12028380,Equity Shares,NAVA,Buy
 Market Purchase,AV Dwellings Private Limited,2025-11-27,2025-11-27,4910000,1.73,4885000,1.73,NAVA LIMITED,2025-11-28,2025-11-28,Promoter Group,25000,Equity Shares,13289072,Equity Shares,NAVA,Buy
+Market Purchase,AV Dwellings Private Limited,2025-11-26,2025-11-26,4885000,1.73,4862007,1.72,NAVA LIMITED,2025-11-28,2025-11-27,Promoter Group,22993,Equity Shares,12028380,Equity Shares,NAVA,Buy
 Market Purchase,Hindustan Cotton Company,2025-11-27,2025-11-27,47569986,56.97,47565106,56.96,Sarla Performance Fibers Limited,2025-11-28,2025-11-28,Promoter Group,4880,Equity Shares,430318,Equity Shares,SARLAPOLY,Buy
 Market Purchase,MANJOO SARDANA,2025-11-26,2025-11-28,2482044,7.94,2477544,7.93,Sukhjit Starch & Chemicals Limited,2025-11-28,2025-11-28,Promoters,4500,Equity Shares,678000,Equity Shares,SUKHJITS,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-11-26,2025-11-26,22733000,10.43,22693000,10.43,Surya Roshni Limited,2025-11-28,2025-11-27,Promoter Group,40000,Equity Shares,10823924,Equity Shares,SURYAROSNI,Buy
@@ -2586,10 +2586,10 @@ Market Purchase,Vinay Surya,2025-11-24,2025-11-26,2177595,1,2166924,1,Surya Rosh
 Market Purchase,PRIYANKA RICHI CHOKSI,2025-11-28,2025-11-28,197400,1.95,195000,1.93,Viviana Power Tech Limited,2025-11-28,2025-11-28,Promoters,2400,Equity Shares,2085000,Equity Shares,VIVIANA,Buy
 Market Purchase,Richi Nikeshbhai Choksi,2025-11-28,2025-11-28,198400,1.96,197200,1.95,Viviana Power Tech Limited,2025-11-28,2025-11-28,Promoters,1200,Equity Shares,1044864,Equity Shares,VIVIANA,Buy
 Market Purchase,Destiny Logistics & Infra Limited,2025-11-25,2025-11-25,3789563,16.11,3749563,15.94,Dynamic Services & Security Limited,2025-11-28,2025-11-27,Promoter Group,40000,Equity Shares,4801022,Equity Shares,DYNAMIC,Buy
-Market Purchase,Destiny Logistics & Infra Limited,2025-11-27,2025-11-27,3824563,16.26,3789563,16.11,Dynamic Services & Security Limited,2025-11-28,2025-11-27,Promoter Group,35000,Equity Shares,4572118,Equity Shares,DYNAMIC,Buy
 Market Purchase,Rekha Bhagat,2025-11-25,2025-11-25,2808188,11.94,2804188,11.92,Dynamic Services & Security Limited,2025-11-28,2025-11-27,Promoters,4000,Equity Shares,456912,Equity Shares,DYNAMIC,Buy
-Market Purchase,MADHAV DOSHI,2025-11-25,2025-11-26,76517,0.85,72517,0.81,Madhav Marbles and Granites Limited,2025-11-28,2025-11-26,Director,4000,Equity Shares,169160,Equity Shares,MADHAV,Buy
+Market Purchase,Destiny Logistics & Infra Limited,2025-11-27,2025-11-27,3824563,16.26,3789563,16.11,Dynamic Services & Security Limited,2025-11-28,2025-11-27,Promoter Group,35000,Equity Shares,4572118,Equity Shares,DYNAMIC,Buy
 Market Purchase,RIDDHIMA DOSHI,2025-11-26,2025-11-27,1065865,11.91,1060300,11.85,Madhav Marbles and Granites Limited,2025-11-28,2025-11-27,Director,5565,Equity Shares,240753,Equity Shares,MADHAV,Buy
+Market Purchase,MADHAV DOSHI,2025-11-25,2025-11-26,76517,0.85,72517,0.81,Madhav Marbles and Granites Limited,2025-11-28,2025-11-26,Director,4000,Equity Shares,169160,Equity Shares,MADHAV,Buy
 Market Sale,Whirlpool Mauritius Limited,2025-11-27,2025-11-27,50449633,39.76,64704633,51,Whirlpool of India Limited,2025-11-28,2025-11-27,Promoter Group,14255000,Equity Shares,14896023116,Equity Shares,WHIRLPOOL,Sell
 Market Purchase,SANJAY KUMAR JAIN,2025-11-26,2025-11-27,5970624,2.31,5955436,2.3,T T Limited,2025-11-28,2025-11-27,Promoter Group,15188,Equity Shares,144118,Equity Shares,TTL,Buy
 Market Purchase,Manish Jain,2025-11-27,2025-11-27,48831000,27.82,48791000,27.8,Enviro Infra Engineers Limited,2025-11-28,2025-11-28,Promoters,40000,Equity Shares,8669600,Equity Shares,EIEL,Buy
@@ -2597,8 +2597,8 @@ Market Purchase,Harsha Farms Private Limited,2025-11-27,2025-11-27,461633,1.68,4
 Market Sale,RISHI TREHAN,2025-11-24,2025-11-24,209100,1.85,220300,1.95,Brace Port Logistics Limited,2025-11-27,2025-11-25,Promoters,11200,Equity Shares,907200,Equity Shares,BRACEPORT,Sell
 Market Sale,YASHPAL SHARMA,2025-11-24,2025-11-24,116700,1.03,105500,0.93,Brace Port Logistics Limited,2025-11-27,2025-11-25,Promoters,11200,Equity Shares,907200,Equity Shares,BRACEPORT,Buy
 Market Purchase,SONAM RAGAVAN,2025-11-27,2025-11-27,327000,2.05,311000,1.95,Globesecure Technologies Limited,2025-11-27,2025-11-27,Director,16000,Equity Shares,145600,Equity Shares,GSTL,Buy
-Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-21,2025-11-21,1334390,0.13,837053,0.08,JINDAL STEEL LIMITED,2025-11-27,2025-11-25,Promoter Group,497337,Equity Shares,522920015,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-25,2025-11-25,2023361,0.2,1932149,0.19,JINDAL STEEL LIMITED,2025-11-27,2025-11-25,Promoter Group,91212,Equity Shares,93003403,Equity Shares,JINDALSTEL,Buy
+Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-21,2025-11-21,1334390,0.13,837053,0.08,JINDAL STEEL LIMITED,2025-11-27,2025-11-25,Promoter Group,497337,Equity Shares,522920015,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-24,2025-11-24,1932149,0.19,1334390,0.13,JINDAL STEEL LIMITED,2025-11-27,2025-11-25,Promoter Group,597759,Equity Shares,620599371,Equity Shares,JINDALSTEL,Buy
 Market Sale,Devesh Sachdev,2025-11-26,2025-11-26,4580301,2.82,4630301,2.86,Fusion Finance Limited,2025-11-27,2025-11-27,Promoters,50000,Equity Shares,8400000,Equity Shares,FUSION,Sell
 Market Sale,Shakuntala Shetty,2025-11-25,2025-11-25,71124135,34.8,72301135,35.38,Narayana Hrudayalaya Ltd.,2025-11-27,2025-11-26,Promoters,1177000,Equity Shares,2306990620,Equity Shares,NH,Sell
@@ -2617,26 +2617,26 @@ Market Purchase,Manish Bindal,2025-11-25,2025-11-25,8919406,37.33,8909006,37.29,
 Market Sale,PETERHOUSE INVESTMENTS LIMITED,2025-11-25,2025-11-25,3750000,1.23,3970795,1.3,Usha Martin Limited,2025-11-26,2025-11-25,Promoter Group,220795,Equity Shares,91722659,Equity Shares,USHAMART,Sell
 Market Purchase,Krishna Kumar Choudhary,2025-11-25,2025-11-25,1404371,2.13,1404259,2.13,Rashi Peripherals Limited,2025-11-26,2025-11-26,Promoters,112,Equity Shares,36512,Equity Shares,RPTECH,Buy
 Market Purchase,Krishna Kumar Choudhary,2025-11-25,2025-11-25,1404259,2.13,1404192,2.13,Rashi Peripherals Limited,2025-11-26,2025-11-26,Promoters,67,Equity Shares,21842,Equity Shares,RPTECH,Buy
+Market Purchase,SECURA INDIA TRUST,2025-03-20,2025-03-20,1443381,7.82,1441542,7.81,Stel Holdings Limited,2025-11-26,2025-11-26,Promoter Group,1839,Equity Shares,807811,Equity Shares,STEL,Buy
 Market Purchase,SECURA INDIA TRUST,2025-11-25,2025-11-25,1443708,7.82,1443381,7.82,Stel Holdings Limited,2025-11-26,2025-11-26,Promoter Group,327,Equity Shares,162315,Equity Shares,STEL,Buy
 Market Purchase,SECURA INDIA TRUST,2025-11-25,2025-11-25,1443881,7.82,1443708,7.82,Stel Holdings Limited,2025-11-26,2025-11-26,Promoter Group,173,Equity Shares,86651,Equity Shares,STEL,Buy
-Market Purchase,SECURA INDIA TRUST,2025-03-20,2025-03-20,1443381,7.82,1441542,7.81,Stel Holdings Limited,2025-11-26,2025-11-26,Promoter Group,1839,Equity Shares,807811,Equity Shares,STEL,Buy
 Market Purchase,RAM GROVHER,2025-11-25,2025-11-25,22800,0,6100,0,EPack Prefab Technologies Limited,2025-11-26,2025-11-25,Director,16700,Equity Shares,5067900,Equity Shares,EPACKPEB,Buy
 Market Purchase,Stuti Jhawar,2025-11-21,2025-11-21,1316000,0.43,1307000,0.43,Usha Martin Limited,2025-11-26,2025-11-25,Promoter Group,9000,Equity Shares,3866542,Equity Shares,USHAMART,Buy
 Market Sale,ANJAY AGARWAL,2025-11-24,2025-11-25,Nil,0,954679,7.44,Aaa Technologies Limited,2025-11-26,2025-11-26,Promoters,954679,Equity Shares,85322731,Equity Shares,AAATECH,Sell
 Market Purchase,RADHIKA NANNAPANENI,2025-11-17,2025-11-17,160894,0.08,158394,0.08,Standard Engineering Technology Limited,2025-11-26,2025-11-24,Director,2500,Equity Shares,413000,Equity Shares,SETL,Buy
 Market Purchase,RADHIKA NANNAPANENI,2025-11-17,2025-11-17,158394,0.08,156394,0.07,Standard Engineering Technology Limited,2025-11-26,2025-11-24,Director,2000,Equity Shares,332000,Equity Shares,SETL,Buy
-Market Purchase,D B Power Limited,2025-11-24,2025-11-24,2096826,1.18,2059986,1.16,D.B.Corp Limited,2025-11-26,2025-11-25,Promoter Group,36840,Equity Shares,9498118,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-11-25,2025-11-25,2105847,1.18,2096826,1.18,D.B.Corp Limited,2025-11-26,2025-11-26,Promoter Group,9021,Equity Shares,2332760,Equity Shares,DBCORP,Buy
+Market Purchase,D B Power Limited,2025-11-24,2025-11-24,2096826,1.18,2059986,1.16,D.B.Corp Limited,2025-11-26,2025-11-25,Promoter Group,36840,Equity Shares,9498118,Equity Shares,DBCORP,Buy
 Market Purchase,DILIP VARGHESE,2025-11-20,2025-11-20,1232693,5.12,1216693,5.05,Tarmat Limited,2025-11-26,2025-11-21,Promoters,16000,Equity Shares,846396,Equity Shares,TARMAT,Buy
 Market Sale,PETERHOUSE INVESTMENTS LIMITED,2025-11-24,2025-11-24,3970795,1.3,4050000,1.33,Usha Martin Limited,2025-11-26,2025-11-24,Promoter Group,79205,Equity Shares,33166302,Equity Shares,USHAMART,Sell
 Market Purchase,DILIP VARGHESE,2025-11-20,2025-11-20,1232693,5.12,1216693,5.05,Tarmat Limited,2025-11-26,2025-11-21,Promoters,16000,Equity Shares,846396,Equity Shares,TARMAT,Buy
-Market Purchase,Jaik Leasing and Commercial Investment Limited,2025-11-24,2025-11-24,32232745,5.69,31654045,5.58,MSP Steel & Power Limited,2025-11-26,2025-11-25,Promoter Group,578700,Equity Shares,1957394,Equity Shares,MSPL,Buy
 Market Purchase,Shree Vinay Finvest P Ltd..,2025-11-20,2025-11-21,9013543,1.59,7878543,1.39,MSP Steel & Power Limited,2025-11-26,2025-11-24,Promoter Group,1135000,Equity Shares,39303519,Equity Shares,MSPL,Buy
+Market Purchase,Jaik Leasing and Commercial Investment Limited,2025-11-24,2025-11-24,32232745,5.69,31654045,5.58,MSP Steel & Power Limited,2025-11-26,2025-11-25,Promoter Group,578700,Equity Shares,1957394,Equity Shares,MSPL,Buy
 Market Purchase,MIDASTECH VENTURES PRIVATE LIMITED,2025-11-25,2025-11-25,18136297,35.63,18116730,35.59,Global Education Limited,2025-11-26,2025-11-26,Promoters,19567,Equity Shares,1570980,Equity Shares,GLOBAL,Buy
 Market Purchase,Aarti Devesh Sahney,2025-11-25,2025-11-25,823919,3.4,760490,3.14,NRB Industrial Bearings Limited,2025-11-26,2025-11-25,Promoters,63429,Equity Shares,2020848,Equity Shares,NIBL,Buy
 Market Purchase,Parag K. Shah,2025-11-25,2025-11-25,119273405,29.54,119183405,29.52,Man Infraconstruction Limited,2025-11-26,2025-11-26,Promoters,90000,Equity Shares,11020500,Equity Shares,MANINFRA,Buy
-Market Purchase,Varun Sawhney,2025-11-24,2025-11-24,240965,1.86,240482,1.86,Cords Cable Industries Limited,2025-11-25,2025-11-25,Promoter Group,483,Equity Shares,89635,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Varun Sawhney,2025-11-24,2025-11-24,240482,1.86,238962,1.85,Cords Cable Industries Limited,2025-11-25,2025-11-25,Promoter Group,1520,Equity Shares,282240,Equity Shares,CORDSCABLE,Buy
+Market Purchase,Varun Sawhney,2025-11-24,2025-11-24,240965,1.86,240482,1.86,Cords Cable Industries Limited,2025-11-25,2025-11-25,Promoter Group,483,Equity Shares,89635,Equity Shares,CORDSCABLE,Buy
 Market Sale,G T Sandeep,2025-11-24,2025-11-24,143722,0.32,151222,0.33,NCL Industries Limited,2025-11-25,2025-11-24,Promoter Group,7500,Equity Shares,0,Equity Shares,NCLIND,Sell
 Market Purchase,Time Exports Private Limited,2025-11-25,2025-11-25,44508400,9.02,44456550,9.01,Time Technoplast Limited,2025-11-25,2025-11-25,Promoters,51850,Equity Shares,10426003,Equity Shares,TIMETECHNO,Buy
 Market Purchase,RAM GROVHER,2025-11-20,2025-11-20,6100,0,2950,0,EPack Prefab Technologies Limited,2025-11-25,2025-11-21,Director,2950,Equity Shares,941522,Equity Shares,EPACKPEB,Buy
@@ -2647,8 +2647,8 @@ Market Purchase,Manish Gulati,2025-11-24,2025-11-24,4000,0,Nil,0,HEG Limited,202
 Market Purchase,SANJAY KUMAR JAIN,2025-11-24,2025-11-25,5955436,2.3,5924736,2.29,T T Limited,2025-11-25,2025-11-25,Promoter Group,30700,Equity Shares,291554,Equity Shares,TTL,Buy
 Market Purchase,AMIT ANIL RAJE,2025-11-24,2025-11-24,4713645,14.83,4703500,14.8,Aartech Solonics Limited,2025-11-25,2025-11-24,Promoters,10145,Equity Shares,520235,Equity Shares,AARTECH,Buy
 Market Purchase,AMIT ANIL RAJE,2025-11-24,2025-11-24,4713645,14.83,4703500,14.8,Aartech Solonics Limited,2025-11-25,2025-11-24,Promoters,10145,Equity Shares,520235,Equity Shares,AARTECH,Buy
-Market Purchase,S. Aravindan,2025-11-21,2025-11-21,4556018,6.91,4505302,6.83,W S Industries (I) Limited,2025-11-25,2025-11-24,Promoters,50716,Equity Shares,3891843,Equity Shares,WSI,Buy
 Market Sale,Mamatha P,2025-11-21,2025-11-21,957854,1.45,1007854,1.52,W S Industries (I) Limited,2025-11-25,2025-11-24,Promoter Group,50000,Equity Shares,3818401,Equity Shares,WSI,Sell
+Market Purchase,S. Aravindan,2025-11-21,2025-11-21,4556018,6.91,4505302,6.83,W S Industries (I) Limited,2025-11-25,2025-11-24,Promoters,50716,Equity Shares,3891843,Equity Shares,WSI,Buy
 Market Purchase,Redrose Vanijya LLP,2025-11-25,2025-11-25,56547775,29.3,55873775,28.95,HEG Limited,2025-11-25,2025-11-25,Promoter Group,674000,Equity Shares,350669648,Equity Shares,HEG,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-11-21,2025-11-21,22693000,10.43,22683000,10.42,Surya Roshni Limited,2025-11-25,2025-11-22,Promoter Group,10000,Equity Shares,2583870,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Cubitex Marketing Private Limited,2025-11-24,2025-11-24,19656000,9.03,19641000,9.03,Surya Roshni Limited,2025-11-25,2025-11-25,Promoter Group,15000,Equity Shares,3850871,Equity Shares,SURYAROSNI,Buy
@@ -2671,51 +2671,51 @@ Market Sale,RISHI TREHAN,2025-11-19,2025-11-19,229900,2.03,247500,2.19,Brace Por
 Market Purchase,Stuti Jhawar,2025-11-20,2025-11-20,1307000,0.43,1301000,0.43,Usha Martin Limited,2025-11-24,2025-11-21,Promoter Group,6000,Equity Shares,2655510,Equity Shares,USHAMART,Buy
 Market Purchase,Abhishek Bhatia,2025-11-20,2025-11-20,823750,1.95,815000,1.93,Tree House Education & Accessories Limited,2025-11-24,2025-11-21,Promoter Group,8750,Equity Shares,69825,Equity Shares,TREEHOUSE,Buy
 Market Sale,Sumit Shah,2025-11-19,2025-11-20,1030830,0.96,1215830,1.13,Renaissance Global Limited,2025-11-24,2025-11-21,Promoters,185000,Equity Shares,24162400,Equity Shares,RGL,Sell
-Market Purchase,Destiny Logistics & Infra Limited,2025-11-18,2025-11-19,3732063,15.87,3603063,15.32,Dynamic Services & Security Limited,2025-11-24,2025-11-19,Promoter Group,129000,Equity Shares,12453341,Equity Shares,DYNAMIC,Buy
-Market Purchase,Rekha Bhagat,2025-11-21,2025-11-21,2804188,11.92,2753688,11.71,Dynamic Services & Security Limited,2025-11-24,2025-11-22,Promoters,50500,Equity Shares,5708719,Equity Shares,DYNAMIC,Buy
 Market Purchase,Destiny Logistics & Infra Limited,2025-11-20,2025-11-20,3749563,15.94,3732063,15.87,Dynamic Services & Security Limited,2025-11-24,2025-11-22,Promoter Group,17500,Equity Shares,1897946,Equity Shares,DYNAMIC,Buy
+Market Purchase,Rekha Bhagat,2025-11-21,2025-11-21,2804188,11.92,2753688,11.71,Dynamic Services & Security Limited,2025-11-24,2025-11-22,Promoters,50500,Equity Shares,5708719,Equity Shares,DYNAMIC,Buy
+Market Purchase,Destiny Logistics & Infra Limited,2025-11-18,2025-11-19,3732063,15.87,3603063,15.32,Dynamic Services & Security Limited,2025-11-24,2025-11-19,Promoter Group,129000,Equity Shares,12453341,Equity Shares,DYNAMIC,Buy
 Market Purchase,Amit Jatia,2025-11-20,2025-11-21,67980,0.04,58980,0.04,WESTLIFE FOODWORLD LIMITED,2025-11-24,2025-11-24,Promoters,9000,Equity Shares,550,Equity Shares,WESTLIFE,Buy
 Market Sale,Peterhouse Investments India Limited,2025-11-20,2025-11-21,4266529,1.4,4466529,1.47,Usha Martin Limited,2025-11-24,2025-11-21,Promoter Group,200000,Equity Shares,86824000,Equity Shares,USHAMART,Sell
 Market Sale,KRISHNA DUSHYANT RANA,2025-11-21,2025-11-21,25017880,45.55,25063773,45.63,Platinum Industries Limited,2025-11-23,2025-11-22,Promoters,45893,Equity Shares,12620575,Equity Shares,PLATIND,Sell
-Market Purchase,BANWARI LAL MITTAL,2025-11-20,2025-11-20,10676000,33.56,10656000,33.5,Health X Platform Limited,2025-11-22,2025-11-21,Promoters,20000,Equity Shares,6397563,Equity Shares,HEALTHX,Buy
 Market Purchase,BANWARI LAL MITTAL,2025-11-21,2025-11-21,10686000,33.59,10676000,33.56,Health X Platform Limited,2025-11-22,2025-11-22,Promoters,10000,Equity Shares,3224963,Equity Shares,HEALTHX,Buy
+Market Purchase,BANWARI LAL MITTAL,2025-11-20,2025-11-20,10676000,33.56,10656000,33.5,Health X Platform Limited,2025-11-22,2025-11-21,Promoters,20000,Equity Shares,6397563,Equity Shares,HEALTHX,Buy
 Market Purchase,Hindustan Cotton Company,2025-11-21,2025-11-21,47544157,56.94,47541166,56.93,Sarla Performance Fibers Limited,2025-11-22,2025-11-22,Promoter Group,2991,Equity Shares,263147,Equity Shares,SARLAPOLY,Buy
 Market Purchase,A V S R Holdings Private Limited,2025-11-20,2025-11-21,67815353,10.8,67730353,10.79,NCC Limited,2025-11-22,2025-11-22,Promoters,85000,Equity Shares,15178300,Equity Shares,NCC,Buy
 Market Sale,MEENAKSHI PATHAK,2025-11-21,2025-11-21,436,0,19436,0.18,Reliable Data Services Limited,2025-11-22,2025-11-22,Promoter Group,19000,Equity Shares,2627700,Equity Shares,RELIABLE,Sell
 Market Purchase,KANISHKA SETHIA,2025-11-21,2025-11-21,204920,0.2,104920,0.1,Western Carriers (India) Limited,2025-11-22,2025-11-22,Promoters,100000,Equity Shares,12078000,Equity Shares,WCIL,Buy
-Market Purchase,Varun Sawhney,2025-11-21,2025-11-21,238962,1.85,238769,1.85,Cords Cable Industries Limited,2025-11-22,2025-11-21,Promoter Group,193,Equity Shares,35810,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Varun Sawhney,2025-11-21,2025-11-21,238769,1.85,237888,1.84,Cords Cable Industries Limited,2025-11-22,2025-11-21,Promoter Group,881,Equity Shares,163468,Equity Shares,CORDSCABLE,Buy
+Market Purchase,Varun Sawhney,2025-11-21,2025-11-21,238962,1.85,238769,1.85,Cords Cable Industries Limited,2025-11-22,2025-11-21,Promoter Group,193,Equity Shares,35810,Equity Shares,CORDSCABLE,Buy
 Market Purchase,JYOTI JAIN,2025-11-21,2025-11-21,19887500,7.7,19652500,7.61,T T Limited,2025-11-22,2025-11-21,Promoter Group,235000,Equity Shares,2272450,Equity Shares,TTL,Buy
 Market Purchase,A V S R Holdings Private Limited,2025-11-18,2025-11-19,67730353,10.79,67664274,10.78,NCC Limited,2025-11-22,2025-11-20,Promoters,66079,Equity Shares,12054338,Equity Shares,NCC,Buy
+Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2556147,13.76,2555727,13.75,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,420,Equity Shares,179250,Equity Shares,NINSYS,Buy
+Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2560647,13.78,2559647,13.77,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,444995,Equity Shares,NINSYS,Buy
+Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2559647,13.77,2558647,13.77,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,446572,Equity Shares,NINSYS,Buy
+Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2558647,13.77,2558147,13.77,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,500,Equity Shares,221949,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2553675,13.74,2552675,13.74,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,430800,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2553727,13.74,2553675,13.74,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,52,Equity Shares,22824,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2554727,13.75,2553727,13.74,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,404398,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2555727,13.75,2554727,13.75,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,409446,Equity Shares,NINSYS,Buy
-Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2556147,13.76,2555727,13.75,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,420,Equity Shares,179250,Equity Shares,NINSYS,Buy
+Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2561611,13.78,2560647,13.78,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,964,Equity Shares,433634,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2556647,13.76,2556147,13.76,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,500,Equity Shares,216336,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2557147,13.76,2556647,13.76,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,500,Equity Shares,218480,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2558147,13.77,2557647,13.76,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,500,Equity Shares,222627,Equity Shares,NINSYS,Buy
 Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2557647,13.76,2557147,13.76,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,500,Equity Shares,218500,Equity Shares,NINSYS,Buy
-Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2558647,13.77,2558147,13.77,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,500,Equity Shares,221949,Equity Shares,NINSYS,Buy
-Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2559647,13.77,2558647,13.77,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,446572,Equity Shares,NINSYS,Buy
-Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2560647,13.78,2559647,13.77,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,1000,Equity Shares,444995,Equity Shares,NINSYS,Buy
-Market Purchase,Rachana Niraj Gemawat,2025-11-21,2025-11-21,2561611,13.78,2560647,13.78,Nintec Systems Limited,2025-11-21,2025-11-21,Promoter Group,964,Equity Shares,433634,Equity Shares,NINSYS,Buy
-Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-17,2025-11-17,502954,0.05,453536,0.04,JINDAL STEEL LIMITED,2025-11-21,2025-11-19,Promoter Group,49418,Equity Shares,53133932,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-20,2025-11-20,837053,0.08,808527,0.08,JINDAL STEEL LIMITED,2025-11-21,2025-11-21,Promoter Group,28526,Equity Shares,30411759,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-19,2025-11-19,808527,0.08,691937,0.06,JINDAL STEEL LIMITED,2025-11-21,2025-11-21,Promoter Group,116590,Equity Shares,123888312,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-18,2025-11-18,691937,0.06,502954,0.05,JINDAL STEEL LIMITED,2025-11-21,2025-11-19,Promoter Group,188983,Equity Shares,200977675,Equity Shares,JINDALSTEL,Buy
+Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-17,2025-11-17,502954,0.05,453536,0.04,JINDAL STEEL LIMITED,2025-11-21,2025-11-19,Promoter Group,49418,Equity Shares,53133932,Equity Shares,JINDALSTEL,Buy
 Market Purchase,T.T. BRANDS LIMITED,2025-11-18,2025-11-21,86958325,33.66,86604821,33.53,T T Limited,2025-11-21,2025-11-21,Promoter Group,353504,Equity Shares,3372572,Equity Shares,TTL,Buy
-Market Purchase,Krishna Kumar Choudhary,2025-11-20,2025-11-20,1389028,2.11,1373749,2.08,Rashi Peripherals Limited,2025-11-21,2025-11-21,Promoters,15279,Equity Shares,5115009,Equity Shares,RPTECH,Buy
 Market Purchase,Krishna Kumar Choudhary,2025-11-20,2025-11-20,1373749,2.08,1370139,2.08,Rashi Peripherals Limited,2025-11-21,2025-11-21,Promoters,3610,Equity Shares,1209217,Equity Shares,RPTECH,Buy
-Market Purchase,Anjan Chatterjee,2025-11-19,2025-11-19,12247521,25.39,12245000,25.39,Speciality Restaurants Limited,2025-11-21,2025-11-21,Promoters,2521,Equity Shares,329079,Equity Shares,SPECIALITY,Buy
+Market Purchase,Krishna Kumar Choudhary,2025-11-20,2025-11-20,1389028,2.11,1373749,2.08,Rashi Peripherals Limited,2025-11-21,2025-11-21,Promoters,15279,Equity Shares,5115009,Equity Shares,RPTECH,Buy
 Market Purchase,Anjan Chatterjee,2025-11-20,2025-11-20,12295000,25.49,12247521,25.39,Speciality Restaurants Limited,2025-11-21,2025-11-21,Promoters,47479,Equity Shares,6348099,Equity Shares,SPECIALITY,Buy
+Market Purchase,Anjan Chatterjee,2025-11-19,2025-11-19,12247521,25.39,12245000,25.39,Speciality Restaurants Limited,2025-11-21,2025-11-21,Promoters,2521,Equity Shares,329079,Equity Shares,SPECIALITY,Buy
 Market Purchase,Time Exports Private Limited,2025-11-21,2025-11-21,44401550,8.99,44257438,8.97,Time Technoplast Limited,2025-11-21,2025-11-21,Promoters,144112,Equity Shares,28557239,Equity Shares,TIMETECHNO,Buy
-Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2229258,0.56,2224258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,5000,Equity Shares,133750,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2237558,0.56,2229258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,8300,Equity Shares,221610,Equity Shares,DHANBANK,Buy
+Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2229258,0.56,2224258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,5000,Equity Shares,133750,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2224258,0.56,2219258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,5000,Equity Shares,133500,Equity Shares,DHANBANK,Buy
-Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2199258,0.56,2189258,0.55,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,10000,Equity Shares,271000,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2219258,0.56,2209258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,10000,Equity Shares,268000,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2209258,0.56,2204258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,5000,Equity Shares,134500,Equity Shares,DHANBANK,Buy
+Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2199258,0.56,2189258,0.55,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,10000,Equity Shares,271000,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-21,2025-11-21,2204258,0.56,2199258,0.56,Dhanlaxmi Bank Limited,2025-11-21,2025-11-21,Director,5000,Equity Shares,134750,Equity Shares,DHANBANK,Buy
 Market Purchase,PANKAJ SARDANA,2025-11-21,2025-11-21,2407216,7.7,2407116,7.7,Sukhjit Starch & Chemicals Limited,2025-11-21,2025-11-21,Promoters,100,Equity Shares,15200,Equity Shares,SUKHJITS,Buy
 Market Sale,NARESH SARDANA,2025-11-21,2025-11-21,232534,0.74,232634,0.74,Sukhjit Starch & Chemicals Limited,2025-11-21,2025-11-21,Promoter Group,100,Equity Shares,15300,Equity Shares,SUKHJITS,Sell
@@ -2728,9 +2728,9 @@ Market Sale,DEVANSHI JALAN,2025-11-20,2025-11-20,1708228,2.87,1781228,2.99,Linc 
 Market Purchase,DEEPAK JALAN,2025-11-20,2025-11-20,1694208,2.85,1621208,2.73,Linc Limited,2025-11-21,2025-11-20,Promoters,73000,Equity Shares,8918239,Equity Shares,LINC,Buy
 Market Purchase,D B Power Limited,2025-11-20,2025-11-20,2056540,1.15,2027662,1.14,D.B.Corp Limited,2025-11-21,2025-11-21,Promoter Group,28878,Equity Shares,7516308,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-11-19,2025-11-19,2027662,1.14,2021479,1.13,D.B.Corp Limited,2025-11-21,2025-11-20,Promoter Group,6183,Equity Shares,1615439,Equity Shares,DBCORP,Buy
+Market Purchase,Kankana Utsav Doshi,2025-11-19,2025-11-20,62640,0.25,Nil,0,Essen Speciality Films Limited,2025-11-21,2025-11-21,Promoter Group,62640,Equity Shares,14858834,Equity Shares,ESFL,Buy
 Market Purchase,Chandni Pallav Doshi,2025-11-19,2025-11-19,76320,0.31,71640,0.29,Essen Speciality Films Limited,2025-11-21,2025-11-21,Promoter Group,4680,Equity Shares,1133179,Equity Shares,ESFL,Buy
 Market Purchase,Urvashi Bansidhar Soni,2025-11-19,2025-11-19,70560,0.28,64800,0.26,Essen Speciality Films Limited,2025-11-21,2025-11-21,Promoter Group,5760,Equity Shares,1392055,Equity Shares,ESFL,Buy
-Market Purchase,Kankana Utsav Doshi,2025-11-19,2025-11-20,62640,0.25,Nil,0,Essen Speciality Films Limited,2025-11-21,2025-11-21,Promoter Group,62640,Equity Shares,14858834,Equity Shares,ESFL,Buy
 Market Purchase,MIDASTECH VENTURES PRIVATE LIMITED,2025-11-20,2025-11-20,18113730,35.59,18105689,35.57,Global Education Limited,2025-11-21,2025-11-21,Promoters,8041,Equity Shares,611573,Equity Shares,GLOBAL,Buy
 Market Purchase,Abhishek Bhatia,2025-11-19,2025-11-19,815000,1.93,806064,1.91,Tree House Education & Accessories Limited,2025-11-21,2025-11-20,Promoter Group,8936,Equity Shares,70505,Equity Shares,TREEHOUSE,Buy
 Market Purchase,Cubitex Marketing Private Limited,2025-11-20,2025-11-20,19641000,9.03,19621000,9.02,Surya Roshni Limited,2025-11-21,2025-11-21,Promoter Group,20000,Equity Shares,5299273,Equity Shares,SURYAROSNI,Buy
@@ -2749,8 +2749,8 @@ Market Purchase,Varun Sawhney,2025-11-20,2025-11-20,237888,1.84,236358,1.83,Cord
 Market Sale,BCP TOPCO IX PTE LTD,2025-11-18,2025-11-18,58299642,30.62,76299642,40.07,MphasiS Limited,2025-11-20,2025-11-18,Promoters,18000000,Equity Shares,47260650600,Equity Shares,MPHASIS,Sell
 Market Purchase,Krishna Kumar Choudhary,2025-11-19,2025-11-19,1370139,2.08,1359477,2.06,Rashi Peripherals Limited,2025-11-20,2025-11-20,Promoters,10662,Equity Shares,3551612,Equity Shares,RPTECH,Buy
 Market Purchase,LIVING MEDIA INDIA LIMITED,2025-11-19,2025-11-19,36341078,60.9,33954333,56.9,TV Today Network Limited,2025-11-20,2025-11-20,Promoters,2386745,Equity Shares,337008394,Equity Shares,TVTODAY,Buy
-Market Purchase,Varun Sawhney,2025-11-19,2025-11-19,235539,1.82,235038,1.82,Cords Cable Industries Limited,2025-11-20,2025-11-19,Promoter Group,501,Equity Shares,90447,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Varun Sawhney,2025-11-19,2025-11-19,235038,1.82,232717,1.8,Cords Cable Industries Limited,2025-11-20,2025-11-19,Promoter Group,2321,Equity Shares,419018,Equity Shares,CORDSCABLE,Buy
+Market Purchase,Varun Sawhney,2025-11-19,2025-11-19,235539,1.82,235038,1.82,Cords Cable Industries Limited,2025-11-20,2025-11-19,Promoter Group,501,Equity Shares,90447,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Shakti Brothers Trust,2025-11-19,2025-11-19,9385200,7.61,9377200,7.6,Shakti Pumps (India) Limited,2025-11-20,2025-11-20,Promoters,8000,Equity Shares,5572501,Equity Shares,SHAKTIPUMP,Buy
 Market Sale,Rajnish Rikhy,2025-11-12,2025-11-14,29600,0.1,31000,0.1,Lux Industries Limited,2025-11-20,2025-11-18,Director,1400,Equity Shares,1684710,Equity Shares,LUXIND,Sell
 Market Purchase,MIDASTECH VENTURES PRIVATE LIMITED,2025-11-19,2025-11-19,18105689,35.57,18070597,35.5,Global Education Limited,2025-11-20,2025-11-20,Promoters,35092,Equity Shares,2663712,Equity Shares,GLOBAL,Buy
@@ -2761,8 +2761,8 @@ Market Purchase,SANJAY KUMAR JAIN,2025-11-19,2025-11-19,5881635,2.27,5844435,2.2
 Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-11-19,2025-11-19,468227,2.53,464252,2.51,Stel Holdings Limited,2025-11-20,2025-11-19,Promoter Group,3975,Equity Shares,1910334,Equity Shares,STEL,Buy
 Market Purchase,BANWARI LAL MITTAL,2025-11-18,2025-11-18,10641000,33.45,10636000,33.44,Health X Platform Limited,2025-11-19,2025-11-19,Promoters,5000,Equity Shares,1522934,Equity Shares,HEALTHX,Buy
 Market Sale,RAMASUBRAMANIAN  BALASUBRAMANIAM,2025-11-18,2025-11-18,12612601,6.98,13412601,7.42,BLACKBUCK LIMITED,2025-11-19,2025-11-19,Promoters,800000,Equity Shares,540800000,Equity Shares,BLACKBUCK,Sell
-Market Sale,CHANAKYA HRIDAYA,2025-11-18,2025-11-18,13454797,7.45,14254797,7.89,BLACKBUCK LIMITED,2025-11-19,2025-11-19,Promoters,800000,Equity Shares,540800000,Equity Shares,BLACKBUCK,Sell
 Market Sale,RAJESH KUMAR NAIDU YABAJI,2025-11-18,2025-11-18,19341146,10.7,21341146,11.81,BLACKBUCK LIMITED,2025-11-19,2025-11-19,Promoters,2000000,Equity Shares,1352800000,Equity Shares,BLACKBUCK,Sell
+Market Sale,CHANAKYA HRIDAYA,2025-11-18,2025-11-18,13454797,7.45,14254797,7.89,BLACKBUCK LIMITED,2025-11-19,2025-11-19,Promoters,800000,Equity Shares,540800000,Equity Shares,BLACKBUCK,Sell
 Market Sale,Mohmed Sohil Yusufbhai Dabhoya,2025-11-13,2025-11-14,192410,0.1,266977,0.14,KPI Green Energy Limited,2025-11-19,2025-11-17,Director,74567,Equity Shares,35190125,Equity Shares,KPIGREEN,Sell
 Market Purchase,Ashish Kukreja,2025-11-18,2025-11-19,1523412,47.22,1521612,47.16,Homesfy Realty Limited,2025-11-19,2025-11-19,Promoters,1800,Equity Shares,338238,Equity Shares,HOMESFY,Buy
 Market Sale,A J SURIYANARAYANA,2025-11-13,2025-11-13,3551567,0.37,3601567,0.37,Karur Vysya Bank Limited,2025-11-19,2025-11-17,Promoters,50000,Equity Shares,12577486,Equity Shares,KARURVYSYA,Sell
@@ -2771,24 +2771,24 @@ Market Purchase,Abhishek Bhatia,2025-11-18,2025-11-18,806064,1.91,760468,1.8,Tre
 Market Sale,KRISHNA DUSHYANT RANA,2025-11-18,2025-11-18,25142880,45.78,25292880,46.05,Platinum Industries Limited,2025-11-19,2025-11-19,Promoters,150000,Equity Shares,39786214,Equity Shares,PLATIND,Sell
 Market Purchase,Freesia Investment and Trading Company Limited,2025-11-17,2025-11-17,669960,4.56,667890,4.54,Orient Bell Limited,2025-11-19,2025-11-19,Promoter Group,2070,Equity Shares,602034,Equity Shares,ORIENTBELL,Buy
 Market Purchase,Ravi Agrawal,2025-11-17,2025-11-17,9373035,44.46,9323035,44.22,Orissa Bengal Carrier Limited,2025-11-19,2025-11-19,Promoters,50000,Equity Shares,2750000,Equity Shares,OBCL,Buy
-Market Purchase,Reshant Ghosh,2025-11-17,2025-11-17,18002,0.1,16002,0.09,Anondita Medicare Limited,2025-11-19,2025-11-17,Promoters,2000,Equity Shares,1351000,Equity Shares,ANONDITA,Buy
 Market Purchase,Anupam Ghosh,2025-11-17,2025-11-17,11165591,61.73,11160591,61.71,Anondita Medicare Limited,2025-11-19,2025-11-17,Promoters,5000,Equity Shares,3352200,Equity Shares,ANONDITA,Buy
+Market Purchase,Reshant Ghosh,2025-11-17,2025-11-17,18002,0.1,16002,0.09,Anondita Medicare Limited,2025-11-19,2025-11-17,Promoters,2000,Equity Shares,1351000,Equity Shares,ANONDITA,Buy
 Market Sale,Potluri Venkateshwara Rao,2025-11-18,2025-11-18,2860,0,4860,0,Pennar Industries Limited,2025-11-19,2025-11-19,Director,2000,Equity Shares,451200,Equity Shares,PENIND,Sell
 Market Sale,PARUL KRISHNA RANA,2025-11-17,2025-11-17,13469150,24.52,13644150,24.84,Platinum Industries Limited,2025-11-19,2025-11-18,Promoters,175000,Equity Shares,45646947,Equity Shares,PLATIND,Sell
 Market Sale,KRISHNA DUSHYANT RANA,2025-11-17,2025-11-17,25292880,46.05,25342880,46.14,Platinum Industries Limited,2025-11-19,2025-11-18,Promoters,50000,Equity Shares,13145583,Equity Shares,PLATIND,Sell
+Market Purchase,Cubitex Marketing Private Limited,2025-11-18,2025-11-18,19591000,9,19551000,8.98,Surya Roshni Limited,2025-11-19,2025-11-19,Promoter Group,40000,Equity Shares,10941717,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-11-17,2025-11-17,22643000,10.4,22550000,10.36,Surya Roshni Limited,2025-11-19,2025-11-18,Promoter Group,93000,Equity Shares,25428653,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Cubitex Marketing Private Limited,2025-11-17,2025-11-17,19551000,8.98,19444000,8.93,Surya Roshni Limited,2025-11-19,2025-11-18,Promoter Group,107000,Equity Shares,29243562,Equity Shares,SURYAROSNI,Buy
 Market Purchase,Diwarkar Marketing Private Limited,2025-11-18,2025-11-18,22663000,10.41,22643000,10.4,Surya Roshni Limited,2025-11-19,2025-11-19,Promoter Group,20000,Equity Shares,5411727,Equity Shares,SURYAROSNI,Buy
-Market Purchase,Cubitex Marketing Private Limited,2025-11-18,2025-11-18,19591000,9,19551000,8.98,Surya Roshni Limited,2025-11-19,2025-11-19,Promoter Group,40000,Equity Shares,10941717,Equity Shares,SURYAROSNI,Buy
 Market Purchase,CEREBRAL TECH VENTURES PVT LTD,2025-11-17,2025-11-18,18644731,36.63,18602247,36.55,Global Education Limited,2025-11-19,2025-11-19,Promoter Group,42484,Equity Shares,3242548,Equity Shares,GLOBAL,Buy
 Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-11-18,2025-11-18,464252,2.51,461433,2.5,Stel Holdings Limited,2025-11-19,2025-11-18,Promoter Group,2819,Equity Shares,1293754,Equity Shares,STEL,Buy
 Market Purchase,MAYA RAHUL JOSHI,2025-11-17,2025-11-17,2730578,8.1,2230578,6.62,Om Freight Forwarders Limited,2025-11-19,2025-11-18,Promoter Group,500000,Equity Shares,45000000,Equity Shares,OMFREIGHT,Buy
 Market Purchase,KEJAL HARMESH JOSHI,2025-11-18,2025-11-18,356200,1.06,56200,0.17,Om Freight Forwarders Limited,2025-11-19,2025-11-18,Promoter Group,300000,Equity Shares,30900000,Equity Shares,OMFREIGHT,Buy
 Market Purchase,LACHITA KAMESH JOSHI,2025-11-18,2025-11-18,156200,0.46,56200,0.17,Om Freight Forwarders Limited,2025-11-19,2025-11-18,Promoter Group,100000,Equity Shares,9904000,Equity Shares,OMFREIGHT,Buy
-Market Purchase,Varun Sawhney,2025-11-18,2025-11-18,229085,1.77,214079,1.66,Cords Cable Industries Limited,2025-11-19,2025-11-18,Promoter Group,15006,Equity Shares,2826410,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Varun Sawhney,2025-11-18,2025-11-18,232717,1.8,229085,1.77,Cords Cable Industries Limited,2025-11-19,2025-11-18,Promoter Group,3632,Equity Shares,684094,Equity Shares,CORDSCABLE,Buy
-Market Purchase,Chandni Pallav Doshi,2025-11-17,2025-11-18,71640,0.29,Nil,0,Essen Speciality Films Limited,2025-11-19,2025-11-19,Promoter Group,71640,Equity Shares,17289536,Equity Shares,ESFL,Buy
+Market Purchase,Varun Sawhney,2025-11-18,2025-11-18,229085,1.77,214079,1.66,Cords Cable Industries Limited,2025-11-19,2025-11-18,Promoter Group,15006,Equity Shares,2826410,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Urvashi Bansidhar Soni,2025-11-18,2025-11-18,64800,0.26,Nil,0,Essen Speciality Films Limited,2025-11-19,2025-11-19,Promoter Group,64800,Equity Shares,16053376,Equity Shares,ESFL,Buy
+Market Purchase,Chandni Pallav Doshi,2025-11-17,2025-11-18,71640,0.29,Nil,0,Essen Speciality Films Limited,2025-11-19,2025-11-19,Promoter Group,71640,Equity Shares,17289536,Equity Shares,ESFL,Buy
 Market Purchase,EQUILIBRATED VENTURE CFLOW PRIVATE LIMITED,2025-11-19,2025-11-19,186763880,20.53,186623480,20.52,Paisalo Digital Limited,2025-11-19,2025-11-19,Promoter Group,140400,Equity Shares,4762184,Equity Shares,PAISALO,Buy
 Market Purchase,EQUILIBRATED VENTURE CFLOW PRIVATE LIMITED,2025-11-18,2025-11-18,186623480,20.52,185786480,20.43,Paisalo Digital Limited,2025-11-19,2025-11-19,Promoter Group,837000,Equity Shares,28439032,Equity Shares,PAISALO,Buy
 Market Sale,Kiran Jain,2025-11-17,2025-11-17,20141600,19.34,23641600,22.71,Arihant Capital Markets Limited,2025-11-18,2025-11-18,Promoters,3500000,Equity Shares,349580992,Equity Shares,ARIHANTCAP,Sell
@@ -2796,11 +2796,11 @@ Market Purchase,Sameer Akshay Pakvasa,2025-11-18,2025-11-18,15604379,69.05,15588
 Market Purchase,Abhishek Bhatia,2025-11-17,2025-11-17,760468,1.8,740000,1.75,Tree House Education & Accessories Limited,2025-11-18,2025-11-18,Promoter Group,20468,Equity Shares,158217,Equity Shares,TREEHOUSE,Buy
 Market Purchase,Varun Sawhney,2025-11-17,2025-11-17,214079,1.66,211690,1.64,Cords Cable Industries Limited,2025-11-18,2025-11-18,Promoter Group,2389,Equity Shares,424624,Equity Shares,CORDSCABLE,Buy
 Market Purchase,Varun Sawhney,2025-11-17,2025-11-17,211690,1.64,186194,1.44,Cords Cable Industries Limited,2025-11-18,2025-11-18,Promoter Group,25496,Equity Shares,4531697,Equity Shares,CORDSCABLE,Buy
-Market Sale,Gaddam Venkata Ramana,2025-11-12,2025-11-13,471600,5.12,532670,5.78,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,61070,Equity Shares,2781877,Equity Shares,VINEETLAB,Sell
+Market Sale,Alluri Srinivasa Raju,2025-11-12,2025-11-12,94386,1.02,99386,1.08,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,5000,Equity Shares,227772,Equity Shares,VINEETLAB,Sell
 Market Sale,Alluri Maithili,2025-11-12,2025-11-12,54795,0.59,74795,0.81,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,20000,Equity Shares,912200,Equity Shares,VINEETLAB,Sell
 Market Sale,ALLURI RANGA RAJU,2025-11-12,2025-11-13,74243,0.81,85843,0.93,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,11600,Equity Shares,522476,Equity Shares,VINEETLAB,Sell
 Market Sale,Pericharla Kishore Raju,2025-11-12,2025-11-12,48812,0.53,52312,0.57,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,3500,Equity Shares,159635,Equity Shares,VINEETLAB,Sell
-Market Sale,Alluri Srinivasa Raju,2025-11-12,2025-11-12,94386,1.02,99386,1.08,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,5000,Equity Shares,227772,Equity Shares,VINEETLAB,Sell
+Market Sale,Gaddam Venkata Ramana,2025-11-12,2025-11-13,471600,5.12,532670,5.78,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,61070,Equity Shares,2781877,Equity Shares,VINEETLAB,Sell
 Market Sale,Alluri Prabhakar Raju,2025-11-13,2025-11-13,95476,1.04,100476,1.09,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,5000,Equity Shares,221508,Equity Shares,VINEETLAB,Sell
 Market Sale,Alluri Anantha Laxmi,2025-11-12,2025-11-12,65641,0.71,75641,0.82,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,10000,Equity Shares,455900,Equity Shares,VINEETLAB,Sell
 Market Sale,Satyanarayana Raju Bhupathiraju,2025-11-12,2025-11-12,132145,1.43,152145,1.65,Vineet Laboratories Limited,2025-11-18,2025-11-14,Promoters,20000,Equity Shares,905860,Equity Shares,VINEETLAB,Sell
@@ -2812,13 +2812,13 @@ Market Purchase,SANJAY KUMAR JAIN,2025-11-18,2025-11-18,5844435,2.26,5748740,2.2
 Market Purchase,S. B. (Ravi) Pandit,2025-11-17,2025-11-17,1030306,0.37,989306,0.36,KPIT Technologies Limited,2025-11-18,2025-11-18,Promoters,41000,Equity Shares,50196213,Equity Shares,KPITTECH,Buy
 Market Purchase,Luv Kush Projects Limited,2025-11-17,2025-11-17,3805234,11.96,3785234,11.9,Health X Platform Limited,2025-11-18,2025-11-18,Promoter Group,20000,Equity Shares,5806748,Equity Shares,HEALTHX,Buy
 Market Purchase,BANWARI LAL MITTAL,2025-11-17,2025-11-17,10636000,33.44,10616000,33.37,Health X Platform Limited,2025-11-18,2025-11-18,Promoters,20000,Equity Shares,5984730,Equity Shares,HEALTHX,Buy
-Market Sale,MEENU RAI,2025-11-17,2025-11-17,41136,0.39,57636,0.56,Reliable Data Services Limited,2025-11-18,2025-11-18,Promoter Group,16500,Equity Shares,2409868,Equity Shares,RELIABLE,Sell
 Market Sale,MEENAKSHI PATHAK,2025-11-17,2025-11-17,19436,0.18,60036,0.58,Reliable Data Services Limited,2025-11-18,2025-11-18,Promoter Group,40600,Equity Shares,5905828,Equity Shares,RELIABLE,Sell
+Market Sale,MEENU RAI,2025-11-17,2025-11-17,41136,0.39,57636,0.56,Reliable Data Services Limited,2025-11-18,2025-11-18,Promoter Group,16500,Equity Shares,2409868,Equity Shares,RELIABLE,Sell
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-12,2025-11-12,155862,0.01,Nil,0,JINDAL STEEL LIMITED,2025-11-18,2025-11-14,Promoter Group,155862,Equity Shares,168239001,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-14,2025-11-14,453536,0.04,301887,0.03,JINDAL STEEL LIMITED,2025-11-18,2025-11-14,Promoter Group,151649,Equity Shares,163319907,Equity Shares,JINDALSTEL,Buy
 Market Purchase,JINDAL CEMENT INDUSTRIES PRIVATE LIMITED,2025-11-13,2025-11-13,301887,0.03,155862,0.01,JINDAL STEEL LIMITED,2025-11-18,2025-11-14,Promoter Group,146025,Equity Shares,158126091,Equity Shares,JINDALSTEL,Buy
-Market Purchase,RADHIKA NANNAPANENI,2025-11-13,2025-11-13,156312,0.07,155112,0.07,Standard Engineering Technology Limited,2025-11-18,2025-11-15,Director,1200,Equity Shares,200400,Equity Shares,SETL,Buy
 Market Purchase,RADHIKA NANNAPANENI,2025-11-11,2025-11-11,155112,0.07,154112,0.07,Standard Engineering Technology Limited,2025-11-18,2025-11-15,Director,1000,Equity Shares,163000,Equity Shares,SETL,Buy
+Market Purchase,RADHIKA NANNAPANENI,2025-11-13,2025-11-13,156312,0.07,155112,0.07,Standard Engineering Technology Limited,2025-11-18,2025-11-15,Director,1200,Equity Shares,200400,Equity Shares,SETL,Buy
 Market Purchase,RADHIKA NANNAPANENI,2025-11-13,2025-11-13,156394,0.07,156312,0.07,Standard Engineering Technology Limited,2025-11-18,2025-11-15,Director,82,Equity Shares,13612,Equity Shares,SETL,Buy
 Market Purchase,Aarti Devesh Sahney,2025-11-17,2025-11-17,683520,2.82,647366,2.67,NRB Industrial Bearings Limited,2025-11-18,2025-11-18,Promoters,36154,Equity Shares,1144636,Equity Shares,NIBL,Buy
 Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-11-14,2025-11-14,458803,2.49,457183,2.47,Stel Holdings Limited,2025-11-18,2025-11-17,Promoter Group,1620,Equity Shares,742199,Equity Shares,STEL,Buy
@@ -2829,11 +2829,11 @@ Market Purchase,SANJAY KUMAR JAIN,2025-11-17,2025-11-17,5748740,2.22,5643740,2.1
 Market Sale,PETERHOUSE INVESTMENTS LIMITED,2025-11-17,2025-11-17,4050000,1.33,4090000,1.34,Usha Martin Limited,2025-11-17,2025-11-17,Promoter Group,40000,Equity Shares,18155200,Equity Shares,USHAMART,Sell
 Market Purchase,Amit Jatia,2025-11-13,2025-11-14,58980,0.04,50000,0.03,WESTLIFE FOODWORLD LIMITED,2025-11-17,2025-11-17,Promoters,8980,Equity Shares,558,Equity Shares,WESTLIFE,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-13,2025-11-13,2159258,0.55,2153075,0.55,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,6183,Equity Shares,164776,Equity Shares,DHANBANK,Buy
-Market Purchase,K.N MADHUSOODANAN,2025-11-13,2025-11-13,2153075,0.55,2143075,0.54,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,10000,Equity Shares,266200,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-14,2025-11-14,2174258,0.55,2169258,0.55,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,5000,Equity Shares,132850,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-14,2025-11-14,2179258,0.55,2174258,0.55,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,5000,Equity Shares,132750,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-14,2025-11-14,2189258,0.55,2179258,0.55,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,10000,Equity Shares,265600,Equity Shares,DHANBANK,Buy
 Market Purchase,K.N MADHUSOODANAN,2025-11-14,2025-11-14,2169258,0.55,2159258,0.55,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,10000,Equity Shares,265900,Equity Shares,DHANBANK,Buy
+Market Purchase,K.N MADHUSOODANAN,2025-11-13,2025-11-13,2153075,0.55,2143075,0.54,Dhanlaxmi Bank Limited,2025-11-17,2025-11-17,Director,10000,Equity Shares,266200,Equity Shares,DHANBANK,Buy
 Market Sale,Mathew Cyriac,2025-11-14,2025-11-14,Nil,0,403410,0.93,Ideaforge Technology Limited,2025-11-17,2025-11-17,Director,403410,Equity Shares,186730340,Equity Shares,IDEAFORGE,Sell
 Market Purchase,D B Power Limited,2025-11-14,2025-11-14,1989322,1.12,1987252,1.11,D.B.Corp Limited,2025-11-17,2025-11-14,Promoter Group,2070,Equity Shares,537913,Equity Shares,DBCORP,Buy
 Market Sale,Amit Sanghvi,2025-11-14,2025-11-14,1203290,2.62,1303290,2.84,Shaily Engineering Plastics Limited,2025-11-17,2025-11-14,Promoter Group,100000,Equity Shares,258510000,Equity Shares,SHAILY,Sell
@@ -2868,8 +2868,8 @@ Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-11-13,2025-11-13,457183,2.47,
 Market Purchase,Kishor Patil,2025-11-13,2025-11-13,13385605,4.88,13345605,4.87,KPIT Technologies Limited,2025-11-13,2025-11-13,Promoters,40000,Equity Shares,50059920,Equity Shares,KPITTECH,Buy
 Market Purchase,Stuti Jhawar,2025-11-12,2025-11-12,1292000,0.42,1287000,0.42,Usha Martin Limited,2025-11-13,2025-11-13,Promoter Group,5000,Equity Shares,2326078,Equity Shares,USHAMART,Buy
 Market Purchase,Raghunandana Tangirala,2025-11-13,2025-11-13,16110579,24.06,16094579,24.04,Updater Services Limited,2025-11-13,2025-11-13,Promoters,16000,Equity Shares,3152000,Equity Shares,UDS,Buy
-Market Sale,DEVANSHI JALAN,2025-11-12,2025-11-12,1781228,2.99,1841228,3.1,Linc Limited,2025-11-13,2025-11-12,Promoter Group,60000,Equity Shares,7380985,Equity Shares,LINC,Sell
 Market Purchase,AJANTA SALES PRIVATE LIMITED,2025-11-12,2025-11-12,1172180,1.97,1112180,1.87,Linc Limited,2025-11-13,2025-11-12,Promoter Group,60000,Equity Shares,7380977,Equity Shares,LINC,Buy
+Market Sale,DEVANSHI JALAN,2025-11-12,2025-11-12,1781228,2.99,1841228,3.1,Linc Limited,2025-11-13,2025-11-12,Promoter Group,60000,Equity Shares,7380985,Equity Shares,LINC,Sell
 Market Sale,Peterhouse Investments India Limited,2025-11-12,2025-11-12,4466529,1.47,4566529,1.5,Usha Martin Limited,2025-11-13,2025-11-13,Promoter Group,100000,Equity Shares,46767000,Equity Shares,USHAMART,Sell
 Market Sale,Neeraj Batra,2025-11-13,2025-11-13,6473631,64.13,6658746,65.96,Beta Drugs Limited,2025-11-13,2025-11-13,Promoters,185115,Equity Shares,312103686,Equity Shares,BETA,Sell
 Market Purchase,TARUNA SANJAY PATEL,2025-11-11,2025-11-11,1038750,6.72,1038750,6.72,Tembo Global Industries Limited,2025-11-13,2025-11-13,Promoters,302000,Equity Shares,50000000,Equity Shares,TEMBO,Pledge
@@ -2889,8 +2889,8 @@ Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-11-10,2025-11-11,446319,2.42,
 Market Purchase,LEBNITZE REAL ESTATES PVT LTD,2025-11-10,2025-11-11,452260,2.45,446319,2.42,Stel Holdings Limited,2025-11-12,2025-11-11,Promoter Group,5941,Equity Shares,2523398,Equity Shares,STEL,Buy
 Market Purchase,Bhavik Suryakant Parikh,2025-11-11,2025-11-11,35537035,7.89,31037035,6.89,GLOBE ENTERPRISES (INDIA) LIMITED,2025-11-12,2025-11-12,Promoters,4500000,Equity Shares,12856450,Equity Shares,GLOBE,Buy
 Market Sale,ANJAY AGARWAL,2025-11-07,2025-11-10,954679,7.44,1674679,13.06,Aaa Technologies Limited,2025-11-11,2025-11-11,Promoters,720000,Equity Shares,65144000,Equity Shares,AAATECH,Sell
-Market Purchase,D B Power Limited,2025-11-10,2025-11-10,1979194,1.11,1956601,1.1,D.B.Corp Limited,2025-11-11,2025-11-10,Promoter Group,22593,Equity Shares,5855093,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-11-10,2025-11-10,1979571,1.11,1979194,1.11,D.B.Corp Limited,2025-11-11,2025-11-10,Promoter Group,377,Equity Shares,97775,Equity Shares,DBCORP,Buy
+Market Purchase,D B Power Limited,2025-11-10,2025-11-10,1979194,1.11,1956601,1.1,D.B.Corp Limited,2025-11-11,2025-11-10,Promoter Group,22593,Equity Shares,5855093,Equity Shares,DBCORP,Buy
 Market Purchase,Raghunanadana Tangirala,2025-11-10,2025-11-10,16069579,24,16033579,23.94,Updater Services Limited,2025-11-10,2025-11-10,Promoters,36000,Equity Shares,7020000,Equity Shares,UDS,Buy
 Market Purchase,Nirmal V. Shah,2025-11-07,2025-11-07,3650049,13.57,3644049,13.55,Chembond Chemicals Limited,2025-11-10,2025-11-07,Promoters,6000,Equity Shares,928020,Equity Shares,CHEMBONDCH,Buy
 Market Purchase,Nirmal V. Shah,2025-11-06,2025-11-06,3644049,13.55,3641876,13.54,Chembond Chemicals Limited,2025-11-10,2025-11-07,Promoters,2173,Equity Shares,334642,Equity Shares,CHEMBONDCH,Buy
@@ -3919,45 +3919,13 @@ Market Purchase,D B Power Limited,2025-07-29,2025-07-29,1148037,0.64,1147192,0.6
 Market Purchase,D B Power Limited,2025-07-29,2025-07-29,1147192,0.64,1134641,0.64,D.B.Corp Limited,2025-07-30,2025-07-30,Promoter Group,12551,Equity Shares,3362526,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-07-28,2025-07-28,1134641,0.64,1134472,0.64,D.B.Corp Limited,2025-07-30,2025-07-29,Promoter Group,169,Equity Shares,46017,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-07-28,2025-07-28,1134472,0.64,1034518,0.58,D.B.Corp Limited,2025-07-30,2025-07-29,Promoter Group,99954,Equity Shares,26840138,Equity Shares,DBCORP,Buy
-Market Purchase,MITESHKUMAR CHAMPAKLAL GANDHI,2025-07-25,2025-07-25,712528,8.77,711778,8.76,Mahickra Chemicals Limited,2025-07-29,2025-07-25,Promoters,750,Equity Shares,97838,Equity Shares,MAHICKRA,Buy
 Market Purchase,MITESHKUMAR CHAMPAKLAL GANDHI,2025-07-25,2025-07-25,717028,8.83,712528,8.77,Mahickra Chemicals Limited,2025-07-29,2025-07-25,Promoters,4500,Equity Shares,587250,Equity Shares,MAHICKRA,Buy
+Market Purchase,MITESHKUMAR CHAMPAKLAL GANDHI,2025-07-25,2025-07-25,712528,8.77,711778,8.76,Mahickra Chemicals Limited,2025-07-29,2025-07-25,Promoters,750,Equity Shares,97838,Equity Shares,MAHICKRA,Buy
 Market Purchase,Starwings Realtors Private Limited,2025-07-28,2025-07-28,296000,0.69,Nil,0,Ganesh Infraworld Limited,2025-07-29,2025-07-29,Promoter Group,296000,Equity Shares,60062317,Equity Shares,GANESHIN,Buy
 Market Purchase,Renosen Pharmaceuticals Private Limited,2025-07-28,2025-07-28,2705219,5.87,2702219,5.87,Senores Pharmaceuticals Limited,2025-07-29,2025-07-28,Promoter Group,3000,Equity Shares,1935480,Equity Shares,SENORES,Buy
 Market Sale,BHARATKUMAR VARDHILAL THAKKAR,2025-07-28,2025-07-28,575800,13.41,675000,15.73,Sunrest Lifescience Limited,2025-07-29,2025-07-29,Promoters,99200,Equity Shares,5085984,Equity Shares,SUNREST,Sell
 Market Purchase,Chetan Bipinchandra Shah,2025-07-28,2025-07-28,4050,0.01,3550,0.01,Senores Pharmaceuticals Limited,2025-07-29,2025-07-29,Director,500,Equity Shares,331520,Equity Shares,SENORES,Buy
 Market Purchase,SHARMILA TEKRIWAL,,,20008,0.09,16008,0.07,Monolithisch India Limited,2025-07-29,,Promoters,4000,Equity Shares,415,Equity Shares,MONOLITH,Buy
-Market Purchase,D B Power Limited,2025-07-25,2025-07-25,1034518,0.58,1025518,0.58,D.B.Corp Limited,2025-07-28,2025-07-26,Promoter Group,9000,Equity Shares,2519771,Equity Shares,DBCORP,Buy
 Market Purchase,D B Power Limited,2025-07-24,2025-07-24,1025518,0.58,1004481,0.56,D.B.Corp Limited,2025-07-28,2025-07-25,Promoter Group,21037,Equity Shares,5894875,Equity Shares,DBCORP,Buy
+Market Purchase,D B Power Limited,2025-07-25,2025-07-25,1034518,0.58,1025518,0.58,D.B.Corp Limited,2025-07-28,2025-07-26,Promoter Group,9000,Equity Shares,2519771,Equity Shares,DBCORP,Buy
 Market Sale,Aksara Commercial Private Limited,2025-07-23,2025-07-24,61580741,6.33,61780741,6.35,DPSC Limited,2025-07-28,2025-07-25,Promoter Group,200000,Equity Shares,2611126,Equity Shares,DPSCLTD,Sell
-Market Sale,BOMMI SUREKHA REDDY,2025-07-25,2025-07-25,91733,0.15,556733,0.92,Dodla Dairy Limited,2025-07-26,2025-07-26,Promoter Group,465000,Equity Shares,594025810,Equity Shares,DODLA,Sell
-Market Sale,Mentor Capital Limited,2025-07-25,2025-07-25,10590936,6.24,16390936,9.65,Authum Investment & Infrastructure Limited,2025-07-25,2025-07-25,Promoters,5800000,Equity Shares,13070728040,Equity Shares,AIIL,Sell
-Market Purchase,SHARMILA TEKRIWAL,,,1008,0,8,0,Monolithisch India Limited,2025-07-25,,Promoters,1000,Equity Shares,400,Equity Shares,MONOLITH,Buy
-Market Purchase,SHARMILA TEKRIWAL,,,15008,0.07,8,0,Monolithisch India Limited,2025-07-25,,Promoters,15000,Equity Shares,418,Equity Shares,MONOLITH,Buy
-Market Purchase,EQUILIBRATED VENTURE CFLOW PRIVATE LIMITED,2025-07-24,2025-07-25,148858994,16.5,141388994,15.67,Paisalo Digital Limited,2025-07-25,2025-07-25,Promoter Group,7470000,Equity Shares,248563367,Equity Shares,PAISALO,Buy
-Market Sale,Valluri Varaprasada Rao,2025-05-19,2025-05-19,17372,0.19,17979,0.2,Vineet Laboratories Limited,2025-07-24,2025-07-23,Promoters,607,Equity Shares,20237,Equity Shares,VINEETLAB,Sell
-Market Sale,Valluri Varaprasada Rao,2025-06-30,2025-06-30,14000,0.15,17372,0.19,Vineet Laboratories Limited,2025-07-24,2025-07-23,Promoters,3372,Equity Shares,110500,Equity Shares,VINEETLAB,Sell
-Market Purchase,D B Power Limited,2025-07-22,2025-07-22,983015,0.55,961100,0.54,D.B.Corp Limited,2025-07-24,2025-07-23,Promoter Group,21915,Equity Shares,6243086,Equity Shares,DBCORP,Buy
-Market Purchase,D B Power Limited,2025-07-23,2025-07-23,1004481,0.56,983015,0.55,D.B.Corp Limited,2025-07-24,2025-07-24,Promoter Group,21466,Equity Shares,6050780,Equity Shares,DBCORP,Buy
-Market Purchase,Manish Bindal,2025-07-22,2025-07-22,8869806,37.12,8866606,37.11,Tejas Cargo India Limited,2025-07-24,2025-07-23,Promoters,3200,Equity Shares,706438,Equity Shares,TEJASCARGO,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2085960,9.61,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,6000,Equity Shares,409,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2080960,9.58,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,1000,Equity Shares,409,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2086960,9.61,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,7000,Equity Shares,409,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2080960,9.58,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,1000,Equity Shares,408,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2081960,9.59,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,2000,Equity Shares,407,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2080960,9.58,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,1000,Equity Shares,410,Equity Shares,MONOLITH,Buy
-Market Purchase,PRABHAT TEKRIWAL,,,2088960,9.62,2079960,9.57,Monolithisch India Limited,2025-07-23,2025-07-23,Promoters,9000,Equity Shares,409,Equity Shares,MONOLITH,Buy
-Market Sale,Ignatius Navil Noronha,2025-07-22,2025-07-22,12572414,1.93,12582414,1.93,Avenue Supermarts Limited,2025-07-23,2025-07-22,Director,10000,Equity Shares,40352400,Equity Shares,DMART,Sell
-Market Sale,Dhanjibhai Narsinhbhai Patel,2025-07-14,2025-07-18,237600,0.96,240000,0.97,Ganesh Green Bharat Limited,2025-07-23,2025-07-22,Promoter Group,2400,Equity Shares,1291928,Equity Shares,GGBL,Sell
-Market Sale,BNP Paribas SA,2025-07-21,2025-07-21,62640736,22.44,62659283,22.45,Geojit Financial Services Limited,2025-07-23,2025-07-23,Promoters,18547,Equity Shares,1410038,Equity Shares,GEOJITFSL,Sell
-Market Sale,NIKHILKUMAR YASHVNTLAL THAKKAR,2025-07-22,2025-07-22,601200,14.01,750000,17.48,Sunrest Lifescience Limited,2025-07-23,2025-07-23,Promoters,148800,Equity Shares,7514400,Equity Shares,SUNREST,Sell
-Market Purchase,TARUN MANHARLAL DOSHI,2025-07-21,2025-07-21,5481171,22.13,5479571,22.13,Yash Optics & Lens Limited,2025-07-22,2025-07-22,Promoters,1600,Equity Shares,135200,Equity Shares,YASHOPTICS,Buy
-Market Sale,BNP Paribas SA,2025-07-18,2025-07-18,62659283,22.45,62860634,22.52,Geojit Financial Services Limited,2025-07-22,2025-07-22,Promoters,201351,Equity Shares,15370898,Equity Shares,GEOJITFSL,Sell
-Market Sale,Ignatius Navil Noronha,2025-07-18,2025-07-18,12582414,1.93,12587414,1.93,Avenue Supermarts Limited,2025-07-21,2025-07-19,Director,5000,Equity Shares,20180000,Equity Shares,DMART,Sell
-Market Sale,Ashadevi Lath,2025-07-17,2025-07-17,6434400,26.48,6464400,26.6,Le Merite Exports Limited,2025-07-21,2025-07-18,Promoter Group,30000,Equity Shares,9961500,Equity Shares,LEMERITE,Sell
-Market Sale,Bharat Shreekishan Parihar,2025-07-18,2025-07-18,1865178,34.82,1997178,37.28,Falcon Technoprojects India Limited,2025-07-18,2025-07-18,Promoters,132000,Equity Shares,2039400,Equity Shares,FALCONTECH,Sell
-Market Sale,Bharat Shreekishan Parihar,2025-07-17,2025-07-17,1997178,37.28,2137578,39.9,Falcon Technoprojects India Limited,2025-07-18,2025-07-18,Promoters,140400,Equity Shares,2250612,Equity Shares,FALCONTECH,Sell
-Market Sale,Mukunda Raghavendra,2025-07-16,2025-07-16,940562,2.66,972062,2.74,Newjaisa Technologies Limited,2025-07-18,2025-07-17,Promoters,31500,Equity Shares,1026690,Equity Shares,NEWJAISA,Sell
-Market Purchase,Ashish Kukreja,2025-07-15,2025-07-16,1516512,47,1514712,46.95,Homesfy Realty Limited,2025-07-17,2025-07-17,Promoters,1800,Equity Shares,534060,Equity Shares,HOMESFY,Buy
-Market Sale,AMITBHAI SHAMBHULAL THAKKAR,2025-07-16,2025-07-16,649800,15.14,749000,17.45,Sunrest Lifescience Limited,2025-07-17,2025-07-17,Promoters,99200,Equity Shares,4999680,Equity Shares,SUNREST,Sell
-Market Purchase,DEEPAK ARORA,2025-06-04,2025-06-04,4507525,2.17,4497525,2.16,Som Distilleries & Breweries Limited,2025-07-17,2025-07-16,Promoters,10000,Equity Shares,1407679,Equity Shares,SDBL,Buy
-Market Purchase,KRUPA CHETANKUMAR DETHARIYA,2025-07-10,2025-07-10,1104800,4.42,1100000,4.4,Hi-Green Carbon Limited,2025-07-15,2025-07-12,Promoters,4800,Equity Shares,-,Equity Shares,HIGREEN,Buy
